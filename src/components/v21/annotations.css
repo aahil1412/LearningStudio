@@ -1,0 +1,204 @@
+::highlight(studio-yellow),
+::highlight(offline-yellow) {
+  background: #e9c85a88;
+  color: inherit;
+}
+::highlight(studio-green),
+::highlight(offline-green) {
+  background: #82c69b88;
+  color: inherit;
+}
+::highlight(studio-blue),
+::highlight(offline-blue) {
+  background: #7cb9e888;
+  color: inherit;
+}
+::highlight(studio-pink),
+::highlight(offline-pink) {
+  background: #e89aac88;
+  color: inherit;
+}
+::highlight(studio-purple),
+::highlight(offline-purple) {
+  background: #ba9be688;
+  color: inherit;
+}
+.annotation-toast {
+  position: fixed;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 120;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 12px 18px;
+  background: var(--popover);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px #0002;
+}
+.annotations-library {
+  max-width: 1000px;
+  margin: auto;
+  padding: 28px;
+  color: var(--text);
+}
+.annotations-library > header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-start;
+}
+.annotations-library > header p {
+  color: var(--secondary);
+  max-width: 700px;
+}
+.annotation-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 22px 0;
+}
+.annotation-filters label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex: 1;
+}
+.annotation-filters input {
+  width: 100%;
+}
+.annotation-count,
+.annotation-meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+.annotation-card {
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--highlight-color);
+  background: var(--surface);
+  border-radius: 10px;
+  padding: 18px;
+  margin: 14px 0;
+}
+.annotation-card blockquote {
+  font: inherit;
+  font-size: var(--reading-size, 18px);
+  line-height: 1.7;
+  margin: 12px 0;
+  white-space: pre-wrap;
+}
+.annotation-meta,
+.annotation-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.annotation-meta strong {
+  color: var(--warning);
+}
+.annotation-note {
+  display: flex;
+  gap: 8px;
+  white-space: pre-wrap;
+}
+.annotation-tags {
+  display: flex;
+  gap: 10px;
+  color: var(--secondary);
+}
+.annotation-edit label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+}
+.annotation-actions {
+  margin-top: 16px;
+}
+.annotation-swatch {
+  width: 24px !important;
+  height: 24px;
+  min-height: 24px !important;
+  padding: 0 !important;
+  border-radius: 50% !important;
+  background: var(--highlight-color) !important;
+  border: 2px solid transparent !important;
+}
+.annotation-swatch[aria-pressed="true"] {
+  outline: 2px solid var(--text);
+  outline-offset: 2px;
+}
+.color-yellow {
+  --highlight-color: #e9c85a;
+}
+.color-green {
+  --highlight-color: #82c69b;
+}
+.color-blue {
+  --highlight-color: #7cb9e8;
+}
+.color-pink {
+  --highlight-color: #e89aac;
+}
+.color-purple {
+  --highlight-color: #ba9be6;
+}
+.annotation-empty {
+  padding: 30px;
+  background: var(--surface);
+  border-radius: 12px;
+  line-height: 1.7;
+}
+.v2-selection-tools .annotation-swatch {
+  margin: 0 2px;
+}
+.annotation-note-entry {
+  position: fixed;
+  z-index: 550;
+  bottom: 210px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(460px, 90vw);
+  background: var(--popover);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px #0003;
+}
+.v2-selection-tools {
+  flex-wrap: wrap;
+  max-width: min(960px, calc(100vw - 32px));
+  width: max-content;
+}
+.v2-selection-tools > span {
+  font-size: 12px;
+}
+.v2-selection-tools button {
+  font-size: 12px;
+  min-height: 30px;
+}
+.annotation-note-entry textarea {
+  width: 100%;
+  margin: 10px 0;
+}
+.annotation-note-entry > div {
+  display: flex;
+  gap: 10px;
+}
+@media (max-width: 800px) {
+  .annotations-library {
+    padding: 18px;
+  }
+  .annotation-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .v2-selection-tools {
+    max-width: 96vw;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,368 @@
+.learning-player {
+  min-height: 0;
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  background: var(--reading);
+  font-family: var(--ui-font, "Inter", "Segoe UI", sans-serif);
+}
+.learning-player-header {
+  flex-shrink: 0;
+  padding: 8px 24px;
+  background: var(--reading);
+  border-bottom: 1px solid var(--divider);
+}
+.learning-player-topline,
+.learning-player-heading,
+.learning-player-section-controls,
+.learning-player-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.learning-player-position {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--secondary);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+  white-space: nowrap;
+  min-height: 32px;
+}
+.learning-player-topline {
+  gap: 12px;
+  min-height: 34px;
+  align-items: flex-start;
+}
+.learning-player-summary-controls {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+.learning-player .learning-player-history {
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 0 5px 4px;
+  min-height: 32px;
+  color: var(--secondary);
+  font: 13px/1.4 var(--ui-font);
+  cursor: pointer;
+}
+.learning-player-heading {
+  align-items: flex-start;
+  margin: 12px 0;
+}
+.learning-player-heading > div {
+  min-width: 0;
+}
+.learning-player-heading h2 {
+  margin: 0;
+  max-width: 52ch;
+  color: var(--heading);
+  font: 650 25px/1.24 var(--ui-font);
+  letter-spacing: -0.025em;
+  overflow-wrap: anywhere;
+  text-wrap: balance;
+}
+.learning-player-question {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 13px;
+}
+.learning-player-question summary {
+  width: fit-content;
+  cursor: pointer;
+  text-underline-offset: 3px;
+  min-height: 32px;
+  align-content: center;
+}
+.learning-player-question[open] {
+  flex-basis: 100%;
+  order: 5;
+  padding-block: 4px 8px;
+}
+.learning-player-question summary:hover {
+  color: var(--text);
+}
+.learning-player-question p,
+.learning-player-history-note {
+  margin: 10px 0 0;
+  max-width: 72ch;
+  font: 15px/1.65 var(--reading-font);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.learning-player-question p {
+  max-height: 160px;
+  overflow-y: auto;
+}
+.learning-player-history-note {
+  color: var(--secondary);
+}
+.learning-player-status {
+  flex: 0 0 auto;
+  max-width: 180px;
+  color: var(--warning);
+  font-size: 13px;
+  line-height: 1.5;
+}
+.learning-player-status.is-failed {
+  color: var(--error);
+}
+.learning-player-section-controls {
+  gap: 14px;
+  margin-inline: -4px;
+}
+.learning-player-trail {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  gap: 4px;
+  padding: 5px 4px 3px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  position: relative;
+}
+.learning-player-trail::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background: var(--divider);
+  pointer-events: none;
+}
+.learning-player .learning-player-trail button {
+  flex: 0 0 auto;
+  width: 180px;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  position: relative;
+  text-align: start;
+  border: 0;
+  border-radius: 8px;
+  padding: 7px 10px 7px 6px;
+  background: var(--reading);
+  color: var(--secondary);
+  cursor: pointer;
+  font: 13px/1.4 var(--ui-font);
+}
+.learning-player-trail button > span:last-child {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.learning-player .learning-player-trail button[aria-current="step"] {
+  color: var(--heading);
+  background: var(--selected);
+  font-weight: 650;
+}
+.learning-player-section-number {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--reading);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.learning-player-trail [aria-current="step"] .learning-player-section-number {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--selectionText);
+}
+.learning-player-section-picker {
+  flex: 0 0 150px;
+  display: grid;
+  gap: 3px;
+  font: 12px/1.3 var(--ui-font);
+  color: var(--secondary);
+  padding-bottom: 2px;
+}
+.learning-player-section-picker select {
+  max-width: 150px;
+  width: 100%;
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: var(--input);
+  border-radius: 7px;
+  padding: 7px 8px;
+  font: 13px/1.4 var(--ui-font);
+}
+.learning-player-stages {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px 4px;
+  padding: 0;
+}
+.learning-player-stages > span {
+  color: var(--secondary);
+  font-size: 12px;
+  margin-right: 3px;
+}
+.learning-player .learning-player-stages button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 6px;
+  padding: 5px 7px;
+  min-height: 32px;
+  color: var(--text);
+  background: transparent;
+  font: 13px/1.4 var(--ui-font);
+  cursor: pointer;
+}
+.learning-player .learning-player-stages button:hover {
+  background: var(--hover);
+}
+.learning-player-footer {
+  flex-shrink: 0;
+  padding: 15px 28px;
+  border-top: 1px solid var(--divider);
+  background: var(--surface);
+}
+.learning-player .learning-player-footer button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font: 600 14px/1.4 var(--ui-font);
+}
+.learning-player .learning-player-back {
+  border: 1px solid var(--border);
+  color: var(--text);
+  background: transparent;
+}
+.learning-player .learning-player-ask {
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  margin-inline: auto;
+}
+.learning-player .learning-player-ask[aria-expanded="true"] {
+  background: var(--selected);
+}
+.learning-player .learning-player-forward {
+  border: 1px solid transparent;
+  background: var(--button);
+  color: var(--selectionText);
+}
+.learning-player .learning-player-footer button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+.learning-player button:focus-visible,
+.learning-player select:focus-visible,
+.learning-player summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+.learning-player .learning-player-footer button:hover:not(:disabled),
+.learning-player .learning-player-history:hover {
+  filter: brightness(0.97);
+}
+@media (max-width: 1050px) {
+  .learning-player-header {
+    padding: 8px 20px;
+  }
+  .learning-player-section-picker {
+    flex-basis: 128px;
+  }
+  .learning-player-section-picker select {
+    max-width: 128px;
+  }
+  .learning-player .learning-player-trail button {
+    width: 150px;
+  }
+  .learning-player-footer {
+    padding: 12px 20px;
+    gap: 10px;
+  }
+}
+@media (max-width: 720px) {
+  .learning-player-header {
+    padding: 8px 16px;
+  }
+  .learning-player-heading h2 {
+    font-size: 22px;
+  }
+  .learning-player-heading {
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 14px;
+  }
+  .learning-player-topline {
+    gap: 8px;
+    align-items: flex-start;
+  }
+  .learning-player-summary-controls {
+    gap: 2px 8px;
+  }
+  .learning-player-position {
+    font-size: 12px;
+  }
+  .learning-player .learning-player-history {
+    font-size: 12px;
+    gap: 5px;
+  }
+  .learning-player-trail {
+    display: none;
+  }
+  .learning-player-section-picker {
+    flex: 1;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+  }
+  .learning-player-section-picker select {
+    max-width: none;
+  }
+  .learning-player-stages {
+    gap: 4px;
+  }
+  .learning-player-stages > span {
+    width: 100%;
+  }
+  .learning-player-footer {
+    padding: 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .learning-player .learning-player-footer button {
+    padding: 9px 11px;
+    font-size: 13px;
+  }
+  .learning-player .learning-player-ask {
+    order: 3;
+    flex-basis: 100%;
+    margin-inline: 0;
+  }
+  .learning-player .learning-player-forward {
+    margin-inline-start: auto;
+  }
+}

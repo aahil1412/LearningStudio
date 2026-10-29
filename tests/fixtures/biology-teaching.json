@@ -1,0 +1,313 @@
+{
+  "provenance": "General educational questions from an authorized recorded teaching test; no account or learner history.",
+  "cases": [
+    {
+      "id": "membrane",
+      "question": "I’m new to biology. How does a cell control what enters and leaves it?",
+      "title": "How cells control entry and exit",
+      "rawContent": [
+        {
+          "type": "concept",
+          "title": "The cell membrane: a selective boundary",
+          "prerequisites": [],
+          "objective": "Understand how a cell’s boundary allows useful exchanges while restricting what can pass."
+        },
+        {
+          "type": "terms",
+          "items": [
+            {
+              "term": "Cell",
+              "definition": "The smallest unit of life."
+            },
+            {
+              "term": "Molecule",
+              "definition": "Two or more atoms joined together. Atoms are tiny building blocks of matter."
+            },
+            {
+              "term": "Cell membrane",
+              "definition": "The thin, flexible boundary that separates a cell’s inside from its surroundings."
+            },
+            {
+              "term": "Protein",
+              "definition": "A large molecule that performs jobs such as building structures or moving substances."
+            },
+            {
+              "term": "Selectively permeable",
+              "definition": "Allowing some substances to cross more easily than others."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A cell must take in materials it needs and release waste. Its **cell membrane** helps control these exchanges. The membrane is **selectively permeable**, so it is neither a sealed bag nor an open doorway."
+        },
+        {
+          "type": "illustration",
+          "spec": {
+            "template": "membrane-transport",
+            "title": "Routes into and out of a cell",
+            "caption": "A simplified view of membrane transport. Notice the two main routes: directly through the membrane’s fatty layer, or with help from proteins embedded in it."
+          }
+        },
+        {
+          "type": "text",
+          "text": "**The membrane itself forms a barrier.** Its basic structure is a double layer of fat-like molecules. Small molecules such as oxygen can cross this layer directly. Many other substances, including sugars, cannot cross it easily on their own."
+        },
+        {
+          "type": "text",
+          "text": "**Proteins provide controlled routes across.** Some form narrow passageways. Others carry particular substances across the membrane. Cells can regulate these routes by opening or closing certain passageways, or by changing how many transport proteins are present. Some proteins also use the cell’s energy to pump substances across."
+        },
+        {
+          "type": "text",
+          "text": "**Why both parts matter:** a completely sealed boundary would prevent useful exchanges, while a boundary that let everything through would make it difficult to maintain suitable conditions inside. The fatty barrier and its transport proteins work together to control entry and exit."
+        },
+        {
+          "type": "mcq",
+          "purpose": "checkpoint",
+          "question": "Optional check: A medicine blocks a protein that normally carries sugar into a cell. What is the most likely immediate effect? You can also skip this check.",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Less sugar enters through that protein, but other routes can still work.",
+              "explanation": "Blocking one transport protein reduces movement through that route. It does not necessarily affect other membrane proteins or substances that cross directly."
+            },
+            {
+              "id": "b",
+              "text": "All substances stop entering and leaving the cell.",
+              "explanation": "The membrane has different routes for different substances. Blocking one protein does not close every route."
+            },
+            {
+              "id": "c",
+              "text": "Sugar begins passing freely through the fatty layer instead.",
+              "explanation": "Blocking a protein does not change sugar’s ability to cross the fatty layer. Sugar still cannot pass through that layer easily on its own."
+            }
+          ],
+          "correctChoiceIds": [
+            "a"
+          ],
+          "multiple": false,
+          "allowUnknown": true,
+          "explanation": "The membrane is selective because its fatty layer and its proteins provide different routes for different substances."
+        }
+      ]
+    },
+    {
+      "id": "enzymes",
+      "question": "Why do enzymes make reactions faster without being used up?",
+      "title": "Why enzymes make reactions faster"
+    },
+    {
+      "id": "photosynthesis",
+      "question": "How does a leaf turn sunlight into stored chemical energy? I’m new to this.",
+      "title": "How leaves store sunlight as chemical energy",
+      "rawContent": [
+        {
+          "type": "concept",
+          "title": "Photosynthesis: from sunlight to stored energy",
+          "prerequisites": [],
+          "objective": "Explain how a leaf captures light energy and stores some of it in sugars."
+        },
+        {
+          "type": "terms",
+          "items": [
+            {
+              "term": "Photosynthesis",
+              "definition": "The process plants use to capture light energy and make sugars."
+            },
+            {
+              "term": "Cell",
+              "definition": "The smallest unit of a living thing."
+            },
+            {
+              "term": "Chloroplast",
+              "definition": "A small structure inside many plant cells where photosynthesis happens."
+            },
+            {
+              "term": "Chlorophyll",
+              "definition": "A green substance in chloroplasts that absorbs light."
+            },
+            {
+              "term": "Carbon dioxide",
+              "definition": "A gas in air containing carbon and oxygen atoms. Atoms are the tiny building blocks of matter."
+            },
+            {
+              "term": "Chemical energy",
+              "definition": "Energy associated with the arrangement of atoms in substances, which can be transferred when substances change."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "A leaf does not turn sunlight into matter. Instead, it **uses sunlight’s energy to build sugars** from materials it takes in. This happens in chloroplasts inside its cells. The process has many steps, but two main jobs explain the idea."
+        },
+        {
+          "type": "image",
+          "query": "educational photosynthesis diagram leaf chloroplast sunlight absorbed by chlorophyll carbon dioxide from air water from roots sugar production oxygen released labeled"
+        },
+        {
+          "type": "text",
+          "text": "**1. Capture light energy.** Chlorophyll absorbs light. This powers chemical changes that capture some of the light’s energy in temporary chemical forms. During this stage, water is split and oxygen is released."
+        },
+        {
+          "type": "text",
+          "text": "**2. Use that energy to build sugars.** Chloroplasts use the captured energy to build sugars from carbon dioxide, with material supplied by water as well. Carbon dioxide comes from the air and supplies the sugar’s carbon atoms. Water reaches the leaf through the plant’s roots and stems."
+        },
+        {
+          "type": "text",
+          "text": "**Why this counts as stored energy:** making sugar stores some of the captured energy in a new arrangement of atoms. Later chemical changes involving sugar can transfer that energy into forms cells can use, even when light is unavailable. The plant can also join sugars together to make **starch**, a substance used for longer-term storage."
+        },
+        {
+          "type": "mcq",
+          "purpose": "checkpoint",
+          "question": "Optional check: A greenhouse replaces sunlight with a lamp that gives off light the plant can absorb. Why can the plant still make sugar?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "The lamp supplies light energy that can power photosynthesis.",
+              "explanation": "Yes. Suitable light from a lamp can supply energy for photosynthesis, just as sunlight can."
+            },
+            {
+              "id": "b",
+              "text": "The lamp supplies the carbon atoms needed to build sugar.",
+              "explanation": "The carbon atoms come from carbon dioxide in the air. The lamp supplies energy, not the material that becomes sugar."
+            },
+            {
+              "id": "c",
+              "text": "Water alone supplies all the energy needed to make sugar.",
+              "explanation": "Water is a necessary material, but it does not replace the light energy needed for photosynthesis."
+            }
+          ],
+          "correctChoiceIds": [
+            "a"
+          ],
+          "multiple": false,
+          "allowUnknown": true,
+          "explanation": "Photosynthesis needs both materials and energy. Carbon dioxide and water provide materials; absorbed light provides the energy that helps turn those materials into sugars."
+        }
+      ]
+    },
+    {
+      "id": "gene-to-protein",
+      "question": "How does a cell turn the information in a gene into a protein? I know very little biology.",
+      "title": "From a gene to a protein",
+      "rawContent": [
+        {
+          "type": "concept",
+          "title": "From a gene’s instructions to a protein",
+          "prerequisites": [],
+          "objective": "Understand how a cell copies genetic instructions and uses the copy to build a protein."
+        },
+        {
+          "type": "terms",
+          "items": [
+            {
+              "term": "Cell",
+              "definition": "The smallest unit of life."
+            },
+            {
+              "term": "Molecule",
+              "definition": "A group of atoms joined together. Atoms are tiny building blocks of matter."
+            },
+            {
+              "term": "Amino acid",
+              "definition": "A small molecule that cells can join with others to form a chain."
+            },
+            {
+              "term": "Protein",
+              "definition": "A molecule made of one or more amino acid chains. Its shape helps it perform jobs, such as supporting structures or speeding up chemical changes."
+            },
+            {
+              "term": "DNA",
+              "definition": "A long molecule that stores information in the order of four kinds of chemical ‘letters’: A, T, C, and G."
+            },
+            {
+              "term": "Gene",
+              "definition": "A section of DNA containing instructions for making a working molecule, such as a protein."
+            },
+            {
+              "term": "mRNA (messenger RNA)",
+              "definition": "A message molecule that carries a working copy of a gene’s protein-making instructions."
+            },
+            {
+              "term": "Transcription",
+              "definition": "The process of copying information from DNA into RNA, such as mRNA."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "text": "**The basic idea is: copy the instructions, then use the copy to assemble a protein.** First comes **transcription**. The cell makes an mRNA copy of the information in a protein-making gene. DNA stores the instructions, while mRNA carries a working copy. The original DNA is not used up or turned into protein."
+        },
+        {
+          "type": "terms",
+          "items": [
+            {
+              "term": "Ribosome",
+              "definition": "A tiny structure in a cell that reads mRNA and joins amino acids into a chain."
+            },
+            {
+              "term": "Codon",
+              "definition": "A group of three mRNA letters that specifies an amino acid or a stop signal."
+            },
+            {
+              "term": "tRNA (transfer RNA)",
+              "definition": "A molecule that brings a particular amino acid to a ribosome."
+            },
+            {
+              "term": "Anticodon",
+              "definition": "A group of three letters on a tRNA that pairs with a corresponding codon on mRNA."
+            },
+            {
+              "term": "Translation",
+              "definition": "The process of using an mRNA message to assemble an amino acid chain."
+            }
+          ]
+        },
+        {
+          "type": "illustration",
+          "spec": {
+            "template": "translation",
+            "title": "A ribosome uses an mRNA message to build a chain",
+            "caption": "Simplified view of translation. A ribosome reads mRNA, while tRNAs pair their anticodons with corresponding codons and bring amino acids for the growing chain."
+          }
+        },
+        {
+          "type": "text",
+          "text": "**Next comes translation.** A ribosome reads the mRNA’s letters in groups of three, the codons. At each codon that specifies an amino acid, a tRNA with a corresponding anticodon delivers that amino acid. The ribosome joins the amino acids together in the order specified by the message. A stop codon signals the end of chain assembly."
+        },
+        {
+          "type": "text",
+          "text": "**The chain becomes a working protein.** During and after assembly, the chain folds, often with help from other molecules. Some proteins also need further changes before they work. The important connection is that **the gene’s letter order specifies the amino acid order, which helps determine the protein’s shape and job**. The gene provides information, while the amino acids provide the building material."
+        },
+        {
+          "type": "mcq",
+          "purpose": "checkpoint",
+          "question": "Optional check. A cell has made mRNA copies of a gene, but its ribosomes stop working. What is the most direct result? You can skip this or choose “I do not know.”",
+          "choices": [
+            {
+              "id": "a",
+              "text": "The cell cannot assemble new amino acid chains from those messages.",
+              "explanation": "The messages are available, but ribosomes are needed to read them and join amino acids into chains."
+            },
+            {
+              "id": "b",
+              "text": "The mRNA molecules fold directly into proteins instead.",
+              "explanation": "mRNA carries information. It does not become a protein, which is made from amino acids."
+            },
+            {
+              "id": "c",
+              "text": "The tRNAs take over and assemble complete proteins on their own.",
+              "explanation": "tRNAs deliver amino acids, but they cannot replace the ribosome’s role in reading the message and assembling the chain."
+            }
+          ],
+          "correctChoiceIds": [
+            "a"
+          ],
+          "multiple": false,
+          "allowUnknown": true,
+          "explanation": "Making a message and using it are different steps. An mRNA copy alone is not enough: translation requires functioning ribosomes."
+        }
+      ]
+    }
+  ]
+}

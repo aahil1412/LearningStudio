@@ -1,0 +1,529 @@
+.gene-lab {
+  --gene-blue: #4269cb;
+  --gene-teal: #147d76;
+  --gene-purple: #8051c7;
+  --gene-warm: #bd6041;
+  --gene-a: #25896d;
+  --gene-c: #3d80ba;
+  --gene-g: #b26d22;
+  --gene-t: #a2548d;
+  color: var(--text);
+  background: var(--figure);
+  font: var(--reading-size, 18px)/var(--line-height, 1.65) var(--reading-font, "Segoe UI", sans-serif);
+  min-width: 0;
+  padding: 20px 0;
+}
+[data-theme="dark"] .gene-lab {
+  --gene-blue: #9ab6ff;
+  --gene-teal: #65d4c8;
+  --gene-purple: #c1a0fc;
+  --gene-warm: #f3a785;
+  --gene-a: #72d5ad;
+  --gene-c: #88bbec;
+  --gene-g: #f3ca7e;
+  --gene-t: #eaa4cf;
+}
+.gene-lab button,
+.gene-lab input,
+.gene-lab select,
+.gene-lab textarea {
+  font-family: var(--ui-font, "Segoe UI", sans-serif);
+  color: var(--text);
+  accent-color: var(--accent);
+}
+.gene-lab button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.gene-lab button:hover:not(:disabled) {
+  background: var(--hover, var(--selected));
+}
+.gene-lab button:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+.gene-lab :is(button, input, select, textarea):focus-visible,
+.gene-lab [role="button"]:focus-visible,
+.gene-canvas-wrap:focus-visible {
+  outline: 2px solid var(--focus, var(--accent));
+  outline-offset: 3px;
+}
+.gene-lead {
+  display: flex;
+  align-items: start;
+  gap: 24px;
+  margin: 0 20px 18px;
+}
+.gene-lead p {
+  margin: 0;
+  max-width: 64ch;
+}
+.gene-lead > span {
+  margin-inline-start: auto;
+  flex: 0 0 180px;
+  font: 13px/1.6 var(--ui-font);
+  color: var(--secondary);
+}
+.gene-view-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0 20px 18px;
+  border-bottom: 1px solid var(--divider);
+}
+.gene-view-tabs button[aria-pressed="true"] {
+  border-color: var(--accent);
+  background: var(--selected);
+  font-weight: 600;
+}
+.gene-narration {
+  margin: 20px 20px 8px;
+  max-width: 75ch;
+  min-height: 90px;
+}
+.gene-narration > strong {
+  font-size: 18px;
+  color: var(--heading);
+}
+.gene-narration p {
+  margin: 5px 0 0;
+}
+.gene-canvas-wrap {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+}
+.gene-svg {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  max-width: 1100px;
+  height: auto;
+  margin-inline: auto;
+  overflow: visible;
+  font-family: var(--reading-font, "Segoe UI", sans-serif);
+  color: var(--text);
+}
+.gene-svg text {
+  fill: var(--text);
+  font-family: inherit;
+  font-size: 22px;
+}
+.gene-svg [role="button"] {
+  cursor: pointer;
+}
+.gene-svg [role="button"]:hover {
+  filter: brightness(1.07);
+}
+.gene-svg .gene-strand-label {
+  font-size: 22px;
+  font-weight: 600;
+}
+.gene-svg .gene-letter {
+  font-size: 28px;
+  font-weight: 650;
+  text-anchor: middle;
+}
+.gene-svg .gene-base-index {
+  font-size: 20px;
+  text-anchor: middle;
+  fill: var(--secondary);
+}
+.gene-base {
+  stroke-width: 1.8;
+  fill: color-mix(in srgb, var(--gene-blue) 12%, var(--figure));
+  stroke: var(--gene-blue);
+}
+.gene-base-A {
+  --gene-base-tone: var(--gene-a);
+}
+.gene-base-C {
+  --gene-base-tone: var(--gene-c);
+}
+.gene-base-G {
+  --gene-base-tone: var(--gene-g);
+}
+.gene-base-T,
+.gene-base-U {
+  --gene-base-tone: var(--gene-t);
+}
+.gene-base:is(rect) {
+  fill: color-mix(
+    in srgb,
+    var(--gene-base-tone, var(--gene-blue)) 15%,
+    var(--figure)
+  );
+  stroke: var(--gene-base-tone, var(--gene-blue));
+}
+.gene-pair {
+  stroke: var(--border);
+  stroke-width: 2;
+}
+.gene-codon-pair {
+  stroke: var(--gene-teal);
+  stroke-width: 1.8;
+  stroke-dasharray: 3 3;
+}
+.gene-unmade-base {
+  fill: none;
+  stroke: var(--border);
+  stroke-width: 1.3;
+  stroke-dasharray: 4 4;
+}
+.gene-polymerase {
+  transition: transform 0.18s ease-out;
+}
+.gene-polymerase path {
+  fill: color-mix(in srgb, var(--gene-purple) 20%, var(--figure));
+  stroke: var(--gene-purple);
+  stroke-width: 2;
+}
+.gene-polymerase text {
+  font-size: 22px;
+  font-weight: 600;
+}
+.gene-direction {
+  fill: none;
+  stroke: var(--gene-teal);
+  stroke-width: 3;
+}
+.gene-svg .gene-direction-label {
+  font-size: 22px;
+  fill: var(--secondary);
+}
+.gene-ribosome {
+  fill: color-mix(in srgb, var(--gene-purple) 15%, var(--figure));
+  stroke: var(--gene-purple);
+  stroke-width: 2.2;
+}
+.gene-trna {
+  fill: color-mix(in srgb, var(--gene-teal) 17%, var(--figure));
+  stroke: var(--gene-teal);
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+.gene-amino {
+  fill: color-mix(in srgb, var(--gene-warm) 22%, var(--figure));
+  stroke: var(--gene-warm);
+  stroke-width: 2;
+}
+.gene-svg .gene-amino-text {
+  font-size: 20px;
+  text-anchor: middle;
+  font-weight: 600;
+}
+.gene-peptide-link,
+.gene-amino-attachment {
+  stroke: var(--gene-warm);
+  stroke-width: 3;
+}
+.gene-svg .gene-anticodon {
+  font-size: 23px;
+  font-weight: 600;
+  text-anchor: middle;
+}
+.gene-codon {
+  fill: var(--figure);
+  stroke: var(--gene-teal);
+  stroke-width: 1.7;
+}
+.gene-codon.is-active {
+  stroke-width: 3;
+  fill: color-mix(in srgb, var(--gene-teal) 15%, var(--figure));
+}
+.gene-svg .gene-codon-letter {
+  font-size: 28px;
+  font-weight: 650;
+  text-anchor: middle;
+}
+.gene-rna-backbone {
+  stroke: var(--gene-teal);
+  stroke-width: 5;
+}
+.gene-callout {
+  stroke: var(--secondary);
+  stroke-width: 1.4;
+  fill: none;
+}
+.gene-svg .gene-helper-label {
+  font-size: 22px;
+  fill: var(--secondary);
+}
+.gene-release {
+  fill: color-mix(in srgb, var(--gene-warm) 15%, var(--figure));
+  stroke: var(--gene-warm);
+  stroke-width: 2;
+}
+.gene-svg .gene-release-label {
+  font-size: 22px;
+  text-anchor: middle;
+}
+.gene-transport,
+.gene-window-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 8px 20px;
+}
+.gene-transport > label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-inline-start: auto;
+  font: 14px var(--ui-font);
+}
+.gene-transport input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+.gene-transport .gene-play {
+  background: var(--selected);
+  border-color: var(--accent);
+}
+.gene-window-controls {
+  justify-content: center;
+}
+.gene-window-controls output {
+  font-size: 14px;
+}
+.gene-scrubber {
+  display: block;
+  margin: 8px 20px 24px;
+  font: 14px/1.7 var(--ui-font);
+}
+.gene-scrubber > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.gene-scrubber output {
+  font-variant-numeric: tabular-nums;
+  color: var(--secondary);
+}
+.gene-scrubber input {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+.gene-experiment {
+  padding: 24px 20px 12px;
+  border-top: 1px solid var(--divider);
+}
+.gene-experiment h4 {
+  font: 600 20px/1.4 var(--reading-font);
+  margin: 0 0 8px;
+  color: var(--heading);
+}
+.gene-experiment > p {
+  margin: 0 0 16px;
+  max-width: 70ch;
+}
+.gene-base-palette {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+.gene-base-palette > span {
+  font: 14px var(--ui-font);
+  color: var(--secondary);
+}
+.gene-base-palette .gene-base-chip {
+  background: color-mix(in srgb, var(--gene-base-tone) 14%, var(--figure));
+  border-color: var(--gene-base-tone);
+  font-size: 20px;
+  font-weight: 650;
+  width: 42px;
+  min-height: 42px;
+  padding: 6px;
+}
+.gene-base-palette .gene-base-chip[aria-pressed="true"] {
+  outline: 2px solid var(--focus, var(--accent));
+  outline-offset: 2px;
+}
+.gene-edit-sequence {
+  display: flex;
+  max-width: 100%;
+  overflow-x: auto;
+  gap: 5px;
+  padding: 5px 3px 12px;
+  margin-bottom: 12px;
+}
+.gene-edit-sequence .gene-reference-base {
+  flex: 0 0 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 2px;
+}
+.gene-reference-base span {
+  font-size: 20px;
+  font-weight: 600;
+}
+.gene-reference-base small {
+  font-size: 12px;
+  color: var(--secondary);
+}
+.gene-reference-base.is-selected {
+  border-color: var(--accent);
+  background: var(--selected);
+}
+.gene-reference-base.is-mutated {
+  box-shadow: inset 0 -3px var(--gene-warm);
+}
+.gene-mutation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.gene-mutation-controls > label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font: 14px/1.5 var(--ui-font);
+}
+.gene-mutation-controls input,
+.gene-mutation-controls select {
+  padding: 9px 10px;
+  min-height: 40px;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  max-width: 100%;
+  font-size: 14px;
+}
+.gene-mutation-controls input {
+  width: 110px;
+}
+.gene-mutation-controls .gene-apply {
+  border-color: var(--accent);
+  background: var(--selected);
+}
+.gene-consequence {
+  margin: 16px 0;
+  padding: 16px 0;
+  border-block: 1px solid var(--divider);
+}
+.gene-consequence p {
+  margin: 5px 0 0;
+}
+.gene-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin: 18px 0;
+}
+.gene-comparison > div {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+  align-content: start;
+}
+.gene-comparison strong {
+  font: 600 14px/1.6 var(--ui-font);
+  color: var(--secondary);
+}
+.gene-comparison span {
+  font-size: 16px;
+  overflow-wrap: anywhere;
+  margin-bottom: 8px;
+  letter-spacing: 0.015em;
+}
+.gene-sequence-editor {
+  font-size: 14px;
+  margin-top: 18px;
+}
+.gene-sequence-editor summary,
+.gene-model-notes summary {
+  cursor: pointer;
+  min-height: 32px;
+}
+.gene-sequence-editor label {
+  display: block;
+  margin: 12px 0;
+}
+.gene-sequence-editor textarea {
+  display: block;
+  width: 100%;
+  min-height: 70px;
+  resize: vertical;
+  margin-top: 5px;
+  padding: 10px;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  font-size: 16px;
+}
+.gene-error {
+  color: var(--error);
+}
+.gene-restored-selection,
+.gene-model-notes {
+  padding: 0 20px;
+  color: var(--secondary);
+  font-size: 14px;
+}
+.gene-model-notes p {
+  max-width: 75ch;
+  margin: 10px 0;
+}
+.gene-model-notes a {
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+@media (max-width: 700px) {
+  .gene-lead {
+    display: block;
+  }
+  .gene-lead > span {
+    display: block;
+    margin: 10px 0 0;
+  }
+  .gene-view-tabs {
+    gap: 6px;
+  }
+  .gene-view-tabs button {
+    flex: 1 1 160px;
+    text-align: start;
+  }
+  .gene-narration {
+    min-height: 110px;
+  }
+  .gene-comparison {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .gene-transport > label {
+    margin-inline-start: 0;
+  }
+  .gene-mutation-controls {
+    gap: 10px;
+  }
+  .gene-mutation-controls > label:first-child {
+    flex: 1 1 100%;
+  }
+  .gene-mutation-controls select {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gene-polymerase {
+    transition: none;
+  }
+}

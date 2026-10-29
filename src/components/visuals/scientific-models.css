@@ -1,0 +1,278 @@
+.scientific-model {
+  font: 16px/1.55 var(--reading-font, var(--ui-font));
+  color: var(--text);
+}
+.scientific-model .model-svg {
+  min-width: 660px;
+  touch-action: pan-y;
+}
+.model-orientation {
+  padding: 14px 18px;
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  color: var(--secondary);
+  font-size: 14px;
+}
+.model-live-dot {
+  width: 7px;
+  height: 7px;
+  flex: none;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: var(--science-trna, #0d9488);
+}
+.model-mode-switch {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  padding: 0 16px 14px;
+}
+.model-mode-switch button,
+.model-transport button {
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--text);
+  font: 14px var(--ui-font);
+  cursor: pointer;
+}
+.model-mode-switch button[aria-pressed="true"],
+.model-transport .model-play {
+  background: var(--selected);
+  border-color: var(--accent);
+  color: var(--heading);
+}
+.model-grid line {
+  stroke: var(--border);
+  stroke-width: 1;
+  opacity: 0.6;
+}
+.model-axis {
+  stroke: var(--secondary);
+  stroke-width: 1.5;
+}
+.model-axis-label text,
+.aggregation-legend text,
+.condensate-region text {
+  fill: var(--text);
+  font-size: 22px;
+}
+.field-area {
+  fill: color-mix(in srgb, var(--science-rna, #2563eb) 15%, transparent);
+  stroke: none;
+}
+.field-line {
+  fill: none;
+  stroke: var(--science-rna, #2563eb);
+  stroke-width: 4;
+  stroke-linejoin: round;
+}
+.field-probe-line {
+  stroke: var(--science-amino, #e76f51);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+.field-probe {
+  fill: var(--figure);
+  stroke: var(--science-amino, #e76f51);
+  stroke-width: 4;
+}
+.field-samples .positive {
+  fill: var(--science-rna, #2563eb);
+}
+.field-samples .negative {
+  fill: var(--science-ribosome, #8b5cf6);
+}
+.model-readout {
+  display: flex;
+  gap: 10px 18px;
+  flex-wrap: wrap;
+  padding: 12px 18px;
+  border-block: 1px solid var(--border);
+  font-size: 14px;
+  background: color-mix(in srgb, var(--accent) 4%, var(--figure));
+  font-variant-numeric: tabular-nums;
+}
+.model-readout strong {
+  color: var(--heading);
+}
+.model-readout span {
+  color: var(--secondary);
+}
+.model-parameters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px 24px;
+  padding: 18px;
+}
+.model-parameter {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  min-width: 0;
+}
+.model-parameter > span {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.model-parameter output {
+  color: var(--secondary);
+  font-variant-numeric: tabular-nums;
+}
+.model-parameter input {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+.model-transport {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0 18px 18px;
+}
+.model-transport label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  flex: 1;
+  min-width: 170px;
+}
+.model-transport input {
+  width: 100%;
+  min-width: 70px;
+  accent-color: var(--accent);
+}
+.model-transport output {
+  color: var(--secondary);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.model-assumptions {
+  margin: 0 18px 18px;
+  font-size: 14px;
+  color: var(--secondary);
+}
+.model-assumptions summary {
+  cursor: pointer;
+  color: var(--link, var(--text));
+}
+.model-assumptions p {
+  margin: 9px 0;
+}
+.condensate-region ellipse {
+  fill: color-mix(in srgb, var(--science-ribosome, #8b5cf6) 9%, var(--figure));
+  stroke: var(--science-ribosome, #8b5cf6);
+  stroke-width: 2;
+  stroke-dasharray: 8 5;
+}
+.model-chain {
+  cursor: pointer;
+  outline: none;
+  pointer-events: bounding-box;
+}
+.chain-hit-target {
+  fill: transparent;
+  stroke: transparent;
+}
+.chain-folded polyline {
+  fill: none;
+  stroke: var(--science-trna, #0d9488);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.chain-unfolded polyline {
+  fill: none;
+  stroke: var(--science-amino, #e76f51);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.chain-unfolded circle {
+  fill: var(--science-amino, #e76f51);
+  stroke: var(--figure);
+  stroke-width: 1;
+}
+.is-aggregated .chain-unfolded polyline {
+  stroke: var(--science-ribosome, #8b5cf6);
+}
+.model-chain.is-selected .chain-hit-target,
+.model-chain:focus-visible .chain-hit-target {
+  stroke: var(--accent);
+  stroke-width: 2;
+  stroke-dasharray: 3 3;
+}
+.aggregation-legend circle {
+  fill: none;
+  stroke: var(--science-ribosome, #8b5cf6);
+  stroke-width: 2;
+}
+@media (max-width: 700px) {
+  .model-parameters {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+.vertex-fermion,
+.vertex-boson,
+.vertex-center {
+  cursor: pointer;
+  outline: none;
+}
+.vertex-fermion path {
+  fill: none;
+  stroke: var(--science-rna, #2563eb);
+  stroke-width: 4;
+}
+.vertex-boson-wave {
+  fill: none;
+  stroke: var(--science-ribosome, #8b5cf6);
+  stroke-width: 3.5;
+  stroke-linejoin: round;
+}
+.vertex-boson.qed .vertex-boson-wave {
+  stroke: var(--science-amino, #e76f51);
+}
+.interaction-svg text {
+  font-size: 23px;
+  fill: var(--text);
+}
+.interaction-svg .vertex-hit-line {
+  stroke: transparent;
+  stroke-width: 30;
+  fill: none;
+}
+.vertex-center circle {
+  fill: var(--text);
+  stroke: var(--figure);
+  stroke-width: 2;
+}
+.vertex-center .vertex-center-hit {
+  fill: transparent;
+  stroke: transparent;
+}
+.vertex-fermion.is-selected path:not(.vertex-hit-line),
+.vertex-boson.is-selected .vertex-boson-wave,
+.vertex-fermion:focus-visible path:not(.vertex-hit-line),
+.vertex-boson:focus-visible .vertex-boson-wave {
+  stroke: var(--accent);
+  stroke-width: 6;
+}
+.vertex-summary {
+  margin: 14px 18px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.field-position-label {
+  fill: var(--text);
+  font-size: 22px;
+}

@@ -1,0 +1,437 @@
+{
+  "provenance": "Captured real connected-model output from the explicitly authorized 2026-10-28 biology acceptance run. Offline regression fixture, not a live success claim.",
+  "model": "gpt-6.1-sol",
+  "reasoning": "medium",
+  "intakeDepth": "overview",
+  "modules": [
+    {
+      "title": "Getting Started with Biology",
+      "nodes": [
+        {
+          "id": "f499e98b-c0cb-458d-82d7-da332f98ecc0",
+          "kind": "module",
+          "title": "Getting Started with Biology",
+          "description": "Build a beginner-friendly picture of living systems and how biology connects cells, organisms, and their environments.",
+          "prerequisites": []
+        },
+        {
+          "id": "7fb40a95d43304e48bb01243956b28b0d06c",
+          "parentId": "f499e98b-c0cb-458d-82d7-da332f98ecc0",
+          "kind": "topic",
+          "title": "What Biology Studies",
+          "description": "Start with familiar living things and build a beginner-friendly picture of life. Introduce each new term before using it, with short explanations and everyday examples.",
+          "prerequisites": []
+        },
+        {
+          "id": "47d3dceb30792752f0119a6c8b3c10bea6ac",
+          "parentId": "7fb40a95d43304e48bb01243956b28b0d06c",
+          "kind": "lesson",
+          "title": "Biology Begins with Everyday Life",
+          "description": "Define biology as the study of life and an organism as an individual living thing. Use a tree, a person, and a tiny bacterium as examples. Introduce an observation as something noticed or measured, and connect biology to questions such as why seedlings bend toward a window.",
+          "prerequisites": []
+        },
+        {
+          "id": "f43385a57dee4cf4764d27926150c0e72a94",
+          "parentId": "7fb40a95d43304e48bb01243956b28b0d06c",
+          "kind": "lesson",
+          "title": "Cells: The Basic Units of Life",
+          "description": "Define a cell as the smallest unit that carries out the basic activities of life. Explain that some organisms consist of one cell and others contain many. Describe a simple picture of a cell as a small enclosed space with a boundary and working contents, without introducing internal structures yet.",
+          "prerequisites": [
+            "47d3dceb30792752f0119a6c8b3c10bea6ac"
+          ]
+        },
+        {
+          "id": "a2ceb30ac6a07a9f9e4627b266300e2e2e92",
+          "parentId": "7fb40a95d43304e48bb01243956b28b0d06c",
+          "kind": "lesson",
+          "title": "The Shared Features of Living Things",
+          "description": "Explain that living things are made of cells, use materials and energy, regulate internal conditions, respond to surroundings, and grow and develop. Define energy simply as the capacity to cause change or do work. Use eating, seedling growth, and sweating as examples. Introduce reproduction and inherited information as features of living lineages, not requirements that every individual must fulfill.",
+          "prerequisites": [
+            "f43385a57dee4cf4764d27926150c0e72a94"
+          ]
+        },
+        {
+          "id": "29628e1c706e27ca14e226dcfc4bb407ee64",
+          "parentId": "7fb40a95d43304e48bb01243956b28b0d06c",
+          "kind": "lesson",
+          "title": "Why One Feature Is Not Enough",
+          "description": "Compare a plant, a rock, and a flame. Fire can grow and use fuel, but it lacks cells and the coordinated features of living systems. Explain that movement alone does not identify life and that dormant seeds can remain alive while showing little visible activity.",
+          "prerequisites": [
+            "a2ceb30ac6a07a9f9e4627b266300e2e2e92"
+          ]
+        },
+        {
+          "id": "504312de44ce56342229c98e9c732bb95c25",
+          "parentId": "7fb40a95d43304e48bb01243956b28b0d06c",
+          "kind": "lesson",
+          "title": "Optional Check: Recognizing Life",
+          "description": "Offer a brief multiple-choice check: Which is the strongest reason a sunflower is living? A) It moves in the wind. B) It is made of cells that carry out coordinated life processes. C) It is green. Answer: B. Explain that wind also moves nonliving objects, and many living things are not green. The learner may skip this check or revisit the examples.",
+          "prerequisites": [
+            "29628e1c706e27ca14e226dcfc4bb407ee64"
+          ]
+        },
+        {
+          "id": "5e80243080a7f85f2682f271679c98050ae3",
+          "parentId": "f499e98b-c0cb-458d-82d7-da332f98ecc0",
+          "kind": "topic",
+          "title": "From Cells to Ecosystems",
+          "description": "Build a visual zoom-out map of biological organization. Distinguish levels within a many-celled organism from levels describing organisms and their surroundings.",
+          "prerequisites": [
+            "29628e1c706e27ca14e226dcfc4bb407ee64"
+          ]
+        },
+        {
+          "id": "0311d56d76fe4128874102a474029714cc74",
+          "parentId": "5e80243080a7f85f2682f271679c98050ae3",
+          "kind": "lesson",
+          "title": "Cells Work Together in Tissues and Organs",
+          "description": "Define a tissue as an organized group of cells working together and an organ as a structure containing different tissues that perform related jobs. Use heart muscle cells, heart muscle tissue, and the heart as a zoom-out example. Clarify that single-celled organisms do not have tissues or organs.",
+          "prerequisites": [
+            "f43385a57dee4cf4764d27926150c0e72a94"
+          ]
+        },
+        {
+          "id": "23a2f99361f93db60e1c779e282da1e23abc",
+          "parentId": "5e80243080a7f85f2682f271679c98050ae3",
+          "kind": "lesson",
+          "title": "Organ Systems Support a Whole Organism",
+          "description": "Define an organ system as a group of organs working together. Trace heart to circulatory system to person, explaining that this system moves blood around the body. Describe nested boxes labeled cell, tissue, organ, organ system, and organism. Present this as a common pattern in complex many-celled organisms, not a requirement for all life.",
+          "prerequisites": [
+            "0311d56d76fe4128874102a474029714cc74"
+          ]
+        },
+        {
+          "id": "78d25432734487272818604c11452bcc978d",
+          "parentId": "5e80243080a7f85f2682f271679c98050ae3",
+          "kind": "lesson",
+          "title": "Organisms Form Populations and Communities",
+          "description": "Introduce species as a group of similar organisms belonging to a shared biological lineage, leaving detailed classification for later. Define a population as members of one species living in an area and a community as the populations of different species there. Picture one frog, the frogs of that species in a pond, and the pond's frogs, plants, and other organisms.",
+          "prerequisites": [
+            "23a2f99361f93db60e1c779e282da1e23abc"
+          ]
+        },
+        {
+          "id": "e3af1869b009fee2634c8cd21a096a29cbd2",
+          "parentId": "5e80243080a7f85f2682f271679c98050ae3",
+          "kind": "lesson",
+          "title": "An Ecosystem Includes Nonliving Surroundings",
+          "description": "Define an ecosystem as a community and the nonliving surroundings with which it interacts. Add water, sunlight, air, and soil to the pond picture. Build a visual sequence from cell to organism to population to community to ecosystem, noting that the levels describe different scales rather than a ranking of importance.",
+          "prerequisites": [
+            "78d25432734487272818604c11452bcc978d"
+          ]
+        },
+        {
+          "id": "fc25f7704e4ad8df04da77ffba4e52abda2a",
+          "parentId": "5e80243080a7f85f2682f271679c98050ae3",
+          "kind": "lesson",
+          "title": "Optional Check: Choosing the Right Scale",
+          "description": "Offer a brief multiple-choice check: Which description refers to an ecosystem? A) All frogs of one species in a pond. B) All living populations in the pond. C) The pond's living populations together with water, light, and other nonliving surroundings. Answer: C. Explain that A describes a population and B describes a community.",
+          "prerequisites": [
+            "e3af1869b009fee2634c8cd21a096a29cbd2"
+          ]
+        },
+        {
+          "id": "bb0788ed2149a80f74091828b60e48f8b66d",
+          "parentId": "f499e98b-c0cb-458d-82d7-da332f98ecc0",
+          "kind": "topic",
+          "title": "The Connections That Keep Life Going",
+          "description": "Connect cells, whole organisms, and environments through materials, energy, information, and responses. Keep explanations at overview level to prepare for later modules without requiring chemistry knowledge.",
+          "prerequisites": [
+            "e3af1869b009fee2634c8cd21a096a29cbd2"
+          ]
+        },
+        {
+          "id": "4e29a5582e8e50020fcb13c339fd3d3489e8",
+          "parentId": "bb0788ed2149a80f74091828b60e48f8b66d",
+          "kind": "lesson",
+          "title": "Living Things Need Both Materials and Energy",
+          "description": "Define matter as anything that has mass and takes up space, including air and water. Distinguish materials used to build and maintain living things from energy used to power activities. Explain that a plant uses sunlight as an energy source and takes in water and carbon dioxide, a gas in air, as materials. Animals obtain materials and usable energy from food. Do not introduce chemical equations.",
+          "prerequisites": [
+            "a2ceb30ac6a07a9f9e4627b266300e2e2e92",
+            "e3af1869b009fee2634c8cd21a096a29cbd2"
+          ]
+        },
+        {
+          "id": "228469e68a4680f06266e2a9bf9aa9eb503b",
+          "parentId": "bb0788ed2149a80f74091828b60e48f8b66d",
+          "kind": "lesson",
+          "title": "Boundaries Allow Controlled Exchange",
+          "description": "Define the cell membrane as the thin boundary surrounding a cell. Explain that it helps control what enters and leaves, rather than sealing the cell off completely. Introduce homeostasis as regulation that keeps internal conditions within workable ranges. Use sweating when hot as a whole-organism example, while reserving membrane transport mechanisms for later study.",
+          "prerequisites": [
+            "4e29a5582e8e50020fcb13c339fd3d3489e8"
+          ]
+        },
+        {
+          "id": "4c6431caa618fcb7e12b7ba5a619111e1d58",
+          "parentId": "bb0788ed2149a80f74091828b60e48f8b66d",
+          "kind": "lesson",
+          "title": "Living Systems Use Inherited Information",
+          "description": "Introduce DNA as a substance that stores inherited biological information and genes as sections of DNA that contribute to how cells function. Explain that this information helps guide growth, maintenance, and reproduction. Compare it cautiously to a set of instructions, noting that surroundings also influence how organisms develop. Leave molecular structure and inheritance patterns for later modules.",
+          "prerequisites": [
+            "f43385a57dee4cf4764d27926150c0e72a94",
+            "a2ceb30ac6a07a9f9e4627b266300e2e2e92"
+          ]
+        },
+        {
+          "id": "e544a9cfa73e552a79bba77397a917a3170c",
+          "parentId": "bb0788ed2149a80f74091828b60e48f8b66d",
+          "kind": "lesson",
+          "title": "One Seedling Connects the Main Ideas",
+          "description": "Follow a seedling as an integrated example: its cells use inherited information, its roots take in water, and its leaves capture light energy to help make sugars used for growth and other activities. Explain that plants also release usable energy from sugars. Describe arrows linking cells, roots and leaves, the whole plant, and its surroundings. Treat this as an overview, not a detailed account of photosynthesis.",
+          "prerequisites": [
+            "4e29a5582e8e50020fcb13c339fd3d3489e8",
+            "228469e68a4680f06266e2a9bf9aa9eb503b",
+            "4c6431caa618fcb7e12b7ba5a619111e1d58"
+          ]
+        },
+        {
+          "id": "d4daf1722d9d5d83f5e679b3941d908c106d",
+          "parentId": "bb0788ed2149a80f74091828b60e48f8b66d",
+          "kind": "lesson",
+          "title": "Optional Check: Connecting Cells and Environments",
+          "description": "Offer a brief multiple-choice check: Which statement best describes a living cell? A) It is sealed off from its surroundings. B) It exchanges materials through a controlled boundary and uses energy to carry out activities. C) It needs energy but no materials. Answer: B. Explain that cells need both materials and energy, and their boundaries allow regulated exchange. Invite a review of the seedling picture without treating a response as proof of mastery.",
+          "prerequisites": [
+            "e544a9cfa73e552a79bba77397a917a3170c"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "The Chemistry Needed for Biology",
+      "nodes": [
+        {
+          "id": "828d4617-ed35-4a07-a85f-46114bc1ab1d",
+          "kind": "module",
+          "title": "The Chemistry Needed for Biology",
+          "description": "Introduce just enough chemistry to explain what living things are made of and how their materials interact.",
+          "prerequisites": [
+            "f499e98b-c0cb-458d-82d7-da332f98ecc0"
+          ]
+        },
+        {
+          "id": "43275664018571a19a0a9e29949a4a65606d",
+          "parentId": "828d4617-ed35-4a07-a85f-46114bc1ab1d",
+          "kind": "topic",
+          "title": "From Matter to Molecules",
+          "description": "Introduce the small building blocks of living materials using air, water, and food. Define each new term before using it.",
+          "prerequisites": [
+            "f499e98b-c0cb-458d-82d7-da332f98ecc0"
+          ]
+        },
+        {
+          "id": "7ccbe2bf47e5647cc380f2743a8093f3e5ba",
+          "parentId": "43275664018571a19a0a9e29949a4a65606d",
+          "kind": "concept",
+          "title": "Matter Is Not Energy",
+          "description": "Define matter as anything that has mass and takes up space, including invisible gases. Describe energy as the capacity to cause change. Contrast the water and air a plant takes in with the light energy it receives.",
+          "prerequisites": []
+        },
+        {
+          "id": "941724dda470be4055ab9e5977e209ef1530",
+          "parentId": "43275664018571a19a0a9e29949a4a65606d",
+          "kind": "concept",
+          "title": "Atoms and Elements",
+          "description": "Describe atoms as tiny units of matter and an element as a substance made of one kind of atom. Introduce carbon, hydrogen, oxygen, and nitrogen as common elements in living things without requiring periodic-table memorization.",
+          "prerequisites": [
+            "7ccbe2bf47e5647cc380f2743a8093f3e5ba"
+          ]
+        },
+        {
+          "id": "5a830725a50688ef7e084d8345efbcd17288",
+          "parentId": "43275664018571a19a0a9e29949a4a65606d",
+          "kind": "concept",
+          "title": "Bonds Join Atoms into Molecules",
+          "description": "Define a chemical bond as an attraction that holds atoms together. Explain that sharing electrons, tiny negatively charged parts of atoms, can form molecules. Use water and carbon dioxide to show how formulas record atom types and numbers.",
+          "prerequisites": [
+            "941724dda470be4055ab9e5977e209ef1530"
+          ]
+        },
+        {
+          "id": "b0ef95793210c855dd41286afae9680c44f4",
+          "parentId": "43275664018571a19a0a9e29949a4a65606d",
+          "kind": "lesson",
+          "title": "Topic Check: Materials and Their Building Blocks",
+          "description": "Offer short multiple-choice questions distinguishing matter from energy, atoms from molecules, and elements from combinations of elements. Explain each answer using water, air, or a growing plant.",
+          "prerequisites": [
+            "7ccbe2bf47e5647cc380f2743a8093f3e5ba",
+            "941724dda470be4055ab9e5977e209ef1530",
+            "5a830725a50688ef7e084d8345efbcd17288"
+          ]
+        },
+        {
+          "id": "176d4944cb1e8dc960deee35722b9d2c2fea",
+          "parentId": "828d4617-ed35-4a07-a85f-46114bc1ab1d",
+          "kind": "topic",
+          "title": "Chemical Reactions Rearrange Materials",
+          "description": "Explain what changes and what stays the same in a chemical reaction, then connect reactions with energy transfers.",
+          "prerequisites": [
+            "5a830725a50688ef7e084d8345efbcd17288"
+          ]
+        },
+        {
+          "id": "66c8b9eefbb27ca606b2d0d5638c23755e3a",
+          "parentId": "176d4944cb1e8dc960deee35722b9d2c2fea",
+          "kind": "concept",
+          "title": "The Same Atoms, New Combinations",
+          "description": "Define reactants as starting substances and products as resulting substances. Use a simple particle picture of hydrogen and oxygen forming water to show bonds changing while each kind of atom is conserved. Do not require equation balancing.",
+          "prerequisites": [
+            "5a830725a50688ef7e084d8345efbcd17288"
+          ]
+        },
+        {
+          "id": "5998f9e45741ea100fcd3a671bde3fec61b1",
+          "parentId": "176d4944cb1e8dc960deee35722b9d2c2fea",
+          "kind": "concept",
+          "title": "Reactions Transfer Energy",
+          "description": "Explain that breaking bonds requires energy and forming bonds releases energy. The overall rearrangement determines whether a reaction releases or requires energy. Use food reacting with oxygen as an example, emphasizing that matter does not turn into energy in ordinary biological reactions.",
+          "prerequisites": [
+            "66c8b9eefbb27ca606b2d0d5638c23755e3a",
+            "7ccbe2bf47e5647cc380f2743a8093f3e5ba"
+          ]
+        },
+        {
+          "id": "d2c0c1a329cf5f3c506a50fbe277de2c737b",
+          "parentId": "176d4944cb1e8dc960deee35722b9d2c2fea",
+          "kind": "lesson",
+          "title": "Topic Check: Follow the Atoms and Energy",
+          "description": "Use multiple-choice questions to identify reactants and products, track atoms through a simple diagram, and distinguish material inputs from energy inputs. Address the misconception that atoms disappear when a reaction releases energy.",
+          "prerequisites": [
+            "66c8b9eefbb27ca606b2d0d5638c23755e3a",
+            "5998f9e45741ea100fcd3a671bde3fec61b1"
+          ]
+        },
+        {
+          "id": "84e5b241ec30bd7c5bc8a13514ae6091ae25",
+          "parentId": "828d4617-ed35-4a07-a85f-46114bc1ab1d",
+          "kind": "topic",
+          "title": "Water, Dissolved Substances, and Acidity",
+          "description": "Use salt water, sugar water, oil, and familiar acidic liquids to introduce the watery surroundings in which much of life's chemistry occurs.",
+          "prerequisites": [
+            "5a830725a50688ef7e084d8345efbcd17288"
+          ]
+        },
+        {
+          "id": "6e84b8bfe5f5d74d4be55f4fb3927dd5dd57",
+          "parentId": "84e5b241ec30bd7c5bc8a13514ae6091ae25",
+          "kind": "concept",
+          "title": "Why Water Interacts with Many Substances",
+          "description": "Explain that water has slightly positive and slightly negative regions, a property called polarity. These regions attract nearby water molecules and many other substances. Introduce hydrogen bonds as weak attractions between water molecules, distinct from the bonds within each molecule.",
+          "prerequisites": [
+            "5a830725a50688ef7e084d8345efbcd17288"
+          ]
+        },
+        {
+          "id": "2828847f995fa25e649275e6e206c1455bd8",
+          "parentId": "84e5b241ec30bd7c5bc8a13514ae6091ae25",
+          "kind": "concept",
+          "title": "Dissolving Does Not Mean Disappearing",
+          "description": "Define a solution as a uniform mixture, a solvent as the dissolving liquid, and a solute as the dissolved substance. Contrast sugar molecules spreading through water with salt separating into ions, which are electrically charged atoms or groups of atoms. Define concentration as how much solute is present in a given amount of solution.",
+          "prerequisites": [
+            "6e84b8bfe5f5d74d4be55f4fb3927dd5dd57"
+          ]
+        },
+        {
+          "id": "37f5d64447c59554c509ea3cdf9c585c8685",
+          "parentId": "84e5b241ec30bd7c5bc8a13514ae6091ae25",
+          "kind": "concept",
+          "title": "Why Oil and Water Separate",
+          "description": "Explain that nonpolar substances such as oils lack water-like charged regions and do not mix readily with water. Connect this contrast to why some biological materials can form boundaries without introducing membrane transport mechanisms.",
+          "prerequisites": [
+            "6e84b8bfe5f5d74d4be55f4fb3927dd5dd57",
+            "2828847f995fa25e649275e6e206c1455bd8"
+          ]
+        },
+        {
+          "id": "f250a8528851a405e412ad4a8e0c5f95cc43",
+          "parentId": "84e5b241ec30bd7c5bc8a13514ae6091ae25",
+          "kind": "concept",
+          "title": "Acids, Bases, and the pH Scale",
+          "description": "Introduce pH as a measure related to hydrogen ions in water. Describe acidic solutions as below pH 7, neutral water as about pH 7, and basic solutions as above pH 7 under ordinary conditions. Use lemon juice and baking-soda solution as examples, noting that pH changes can affect biological molecules and that buffers help resist those changes.",
+          "prerequisites": [
+            "2828847f995fa25e649275e6e206c1455bd8"
+          ]
+        },
+        {
+          "id": "7efffd8d9f34f0729cb4c2ace723befaad1e",
+          "parentId": "84e5b241ec30bd7c5bc8a13514ae6091ae25",
+          "kind": "lesson",
+          "title": "Topic Check: Reasoning About Watery Mixtures",
+          "description": "Offer multiple-choice questions about dissolved sugar, salt ions, concentration, separated oil, and everyday pH values. Provide explanations that distinguish dissolving from atom destruction and acidity from temperature.",
+          "prerequisites": [
+            "2828847f995fa25e649275e6e206c1455bd8",
+            "37f5d64447c59554c509ea3cdf9c585c8685",
+            "f250a8528851a405e412ad4a8e0c5f95cc43"
+          ]
+        },
+        {
+          "id": "cd6e99088f153035068f9f10acdfc049cb77",
+          "parentId": "828d4617-ed35-4a07-a85f-46114bc1ab1d",
+          "kind": "topic",
+          "title": "The Main Molecules of Living Things",
+          "description": "Survey carbohydrates, fats and related lipids, proteins, and DNA by their broad jobs. Use food and cell examples rather than chemical-structure memorization.",
+          "prerequisites": [
+            "5998f9e45741ea100fcd3a671bde3fec61b1",
+            "37f5d64447c59554c509ea3cdf9c585c8685"
+          ]
+        },
+        {
+          "id": "2efc35d311fb610a1b34a53bc76119c3b316",
+          "parentId": "cd6e99088f153035068f9f10acdfc049cb77",
+          "kind": "concept",
+          "title": "Carbohydrates: Fuel, Storage, and Structure",
+          "description": "Introduce sugars and chains of sugar units as carbohydrates. Compare glucose as a fuel, starch as plant storage material, and cellulose as structural material in plant cell walls. Explain that similar building blocks can produce materials with different properties.",
+          "prerequisites": [
+            "5a830725a50688ef7e084d8345efbcd17288",
+            "5998f9e45741ea100fcd3a671bde3fec61b1"
+          ]
+        },
+        {
+          "id": "8c12fbeecb6bb8afa012f73a4b967381b457",
+          "parentId": "cd6e99088f153035068f9f10acdfc049cb77",
+          "kind": "concept",
+          "title": "Fats and Related Lipids",
+          "description": "Describe lipids as a group of substances that generally mix poorly with water. Distinguish fats used for long-term energy storage from phospholipids used in cell boundaries. Introduce phospholipids as having a water-interacting region and water-avoiding tails, without requiring structural formulas.",
+          "prerequisites": [
+            "37f5d64447c59554c509ea3cdf9c585c8685",
+            "5998f9e45741ea100fcd3a671bde3fec61b1"
+          ]
+        },
+        {
+          "id": "1ebc73a9280c13476591c564c0c3787e6503",
+          "parentId": "cd6e99088f153035068f9f10acdfc049cb77",
+          "kind": "concept",
+          "title": "Proteins: Shape Supports Function",
+          "description": "Describe proteins as chains of smaller units called amino acids that fold into shapes. Introduce roles in structure, transport, and chemical reactions. Define enzymes as biological catalysts, usually proteins, that speed reactions without being used up overall, and explain that pH can affect protein shape and activity.",
+          "prerequisites": [
+            "66c8b9eefbb27ca606b2d0d5638c23755e3a",
+            "f250a8528851a405e412ad4a8e0c5f95cc43"
+          ]
+        },
+        {
+          "id": "c055337a2b149cd99f3fc3620e08da820170",
+          "parentId": "cd6e99088f153035068f9f10acdfc049cb77",
+          "kind": "concept",
+          "title": "DNA: A Molecule That Stores Information",
+          "description": "Introduce DNA as a nucleic acid built from smaller units called nucleotides. Explain that their sequence stores inherited information used by cells, including instructions for making proteins. Distinguish DNA's information-storage role from the fuel and structural roles of other molecules.",
+          "prerequisites": [
+            "5a830725a50688ef7e084d8345efbcd17288",
+            "1ebc73a9280c13476591c564c0c3787e6503"
+          ]
+        },
+        {
+          "id": "046bdb6bf2d5eae6e9963ebf90fffa0f0f1d",
+          "parentId": "cd6e99088f153035068f9f10acdfc049cb77",
+          "kind": "lesson",
+          "title": "Topic Check: Connect Molecules to Their Jobs",
+          "description": "Use multiple-choice scenarios to compare carbohydrate, lipid, protein, and DNA roles. End with a growing seedling example that separates material inputs from energy inputs and connects atom rearrangement, water, and biological molecules. Give explanatory feedback without requiring structure memorization.",
+          "prerequisites": [
+            "2efc35d311fb610a1b34a53bc76119c3b316",
+            "8c12fbeecb6bb8afa012f73a4b967381b457",
+            "1ebc73a9280c13476591c564c0c3787e6503",
+            "c055337a2b149cd99f3fc3620e08da820170"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,232 @@
+.scientific-scene {
+  color: var(--text);
+  font-family: var(--reading-font, "Segoe UI", sans-serif);
+  font-size: 16px;
+}
+.scientific-scene :is(p, strong, button, li) {
+  overflow-wrap: anywhere;
+}
+.scientific-scene .scientific-svg {
+  min-width: 660px;
+}
+.scene-participant,
+.scene-relation {
+  cursor: pointer;
+  outline: none;
+}
+.scene-participant {
+  /* Make the whole participant, including the clear space between symbol and
+     label, one keyboard/pointer target. No painted hitbox covers the artwork. */
+  pointer-events: bounding-box;
+}
+.scene-participant .scene-symbol :is(path, ellipse, circle, rect) {
+  stroke: var(--scene-color);
+  fill: color-mix(in srgb, var(--scene-color) 13%, var(--figure));
+  stroke-width: 3;
+}
+.scene-participant
+  .scene-symbol
+  :is(
+    .scene-dna path,
+    .scene-rna path,
+    .scene-source path,
+    .scene-cell path,
+    .scene-barrier path,
+    .scene-complex path,
+    .scene-compartment path
+  ) {
+  fill: none;
+}
+.scene-participant .scene-symbol .scene-focus-ring {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2;
+  stroke-dasharray: 5 5;
+  opacity: 0;
+}
+.scene-participant.is-active .scene-symbol .scene-focus-ring {
+  opacity: 0.6;
+}
+.scene-participant.is-selected .scene-symbol .scene-focus-ring,
+.scene-participant:focus-visible .scene-symbol .scene-focus-ring {
+  stroke: var(--science-trna, var(--accent));
+  stroke-width: 3;
+  stroke-dasharray: none;
+  opacity: 1;
+}
+.scene-participant.is-active
+  .scene-symbol
+  :is(path, ellipse, circle, rect):not(.scene-focus-ring) {
+  stroke-width: 4.5;
+}
+.scene-participant.is-selected .scene-label,
+.scene-participant:focus-visible .scene-label {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.scene-dna,
+.scene-complex {
+  --scene-color: var(--science-ribosome, #7950bf);
+}
+.scene-rna,
+.scene-cell,
+.scene-barrier {
+  --scene-color: var(--science-rna, #2563eb);
+}
+.scene-protein,
+.scene-source {
+  --scene-color: var(--science-amino, #bf5a3e);
+}
+.scene-particle,
+.scene-compartment {
+  --scene-color: var(--science-trna, #0f8178);
+}
+.scene-label {
+  fill: var(--text);
+  font-size: 22px;
+  font-weight: 600;
+}
+.scene-relation path {
+  fill: none;
+  stroke: var(--text);
+  stroke-width: 2.5;
+}
+.scene-regulation path {
+  stroke-dasharray: 6 5;
+}
+.scene-edge-reference {
+  font-size: 22px;
+  font-weight: 650;
+  fill: var(--text);
+}
+.scene-relation.is-active path,
+.scene-relation.is-selected path,
+.scene-relation:focus-visible path {
+  stroke: var(--science-trna, var(--accent));
+  stroke-width: 4;
+}
+.scene-relation.is-selected .scene-edge-reference,
+.scene-relation:focus-visible .scene-edge-reference {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.is-playing .scene-relation.is-active path {
+  stroke-dasharray: 8 6;
+  animation: scene-flow 1.2s linear infinite;
+}
+@keyframes scene-flow {
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+.scene-playback {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 12px 16px;
+}
+.scene-playback button {
+  font: inherit;
+  padding: 7px 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 7px;
+  cursor: pointer;
+}
+.scene-playback button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.scene-step,
+.scene-inspector,
+.scene-relationship-key,
+.scene-assumption {
+  margin: 12px 16px;
+  line-height: 1.6;
+}
+.scene-inspector {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--science-trna, var(--accent));
+  border-radius: 8px;
+  background: var(--surface);
+}
+.scene-inspector p {
+  margin: 5px 0;
+}
+.scene-relationship-key {
+  padding-left: 22px;
+}
+.scene-relationship-key li {
+  padding: 3px 0;
+}
+.scene-relationship-key button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--link, var(--text));
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  text-align: left;
+  max-width: 100%;
+}
+.scene-relationship-key li.is-selected {
+  font-weight: 650;
+}
+.scene-assumption {
+  color: var(--secondary, var(--text));
+  font-size: 14px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .is-playing .scene-relation.is-active path {
+    animation: none;
+  }
+}
+
+.scene-protein path,
+.scene-field path,
+.scene-fermion path,
+.scene-gluon path {
+  fill: none !important;
+}
+.scene-field,
+.scene-fermion {
+  --scene-color: var(--science-rna, #2563eb);
+}
+.scene-gluon {
+  --scene-color: var(--science-ribosome, #8b5cf6);
+}
+.scene-inspector {
+  margin-top: 0;
+  border-radius: 0;
+  border-inline: none;
+  border-top: none;
+  background: color-mix(in srgb, var(--accent) 4%, var(--figure));
+  font-size: 14px;
+}
+.scene-inspector > p:first-child {
+  margin: 0;
+}
+.scene-relationship-details {
+  margin: 14px 18px;
+  font-size: 14px;
+}
+.scene-relationship-details summary {
+  cursor: pointer;
+  color: var(--link, var(--text));
+}
+.scene-participant.is-active .scene-symbol .scene-focus-ring {
+  opacity: 0;
+}
+.scene-participant.is-active .scene-label {
+  font-weight: 750;
+}
+
+.scene-participant.is-selected .scene-symbol .scene-focus-ring,
+.scene-participant:focus-visible .scene-symbol .scene-focus-ring {
+  opacity: 1;
+}

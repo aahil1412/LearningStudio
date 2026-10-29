@@ -1,0 +1,671 @@
+.connected-graph {
+  --graph-concept: color-mix(in srgb, #8a73ce 78%, var(--text));
+  --graph-lesson: color-mix(in srgb, #3687b4 78%, var(--text));
+  --graph-note: color-mix(in srgb, #b9832f 78%, var(--text));
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  padding: 24px;
+  gap: 0;
+}
+.connected-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.connected-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.connected-title > svg {
+  color: var(--accent);
+}
+.connected-toolbar h2 {
+  font: 650 23px/1.25 var(--ui-font);
+  letter-spacing: -0.45px;
+  margin: 0;
+}
+.connected-title p {
+  color: var(--secondary);
+  font: 13px/1.5 var(--ui-font);
+  margin: 4px 0 0;
+}
+.connected-toolbar nav {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.connected-toolbar nav button {
+  border: 0;
+  background: transparent;
+  padding: 8px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+.connected-toolbar nav button.active {
+  background: var(--selected);
+  color: var(--heading);
+}
+.connected-searchbar {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.connected-searchbar > button,
+.connected-searchbar > select {
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  font: 13px var(--ui-font);
+}
+.connected-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex: 1;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 0 11px;
+  min-width: 150px;
+}
+.connected-search > svg {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+.connected-search input {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+  font: 14px var(--ui-font);
+  padding: 10px 0;
+  color: var(--text);
+}
+.connected-search > button {
+  padding: 2px;
+  border: 0;
+  background: transparent;
+}
+.connected-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 36px;
+  font: 12px/1.5 var(--ui-font);
+  color: var(--secondary);
+}
+.connected-active-filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0 0 10px;
+}
+.connected-active-filters button {
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  padding: 5px 8px;
+  background: var(--selected);
+  border-color: var(--border);
+  font-size: 12px;
+}
+.connected-body {
+  display: flex;
+  gap: 14px;
+  flex: 1;
+  min-height: 0;
+}
+.connected-filter-panel {
+  width: 218px;
+  flex-shrink: 0;
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  scrollbar-width: thin;
+}
+.connected-panel-section {
+  padding: 14px;
+  border-bottom: 1px solid var(--divider, var(--border));
+}
+.connected-panel-section h3 {
+  font-size: 14px;
+  font-weight: 650;
+  margin: 0 0 12px;
+}
+.connected-panel-section h4 {
+  font-size: 12px;
+  font-weight: 650;
+  margin: 15px 0 8px;
+}
+.connected-panel-section summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font: 600 13px var(--ui-font);
+  list-style: none;
+}
+.connected-panel-section summary::-webkit-details-marker {
+  display: none;
+}
+.connected-panel-section > p {
+  font: 12px/1.5 var(--ui-font);
+  color: var(--secondary);
+  margin: 9px 0;
+}
+.connected-panel-section > label,
+.connected-relations > label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font: 12px/1.6 var(--ui-font);
+  margin-top: 10px;
+}
+.connected-panel-section > label:has(select) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 5px;
+}
+.connected-panel-section select {
+  min-width: 0;
+  max-width: 100%;
+  width: 100%;
+  font-size: 12px;
+  padding: 7px 6px;
+  color: var(--text);
+  background: var(--input);
+}
+.connected-panel-section > button {
+  width: 100%;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.connected-select-label {
+  font: 12px var(--ui-font);
+  color: var(--secondary);
+}
+.connected-select-label select {
+  margin-top: 5px;
+}
+.connected-kind-filters {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.connected-kind-filters label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font: 13px var(--ui-font);
+  padding: 5px 0;
+  cursor: pointer;
+}
+.connected-kind-dot,
+.connected-map-legend i {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.connected-keywords {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+.connected-keywords button {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  padding: 4px 6px;
+  font: 12px var(--ui-font);
+  background: var(--figure);
+}
+.connected-keywords button span {
+  font-size: 10px;
+  color: var(--secondary);
+}
+.connected-keywords button[aria-pressed="true"] {
+  background: var(--selected);
+  border-color: var(--accent);
+  color: var(--heading);
+}
+.connected-keyword-form {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0;
+}
+.connected-keyword-form input {
+  min-width: 0;
+  flex: 1;
+  font-size: 12px;
+  padding: 7px;
+}
+.connected-keyword-form button {
+  padding: 5px 7px;
+  font-size: 12px;
+}
+.connected-relations > label {
+  align-items: flex-start;
+}
+.connected-relations > label > span {
+  margin-left: auto;
+  color: var(--secondary);
+  font-size: 11px;
+}
+.connected-node-list {
+  display: flex;
+  flex-direction: column;
+}
+.connected-node-list > button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-align: left;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--border) 50%, transparent);
+  background: transparent;
+}
+.connected-node-list > button:hover {
+  background: var(--hover);
+}
+.connected-node-list > button.selected {
+  background: var(--selected);
+  box-shadow: inset 3px 0 var(--accent);
+}
+.connected-node-list > button > span:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+}
+.connected-node-list strong {
+  display: block;
+  font: 500 12px/1.4 var(--ui-font);
+  overflow-wrap: anywhere;
+}
+.connected-node-list small {
+  display: block;
+  font: 11px/1.4 var(--ui-font);
+  color: var(--secondary);
+  margin-top: 2px;
+}
+.connected-degree {
+  font: 11px var(--ui-font);
+  color: var(--secondary);
+}
+.connected-flow {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--figure);
+  min-height: 350px;
+}
+.connected-dot-node {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: grab;
+}
+.connected-dot {
+  display: block;
+  width: var(--node-size, 18px);
+  height: var(--node-size, 18px);
+  border-radius: 50%;
+  background: var(--node-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--node-color) 8%, transparent);
+  transition:
+    box-shadow 0.15s,
+    opacity 0.15s;
+}
+.connected-dot-node .react-flow__handle {
+  left: 50%;
+  right: auto;
+  top: 50%;
+  opacity: 0;
+  border: 0;
+  pointer-events: none;
+}
+.connected-dot-caption {
+  position: absolute;
+  left: calc(50% + var(--node-size) / 2 + 7px);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  max-width: 165px;
+  opacity: 0;
+  pointer-events: none;
+  color: var(--text);
+  text-align: left;
+}
+.connected-dot-caption strong {
+  font: 500 13px/1.3 var(--ui-font);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow:
+    0 1px var(--figure),
+    1px 0 var(--figure),
+    -1px 0 var(--figure),
+    0 -1px var(--figure);
+}
+.connected-dot-node.show-label .connected-dot-caption,
+.connected-dot-node:hover .connected-dot-caption,
+.connected-dot-node.is-active .connected-dot-caption,
+.react-flow__node:focus-visible .connected-dot-caption {
+  opacity: 1;
+}
+.connected-dot-node.is-active .connected-dot,
+.react-flow__node:focus-visible .connected-dot {
+  box-shadow:
+    0 0 0 4px color-mix(in srgb, var(--node-color) 22%, transparent),
+    0 0 0 6px var(--node-color);
+}
+.connected-dot-node.is-dimmed {
+  opacity: 0.28;
+}
+.connected-dot-node:hover {
+  opacity: 1;
+  z-index: 4;
+}
+.connected-map-legend {
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: color-mix(in srgb, var(--figure) 94%, transparent);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 10px;
+  pointer-events: none;
+}
+.connected-map-legend > span {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font: 11px var(--ui-font);
+  color: var(--secondary);
+}
+.connected-suggestion-key:before {
+  content: "";
+  display: block;
+  width: 20px;
+  border-top: 1px dashed var(--secondary);
+}
+.connected-inspector {
+  width: 302px;
+  flex-shrink: 0;
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px;
+  scrollbar-width: thin;
+}
+.connected-close {
+  float: right;
+  padding: 4px;
+  border: 0;
+  background: transparent;
+}
+.connected-type-badge {
+  display: inline-block;
+  font: 600 10px var(--ui-font);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  border-radius: 4px;
+  padding: 4px 6px;
+  background: var(--selected);
+  color: var(--secondary);
+}
+.connected-inspector h3 {
+  font: 650 22px/1.25 var(--ui-font);
+  letter-spacing: -0.45px;
+  margin: 13px 0 6px;
+  overflow-wrap: anywhere;
+}
+.connected-subject-name {
+  color: var(--secondary);
+  font: 12px/1.5 var(--ui-font);
+  margin: 0 0 18px;
+}
+.connected-inspector p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font: 14px/1.6 var(--reading-font, var(--ui-font));
+}
+.connected-definition {
+  margin-bottom: 16px;
+}
+.connected-node-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.connected-node-actions button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 8px;
+  font: 12px var(--ui-font);
+}
+.connected-evidence {
+  border-left: 2px solid var(--accent);
+  padding-left: 10px;
+  margin: 17px 0;
+}
+.connected-inspector h4 {
+  font: 650 13px var(--ui-font);
+  margin: 17px 0 9px;
+}
+.connected-inspector h4 > span {
+  font-size: 11px;
+  color: var(--secondary);
+}
+.connected-evidence p {
+  color: var(--secondary);
+  font-size: 13px;
+  margin: 8px 0;
+}
+.connected-backlink {
+  padding: 13px 0;
+  border-top: 1px solid var(--divider, var(--border));
+}
+.connected-backlink > div:first-child {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.connected-backlink > div:first-child > svg {
+  color: var(--secondary);
+  flex-shrink: 0;
+}
+.connected-backlink > div:first-child > button {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  text-align: left;
+  font: 600 13px/1.45 var(--ui-font);
+  color: var(--link, var(--accent));
+}
+.connected-backlink.is-selected {
+  background: var(--selected);
+  margin-inline: -9px;
+  padding-inline: 9px;
+}
+.connected-backlink > small {
+  display: block;
+  font: 11px var(--ui-font);
+  color: var(--secondary);
+  margin: 6px 0;
+  text-transform: capitalize;
+}
+.connected-backlink > p {
+  font: 12px/1.55 var(--ui-font);
+  margin: 7px 0;
+  color: var(--secondary);
+}
+.connected-backlink > button {
+  font-size: 11px;
+  padding: 5px 7px;
+  margin: 5px 4px 0 0;
+}
+.connected-source-reference {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.connected-review-actions {
+  display: flex;
+  gap: 6px;
+  margin-top: 9px;
+}
+.connected-review-actions button {
+  font-size: 11px;
+  padding: 6px 7px;
+}
+.connected-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  text-align: center;
+  pointer-events: none;
+}
+.connected-empty button {
+  pointer-events: auto;
+}
+.connected-empty p {
+  max-width: 380px;
+  line-height: 1.7;
+  font-size: 14px;
+  color: var(--secondary);
+}
+.connected-empty h3 {
+  font-size: 20px;
+  margin: 15px 0 0;
+}
+.connected-help {
+  font: 11px/1.5 var(--ui-font);
+  color: var(--secondary);
+  margin: 10px 0 0;
+}
+.connected-graph .react-flow__controls {
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px #0001;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.connected-graph .react-flow__controls-button {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+.connected-graph .react-flow__controls-button svg {
+  fill: currentColor;
+}
+.connected-graph .react-flow__minimap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+}
+@media (max-width: 1250px) {
+  .connected-filter-panel {
+    width: 190px;
+  }
+  .connected-inspector {
+    width: 270px;
+    padding: 15px;
+  }
+  .connected-graph {
+    padding: 18px;
+  }
+  .connected-toolbar nav button {
+    font-size: 11px;
+    padding: 7px 8px;
+  }
+}
+@media (max-width: 1000px) {
+  .connected-body {
+    flex-wrap: wrap;
+    overflow: auto;
+  }
+  .connected-filter-panel {
+    width: 180px;
+    max-height: 500px;
+  }
+  .connected-flow {
+    min-width: 300px;
+    min-height: 440px;
+  }
+  .connected-inspector {
+    width: 100%;
+    max-height: 350px;
+  }
+  .connected-map-legend {
+    gap: 10px;
+  }
+  .connected-toolbar {
+    margin-bottom: 14px;
+  }
+  .connected-title p {
+    display: none;
+  }
+  .connected-status {
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .connected-dot {
+    transition: none;
+  }
+}
+
+.connected-derived-note {
+  border-left: 2px solid var(--border);
+  padding-left: 10px;
+  color: var(--secondary);
+  font-size: 13px !important;
+}
+.connected-derived-note > button {
+  display: block;
+  margin-top: 8px;
+  font: 12px var(--ui-font);
+  padding: 6px 9px;
+}

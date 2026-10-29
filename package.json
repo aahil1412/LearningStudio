@@ -1,0 +1,112 @@
+{
+  "name": "learning-studio",
+  "version": "2.4.0",
+  "private": true,
+  "description": "An independent, customizable desktop workspace for learning",
+  "author": "Learning Studio contributors",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist-electron/main.cjs",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "dev:desktop": "node scripts/dev.mjs",
+    "build:electron": "node scripts/build-electron.mjs",
+    "build": "tsc --noEmit && vite build && node scripts/build-export.mjs && npm run build:electron",
+    "start": "electron .",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src electron tests --max-warnings 0",
+    "test": "node scripts/test.mjs",
+    "test:e2e": "playwright test",
+    "package": "npm run build && electron-builder --win nsis --x64",
+    "package:dir": "npm run build && electron-builder --win dir --x64",
+    "postinstall": "electron-builder install-app-deps",
+    "package:signed": "npm run build && node scripts/package-signed.mjs"
+  },
+  "dependencies": {
+    "@rdkit/rdkit": "^2026.9.1",
+    "@xyflow/react": "^12.10.0",
+    "3dmol": "^2.5.3",
+    "better-sqlite3": "^13.0.3",
+    "d3-contour": "^4.0.2",
+    "d3-scale": "^4.0.2",
+    "d3-shape": "^3.2.0",
+    "electron-updater": "^6.8.11",
+    "fast-xml-parser": "^5.11.2",
+    "gpt-tokenizer": "4.1.0",
+    "jose": "^6.1.3",
+    "katex": "^0.19.1",
+    "lucide-react": "^0.468.0",
+    "ml-matrix": "^6.15.1",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "5.4.296",
+    "plotly.js-basic-dist-min": "^4.1.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-markdown": "^10.1.0",
+    "rehype-katex": "^7.0.1",
+    "remark-gfm": "^4.0.1",
+    "remark-math": "^6.0.0",
+    "tesseract.js": "^7.0.0",
+    "three": "^0.186.1",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@eslint/js": "^9.38.0",
+    "@playwright/test": "^1.56.1",
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/d3-contour": "^3.0.6",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-shape": "^3.2.0",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.1.16",
+    "@types/react-dom": "^19.1.9",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^5.0.4",
+    "electron": "^45.1.0",
+    "electron-builder": "^26.0.12",
+    "esbuild": "^0.25.11",
+    "eslint": "^9.38.0",
+    "prettier": "^3.9.10",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.2",
+    "vite": "^7.1.12",
+    "vitest": "^5.0.5"
+  },
+  "build": {
+    "appId": "org.learningstudio.desktop",
+    "productName": "Learning Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "package.json",
+      "assets/icon.png",
+      "assets/fonts/**/*",
+      "LICENSE",
+      "assets/ocr/**/*",
+      "dist-export/**/*"
+    ],
+    "asarUnpack": [
+      "**/node_modules/**/*",
+      "**/tesseract.js/**",
+      "**/tesseract.js-core/**",
+      "**/@rdkit/rdkit/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico",
+      "signExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    }
+  },
+  "overrides": {
+    "katex": "^0.19.1"
+  }
+}

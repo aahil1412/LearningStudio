@@ -1,0 +1,23 @@
+/* Secondary information remains readable on every preset surface. */
+.new-button span,
+.search-field kbd,
+.sidebar-empty,
+.welcome-footer,
+.reading-end {
+  opacity: 1;
+}
+.new-button span {
+  color: inherit;
+}
+.session-item.active small,
+.preset.active small {
+  color: var(--text);
+}
+.composer-meta .text-button {
+  font-size: 9px;
+  padding: 0;
+}
+.settings-modal:focus,
+.new-session-modal:focus {
+  outline: none;
+}

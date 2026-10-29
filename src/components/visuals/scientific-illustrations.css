@@ -1,0 +1,340 @@
+.scientific-illustration {
+  /* Semantic hues stay distinct even when the interface uses a monochrome
+     custom accent. Mixing with text/figure adapts ink and fill to every theme. */
+  --science-rna: color-mix(in srgb, #2563eb 78%, var(--text));
+  --science-trna: color-mix(in srgb, #0d9488 78%, var(--text));
+  --science-ribosome: color-mix(in srgb, #8b5cf6 78%, var(--text));
+  --science-amino: color-mix(in srgb, #e76f51 78%, var(--text));
+  --science-head: color-mix(in srgb, #3b82f6 78%, var(--text));
+  --science-tail: color-mix(in srgb, #b7791f 78%, var(--text));
+  --science-neutral: color-mix(in srgb, var(--text) 78%, var(--figure));
+  --science-trna-fill: color-mix(
+    in srgb,
+    var(--science-trna) 15%,
+    var(--figure)
+  );
+  font-family: var(--reading-font, var(--ui-font, "Segoe UI", sans-serif));
+  color: var(--text);
+  font-size: 16px;
+}
+.science-viewport {
+  overflow: auto;
+  overscroll-behavior-x: contain;
+  background: var(--figure);
+}
+.scientific-svg {
+  display: block;
+  width: 100%;
+  /* Keep annotations >=16px at the normal reading-column width. A small
+     embedded pane pans instead of making molecular labels microscopic. */
+  min-width: 660px;
+  max-height: none;
+  background: var(--figure);
+  color: var(--science-neutral);
+  font-family: var(--reading-font, var(--ui-font, "Segoe UI", sans-serif));
+}
+.science-label {
+  fill: var(--text);
+  font-size: 24px;
+  font-weight: 600;
+}
+.science-small {
+  fill: var(--text);
+  font-size: 22px;
+}
+.science-base {
+  fill: var(--text);
+  font-size: 26px;
+  font-weight: 650;
+  letter-spacing: 2px;
+}
+.science-ribosome {
+  fill: color-mix(in srgb, var(--science-ribosome) 17%, var(--figure));
+  stroke: var(--science-ribosome);
+  stroke-width: 2.5;
+}
+.science-ribosome-small {
+  fill: color-mix(in srgb, var(--science-ribosome) 29%, var(--figure));
+  stroke: var(--science-ribosome);
+  stroke-width: 2.5;
+}
+.science-site {
+  fill: none;
+  stroke: var(--science-ribosome);
+  stroke-width: 2;
+  stroke-dasharray: 7 5;
+  opacity: 0.65;
+}
+.science-trna {
+  transition: transform 0.3s ease;
+}
+.science-trna-body {
+  fill: var(--science-trna-fill);
+  stroke: var(--science-trna);
+  stroke-width: 5;
+}
+.science-trna-stem {
+  fill: none;
+  stroke: var(--science-trna);
+  stroke-width: 5;
+}
+.science-emphasis .science-trna-body {
+  stroke-width: 6;
+}
+.science-connector,
+.science-axis {
+  fill: none;
+  stroke: var(--science-neutral);
+  stroke-width: 3;
+}
+.science-rna-arrow {
+  stroke: var(--science-rna);
+}
+.science-channel-arrow {
+  stroke: var(--science-trna);
+}
+.science-transfer {
+  fill: none;
+  stroke: var(--science-amino);
+  stroke-width: 4;
+  stroke-dasharray: 8 5;
+}
+.science-leader {
+  fill: none;
+  stroke: var(--science-neutral);
+  stroke-width: 1.8;
+}
+.science-mrna {
+  fill: none;
+  stroke: var(--science-rna);
+  stroke-width: 7;
+}
+.science-codon {
+  fill: color-mix(in srgb, var(--science-rna) 12%, var(--figure));
+  stroke: var(--science-rna);
+  stroke-width: 2;
+}
+.science-pairing path {
+  stroke: var(--science-trna);
+  stroke-width: 2.5;
+  stroke-dasharray: 3 2;
+}
+.science-amino {
+  fill: color-mix(in srgb, var(--science-amino) 32%, var(--figure));
+  stroke: var(--science-amino);
+  stroke-width: 2.5;
+}
+.science-lipid {
+  fill: color-mix(in srgb, var(--science-head) 30%, var(--figure));
+  stroke: var(--science-head);
+  stroke-width: 2;
+}
+.science-lipid-tail {
+  fill: none;
+  stroke: var(--science-tail);
+  stroke-width: 2.5;
+}
+.science-membrane-core {
+  fill: color-mix(in srgb, var(--science-tail) 12%, var(--figure));
+}
+.science-channel {
+  fill: color-mix(in srgb, var(--science-trna) 26%, var(--figure));
+  stroke: var(--science-trna);
+  stroke-width: 3;
+}
+.science-channel-pore {
+  fill: none;
+  stroke: var(--science-trna);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 3;
+}
+.science-oxygen {
+  fill: var(--science-rna);
+}
+.science-solute {
+  fill: var(--science-trna);
+}
+.science-energy {
+  fill: none;
+  stroke: var(--science-amino);
+  stroke-width: 4;
+}
+.science-step-controls {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  border-top: 1px solid var(--border);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.science-step-controls p {
+  flex-basis: 100%;
+  margin: 6px 0 0;
+  color: var(--text);
+}
+.science-step-controls button,
+.science-export button {
+  font: inherit;
+  font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  background: var(--surface);
+  color: var(--text);
+  padding: 7px 12px;
+  cursor: pointer;
+}
+.science-step-controls button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.science-step-controls label {
+  display: block;
+  flex-basis: 100%;
+}
+.science-step-controls input {
+  display: block;
+  width: 100%;
+  accent-color: var(--accent);
+}
+.science-export {
+  padding: 0 16px 14px;
+}
+.science-process-panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 18px;
+  padding: 22px;
+}
+.science-process-panels section {
+  position: relative;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 16px;
+}
+.science-process-panels h5 {
+  font-size: 18px;
+  line-height: 1.4;
+  margin: 10px 0;
+  color: var(--heading);
+}
+.science-process-panels p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 10px 0;
+}
+.science-process-panels svg {
+  height: 26px;
+  width: 80px;
+  float: right;
+}
+.science-process-index {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  background: color-mix(in srgb, var(--accent) 18%, var(--surface));
+  color: var(--text);
+  border-radius: 50%;
+  font-weight: 650;
+}
+.science-process-panels .science-process-active {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+@media (prefers-reduced-motion: reduce) {
+  .science-trna {
+    transition: none;
+  }
+}
+
+.science-residue {
+  fill: var(--text);
+  font-size: 22px;
+  font-weight: 600;
+}
+.science-base-attachment {
+  fill: none;
+  stroke: var(--science-trna);
+  stroke-width: 2;
+}
+.science-interactive {
+  cursor: pointer;
+  outline: none;
+}
+.science-interactive:hover .science-trna-body,
+.science-interactive:focus-visible .science-trna-body,
+.science-selected .science-trna-body {
+  stroke-width: 7;
+}
+.science-interactive:hover .science-ribosome,
+.science-interactive:focus-visible .science-ribosome,
+.science-selected .science-ribosome,
+.science-interactive:hover .science-amino,
+.science-interactive:focus-visible .science-amino,
+.science-selected .science-amino,
+.science-interactive:hover .science-codon,
+.science-interactive:focus-visible .science-codon,
+.science-selected .science-codon {
+  stroke-width: 4;
+}
+.science-interactive:focus-visible > text,
+.science-interactive:hover > text {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.science-selected > text {
+  font-weight: 700;
+}
+.science-inspector {
+  margin: 0 16px 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--science-trna);
+  border-radius: 8px;
+  background: var(--surface);
+  font-size: 16px;
+  line-height: 1.6;
+}
+.science-inspector p {
+  margin: 5px 0;
+}
+.science-inspector button {
+  margin-top: 8px;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 6px 10px;
+  background: var(--figure);
+  color: var(--text);
+  font: inherit;
+}
+
+.science-inspector {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 12px;
+  min-height: 104px;
+  align-content: center;
+}
+.science-inspector strong {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 15px;
+}
+.science-inspector p {
+  grid-column: 1/-1;
+  margin: 0 !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+}
+.science-inspector button {
+  grid-column: 2;
+  grid-row: 1;
+  padding: 4px 9px;
+  font: 13px var(--ui-font);
+}

@@ -1,0 +1,230 @@
+.mcq-checkpoint {
+  margin: 24px 0;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 20px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--reading-font, var(--ui-font, "Segoe UI", sans-serif));
+  font-size: var(--reading-size, 18px);
+  line-height: 1.6;
+}
+.mcq-checkpoint header {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: var(--ui-font, inherit);
+  font-size: 13px;
+  color: var(--muted);
+}
+.mcq-question {
+  font-size: 1.04em;
+  font-weight: 550;
+}
+.mcq-question p {
+  margin: 16px 0;
+}
+.mcq-checkpoint fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 9px;
+}
+.mcq-choice {
+  display: grid;
+  grid-template-columns: 20px 26px 1fr;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  background: var(--reading, var(--surface));
+}
+.mcq-choice:has(input:checked) {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 9%, var(--surface));
+}
+.mcq-choice input {
+  accent-color: var(--accent);
+  height: 18px;
+  width: 18px;
+  margin: 0;
+}
+.mcq-choice-letter {
+  font: 600 14px var(--ui-font, inherit);
+  color: var(--muted);
+}
+.mcq-choice p {
+  margin: 0 !important;
+  font-size: 16px;
+}
+.mcq-choice-feedback {
+  grid-column: 3;
+  font-size: 14px;
+  color: var(--secondary, var(--muted));
+  line-height: 1.6;
+}
+.mcq-choice.mcq-correct {
+  border-color: var(--success);
+}
+.mcq-choice.mcq-incorrect {
+  border-color: var(--warning);
+}
+.mcq-feedback {
+  margin-top: 16px;
+  padding: 14px;
+  border-left: 3px solid var(--accent);
+  background: var(--reading, var(--surface));
+  font-size: 16px;
+}
+.mcq-feedback p {
+  margin: 8px 0;
+}
+.mcq-feedback p:last-child {
+  font-family: var(--ui-font, inherit);
+  font-size: 13px;
+  color: var(--muted);
+}
+.mcq-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.mcq-actions button {
+  font: 500 14px var(--ui-font, inherit);
+  padding: 9px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+.mcq-actions button.primary {
+  background: var(--button, var(--accent));
+  color: var(--selectedText, var(--text));
+}
+.mcq-actions button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.mcq-actions span {
+  font: 13px var(--ui-font, inherit);
+  color: var(--muted);
+}
+.mcq-error {
+  font-size: 14px;
+  color: var(--error, var(--text));
+}
+.teaching-concept {
+  margin: 22px 0 14px;
+  border-bottom: 1px solid var(--divider, var(--border));
+  padding-bottom: 14px;
+  font-family: var(--reading-font, var(--ui-font, "Segoe UI", sans-serif));
+}
+.teaching-concept h3 {
+  font-size: 1.35em;
+  line-height: 1.4;
+  margin: 0 0 8px;
+  color: var(--heading);
+}
+.teaching-concept p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+.teaching-prerequisites {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  color: var(--secondary, var(--muted));
+  font-size: 14px;
+}
+.teaching-terms {
+  margin: 16px 0;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: var(--reading-font, var(--ui-font, "Segoe UI", sans-serif));
+}
+.teaching-terms h4 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: var(--heading);
+}
+.teaching-terms dl {
+  margin: 0;
+  display: grid;
+  grid-template-columns: minmax(85px, auto) 1fr;
+  gap: 9px 16px;
+  font-size: 16px;
+  line-height: 1.55;
+}
+.teaching-terms dt {
+  color: var(--bold, var(--text));
+  font-weight: 650;
+}
+.teaching-terms dd {
+  margin: 0;
+}
+.lesson-term {
+  font: inherit !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px dotted var(--accent) !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  cursor: help;
+  text-align: inherit;
+  display: inline;
+  line-height: inherit !important;
+}
+.lesson-term:hover,
+.lesson-term:focus-visible {
+  color: var(--link, var(--accent)) !important;
+  outline-color: var(--focus, var(--accent));
+}
+.lesson-term-definition {
+  padding: 16px;
+  margin: 16px 0;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  background: var(--popover, var(--surface));
+  color: var(--text);
+  font-family: var(--reading-font, var(--ui-font, "Segoe UI", sans-serif));
+  line-height: 1.6;
+}
+.lesson-term-definition p {
+  margin: 7px 0;
+  font-size: 16px;
+}
+.lesson-term-definition button {
+  font: 13px var(--ui-font, inherit);
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 10px;
+}
+@media (max-width: 600px) {
+  .mcq-checkpoint {
+    padding: 14px;
+  }
+  .mcq-choice {
+    grid-template-columns: 18px 20px 1fr;
+    gap: 8px;
+    padding: 10px;
+  }
+  .teaching-terms dl {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+  .teaching-terms dd {
+    margin-bottom: 10px;
+  }
+}

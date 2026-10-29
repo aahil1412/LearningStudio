@@ -1,0 +1,600 @@
+/* Impeccable Operate/Read: a restrained, data-preserving desktop redesign. */
+.app-shell {
+  --ui-control-height: 36px;
+}
+.app-shell button,
+.app-shell input,
+.app-shell select,
+.app-shell textarea {
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease;
+}
+.app-shell .titlebar {
+  height: 48px;
+  padding: 0 20px;
+  gap: 18px;
+  background: var(--sidebar);
+}
+.app-shell .brand {
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  gap: 9px;
+}
+.app-shell .brand-mark {
+  width: 27px;
+  height: 27px;
+  border-radius: 7px;
+  background: var(--accent);
+  color: var(--reading);
+}
+.app-shell .brand small {
+  display: none;
+}
+.app-shell .titlebar-center {
+  margin-left: auto;
+  font-size: 12px;
+}
+.app-shell .account-pill {
+  font-size: 12px;
+  border-radius: 7px;
+  padding: 6px 10px;
+  min-height: 32px;
+}
+.app-shell .sidebar {
+  padding: 18px 12px 12px;
+  background: color-mix(in srgb, var(--sidebar) 88%, var(--bg));
+}
+.app-shell .new-button {
+  min-height: 38px;
+  font-size: 13px;
+  border-radius: 8px;
+  gap: 8px;
+}
+.app-shell .new-button span {
+  font-size: 11px;
+}
+.app-shell .search-field {
+  padding: 9px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--input);
+  margin: 14px 0 18px;
+}
+.app-shell .search-field input {
+  font-size: 13px;
+}
+.app-shell .search-field kbd {
+  font-size: 10px;
+  border: 0;
+}
+.app-shell .subject-switcher {
+  font-size: 12px;
+  padding: 0 4px;
+  margin: 0 0 12px;
+  gap: 6px;
+}
+.app-shell .subject-switcher select {
+  font-size: 13px;
+  padding: 9px;
+}
+.app-shell .main-nav {
+  gap: 3px;
+}
+.app-shell .main-nav > button {
+  min-height: 39px;
+  font-size: 13px;
+  padding: 9px 10px;
+  gap: 10px;
+  border-radius: 7px;
+}
+.app-shell .main-nav > button.active {
+  background: var(--selected);
+  color: var(--heading);
+  font-weight: 600;
+}
+.app-shell .main-nav > button > span {
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+.app-shell .sidebar-label {
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  padding: 0 8px;
+  margin-bottom: 6px;
+}
+.app-shell .session-list {
+  margin-top: 25px;
+}
+.app-shell .session-item {
+  padding: 10px 8px;
+  border-radius: 7px;
+  gap: 8px;
+}
+.app-shell .session-item strong {
+  font-size: 13px;
+  line-height: 1.45;
+}
+.app-shell .session-item small {
+  font-size: 11px;
+  margin-top: 3px;
+}
+.app-shell .sidebar-empty {
+  font: 13px/1.6 var(--ui-font);
+  opacity: 1;
+}
+.app-shell .sidebar-bottom {
+  padding-top: 12px;
+}
+.app-shell .local-card strong,
+.app-shell .sidebar-bottom > .button-row > button:first-child {
+  font-size: 12px;
+}
+.app-shell .local-card small {
+  font-size: 11px;
+}
+.app-shell .workspace-toolbar {
+  height: 46px;
+  padding: 0 26px;
+  background: var(--reading);
+}
+.app-shell .breadcrumb {
+  font-size: 12px;
+  gap: 8px;
+}
+.app-shell .keyboard-hint {
+  font-size: 11px;
+}
+.app-shell .lesson-top {
+  padding: 22px 28px 14px;
+  align-items: flex-start;
+  gap: 20px;
+}
+.app-shell .lesson-top h1 {
+  font: var(--heading-weight) 27px/1.25 var(--reading-font);
+  margin: 0;
+  letter-spacing: -0.025em;
+  max-width: 35ch;
+}
+.app-shell .eyebrow,
+.app-shell .v2-eyebrow,
+.app-shell .welcome-eyebrow {
+  display: none;
+}
+.app-shell .lesson-actions {
+  gap: 6px;
+  align-self: flex-start;
+}
+.app-shell .lesson-actions > button {
+  font-size: 12px;
+  min-height: 34px;
+  padding: 6px 10px;
+  border-color: var(--border);
+  background: var(--surface);
+}
+.app-shell .reading-controls {
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  overflow: hidden;
+}
+.app-shell .reading-controls button {
+  font-size: 12px;
+  min-height: 32px;
+  padding: 5px 8px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.app-shell .reading-controls button + button {
+  border-left: 1px solid var(--divider);
+}
+.app-shell .mode-bar {
+  gap: 4px;
+  padding: 0 28px 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.app-shell .mode-bar button {
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 7px;
+}
+.app-shell .mode-bar button.active {
+  background: var(--selected);
+  font-weight: 600;
+  color: var(--text);
+}
+.app-shell .subject-chat-banner {
+  margin-top: 10px;
+  gap: 6px;
+}
+.app-shell .subject-chat-banner button {
+  font-size: 12px;
+  border: 0;
+  background: transparent;
+  padding: 4px 0;
+  color: var(--secondary);
+}
+.app-shell .subject-chat-banner button + button {
+  margin-left: 10px;
+  color: var(--link);
+}
+.app-shell .reading-column {
+  max-width: var(--reading-width);
+  padding: 30px 36px 30px;
+}
+.app-shell .objective {
+  font-size: 14px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0 0 18px;
+  gap: 12px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--divider);
+}
+.app-shell .objective small {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.app-shell .lesson-message {
+  margin: 24px 0 36px;
+}
+.app-shell .message-label {
+  font-family: var(--ui-font);
+  font-size: 12px !important;
+  letter-spacing: 0;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+  line-height: 1.4;
+  min-height: 28px;
+}
+.app-shell .message-label .text-button {
+  font-size: 12px;
+  color: var(--text);
+  padding: 4px;
+  opacity: 1;
+}
+.app-shell .lesson-message:hover .message-label .text-button,
+.app-shell .message-label:focus-within .text-button {
+  opacity: 1;
+}
+.app-shell .message-label .reply-phase {
+  margin-left: 6px;
+  font-size: 12px;
+  color: var(--secondary);
+  font-weight: 400;
+}
+.app-shell .tutor-avatar,
+.app-shell .user-avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  font-size: 11px;
+}
+.app-shell .lesson-message.user {
+  border: 0;
+  padding: 16px 18px;
+  background: var(--surface);
+  border-radius: 12px;
+}
+.app-shell .lesson-message.user .message-label {
+  margin-bottom: 8px;
+}
+.app-shell .lesson-message.user .markdown {
+  font-size: 16px;
+  line-height: 1.65;
+}
+.app-shell .reading h1 {
+  font-size: calc(var(--reading-size) * 1.6);
+  letter-spacing: -0.025em;
+}
+.app-shell .reading h2 {
+  font-size: calc(var(--reading-size) * 1.35);
+  letter-spacing: -0.02em;
+}
+.app-shell .reading h3 {
+  font-size: calc(var(--reading-size) * 1.15);
+  letter-spacing: -0.015em;
+}
+.app-shell .reading p {
+  line-height: var(--line-height);
+}
+.app-shell .reading strong {
+  font-weight: var(--bold-weight);
+}
+.app-shell .teaching-concept {
+  padding: 0;
+  margin: 24px 0 18px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+.app-shell .teaching-concept h3 {
+  font-size: calc(var(--reading-size) * 1.3);
+}
+.app-shell .teaching-prerequisites {
+  font-size: 14px;
+  margin-top: 8px;
+}
+.app-shell .teaching-terms {
+  padding: 16px 18px;
+  margin: 18px 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.app-shell .teaching-terms h4 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.app-shell .teaching-terms dl {
+  font-size: 15px;
+  line-height: 1.65;
+  gap: 6px 15px;
+}
+.app-shell .composer-wrap {
+  padding: 12px 28px 14px;
+  border-top: 1px solid var(--divider);
+  background: var(--reading);
+}
+.app-shell .quick-actions {
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.app-shell .quick-actions button {
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 7px;
+}
+.app-shell .message-composer {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--input);
+  padding: 10px 12px;
+}
+.app-shell .message-composer textarea {
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 46px;
+}
+.app-shell .composer-meta {
+  font-size: 11px;
+  padding: 7px 2px 0;
+}
+.app-shell .send-button {
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+}
+.app-shell .welcome {
+  width: min(820px, 100%);
+  padding: 68px 36px 40px;
+}
+.app-shell .welcome h1 {
+  font: 600 38px/1.15 var(--reading-font);
+  letter-spacing: -0.03em;
+  max-width: 20ch;
+  margin: 0 0 18px;
+}
+.app-shell .welcome-copy {
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 55ch;
+  margin-bottom: 28px;
+}
+.app-shell .goal-composer {
+  border-radius: 12px;
+  padding: 20px;
+  background: var(--input);
+  box-shadow: none;
+}
+.app-shell .goal-composer label {
+  font-size: 15px;
+}
+.app-shell .goal-composer textarea {
+  font-size: 16px;
+  min-height: 108px;
+  padding-top: 16px;
+}
+.app-shell .goal-composer > div > span {
+  font-size: 12px;
+}
+.app-shell .welcome-options {
+  margin-top: 24px;
+  gap: 0;
+}
+.app-shell .welcome-options button {
+  border: 0;
+  border-radius: 0;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--divider);
+  background: transparent;
+}
+.app-shell .welcome-options strong {
+  font-size: 15px;
+}
+.app-shell .welcome-options small {
+  font-size: 13px;
+}
+.app-shell .welcome-footer {
+  display: none;
+}
+.app-shell .settings-modal {
+  border-radius: 12px;
+  box-shadow: none;
+}
+.app-shell .settings-nav {
+  padding: 25px 12px;
+  width: 220px;
+}
+.app-shell .settings-nav h2 {
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+.app-shell .settings-nav button {
+  font-size: 14px;
+  padding: 12px;
+  min-height: 42px;
+}
+.app-shell .settings-content {
+  padding: 36px;
+}
+.app-shell .settings-content > h2 {
+  font-size: 26px;
+  letter-spacing: -0.025em;
+}
+.app-shell .settings-content p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.app-shell .settings-card {
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 20px;
+}
+.app-shell .v2-card {
+  border-radius: 10px;
+  box-shadow: none;
+}
+.app-shell .v2-reading-heading h1 {
+  font-size: 28px;
+  letter-spacing: -0.025em;
+}
+.app-shell .v2-actions button,
+.app-shell .v2-reading-heading p {
+  font-size: 13px;
+}
+.app-shell .subject-studio h1,
+.app-shell .subjects-page h1 {
+  font-size: 28px;
+}
+.app-shell .visual-instance-toolbar {
+  font: 12px var(--ui-font);
+  padding: 6px 10px;
+  background: var(--figure);
+  border-radius: 10px 10px 0 0;
+  gap: 5px;
+}
+.app-shell .visual-instance-toolbar > span {
+  display: none;
+}
+.app-shell .visual-instance-toolbar > button {
+  padding: 4px 8px;
+  min-height: 28px;
+}
+.app-shell
+  .visual-instance-toolbar
+  > button[aria-label="Move visual inline"][aria-pressed="true"] {
+  display: none;
+}
+.app-shell .visual-instance-shell > .visual-figure {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.app-shell .visual-figure-header {
+  align-items: center;
+  padding: 16px 18px;
+}
+.app-shell .visual-figure-header > div:first-child {
+  display: flex;
+  gap: 8px 12px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.app-shell .visual-figure h4 {
+  font: 600 17px/1.4 var(--ui-font);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+.app-shell .visual-tag {
+  font-size: 11px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-weight: 400;
+  color: var(--secondary);
+}
+.tutor-pending {
+  padding: 12px 0 28px;
+  min-height: 128px;
+}
+.thinking-mark {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 20px;
+}
+.thinking-mark span {
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: thinking-breathe 1.5s ease-in-out infinite;
+}
+.thinking-mark span:nth-child(2) {
+  animation-delay: 0.18s;
+}
+.thinking-mark span:nth-child(3) {
+  animation-delay: 0.36s;
+}
+.thinking-lines {
+  max-width: 440px;
+  display: grid;
+  gap: 12px;
+}
+.thinking-lines i {
+  height: 10px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--text) 7%, var(--reading));
+}
+.thinking-lines i:nth-child(2) {
+  width: 86%;
+}
+.thinking-lines i:nth-child(3) {
+  width: 62%;
+}
+@keyframes thinking-breathe {
+  0%,
+  100% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@media (hover: none) {
+  .app-shell .message-label .text-button {
+    opacity: 1;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .thinking-mark span {
+    animation: none;
+    opacity: 0.65;
+  }
+}
+@media (max-width: 1150px) {
+  .app-shell .lesson-top {
+    flex-wrap: wrap;
+    padding: 18px 22px 12px;
+  }
+  .app-shell .lesson-actions {
+    width: 100%;
+  }
+  .app-shell .reading-column {
+    padding: 24px;
+  }
+  .app-shell .composer-wrap {
+    padding: 10px 20px;
+  }
+  .app-shell .titlebar-center {
+    display: none;
+  }
+  .app-shell .keyboard-hint {
+    display: none;
+  }
+}

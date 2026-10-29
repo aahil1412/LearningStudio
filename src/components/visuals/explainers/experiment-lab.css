@@ -1,0 +1,204 @@
+.learning-experiment {
+  color: var(--text);
+  font: 16px/1.6 var(--reading-font, var(--ui-font));
+  padding: 14px 16px 20px;
+  min-width: 0;
+}
+.learning-experiment .experiment-question {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: var(--heading);
+}
+.experiment-stages {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.learning-experiment button {
+  font: 14px/1.4 var(--ui-font);
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 12px;
+  min-height: 36px;
+  cursor: pointer;
+}
+.learning-experiment button[aria-pressed="true"] {
+  background: var(--selected);
+  border-color: var(--accent);
+}
+.learning-experiment button:focus-visible,
+.learning-experiment input:focus-visible {
+  outline: 2px solid var(--focus, var(--accent));
+  outline-offset: 3px;
+}
+.experiment-explanation {
+  margin: 10px 0 18px;
+  max-width: 74ch;
+  font-size: 16px;
+}
+.experiment-viewport {
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 8px 0 16px;
+  scrollbar-gutter: stable;
+}
+.experiment-viewport > svg {
+  display: block;
+  width: 100%;
+  min-width: 640px;
+  max-width: 900px;
+  height: auto;
+  max-height: none;
+  margin: auto;
+  font-family: var(--reading-font, var(--ui-font));
+}
+.experiment-viewport svg text {
+  font-size: 20px;
+  fill: var(--text);
+  stroke: none;
+}
+.experiment-element {
+  stroke: currentColor;
+  fill: color-mix(in srgb, currentColor 15%, var(--figure));
+  stroke-width: 3;
+  cursor: pointer;
+  touch-action: none;
+}
+.experiment-element.is-focused {
+  stroke-width: 4.5;
+}
+.experiment-element:focus-visible {
+  outline: none;
+  filter: drop-shadow(0 1px 3px var(--accent));
+}
+.experiment-element .experiment-object-label {
+  fill: var(--text);
+  stroke: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+.experiment-grid {
+  stroke: var(--border);
+  stroke-width: 1;
+}
+.experiment-curve {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.experiment-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  padding: 6px;
+}
+.experiment-legend span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.experiment-legend i {
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+}
+.experiment-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
+  gap: 16px 24px;
+  margin: 18px 0;
+}
+.experiment-controls label {
+  display: block;
+  min-width: 0;
+  font-size: 15px;
+}
+.experiment-controls label > span {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 7px;
+}
+.experiment-controls output {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.experiment-controls input {
+  display: block;
+  width: 100%;
+  accent-color: var(--accent);
+}
+.experiment-readouts {
+  display: flex;
+  gap: 18px 32px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.experiment-readouts dt {
+  font-size: 14px;
+  color: var(--secondary);
+}
+.experiment-readouts dd {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 2px 0;
+  font-variant-numeric: tabular-nums;
+}
+.experiment-transport {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.experiment-transport label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.experiment-transport input {
+  accent-color: var(--accent);
+  width: 160px;
+  max-width: 100%;
+}
+.experiment-method {
+  border-top: 1px solid var(--divider);
+  padding-top: 12px;
+  font-size: 14px;
+  color: var(--secondary);
+}
+.experiment-method summary {
+  cursor: pointer;
+  color: var(--text);
+}
+.experiment-method code {
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.experiment-method p {
+  margin: 10px 0;
+}
+.experiment-error {
+  padding: 12px;
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+.experiment-selection {
+  margin: 10px 0;
+  font-size: 15px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .learning-experiment * {
+    transition: none !important;
+    animation: none !important;
+  }
+}

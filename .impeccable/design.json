@@ -1,0 +1,821 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T01:11:50.112Z",
+  "title": "Design System: Learning Studio campus learning itinerary",
+  "extensions": {
+    "colorMeta": {
+      "identity-light": {
+        "role": "primary",
+        "displayName": "Campus Green",
+        "tonalRamp": [
+          "oklch(15% 0.0245 168.72)",
+          "oklch(26% 0.0424 168.72)",
+          "oklch(37% 0.0603 168.72)",
+          "oklch(48% 0.0734 168.72)",
+          "oklch(59% 0.0734 168.72)",
+          "oklch(70% 0.0734 168.72)",
+          "oklch(82% 0.0660 168.72)",
+          "oklch(95% 0.0183 168.72)"
+        ]
+      },
+      "identity-text-light": {
+        "role": "neutral",
+        "displayName": "Identity White",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(37% 0.0000 89.88)",
+          "oklch(48% 0.0000 89.88)",
+          "oklch(59% 0.0000 89.88)",
+          "oklch(70% 0.0000 89.88)",
+          "oklch(82% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "accent-light": {
+        "role": "primary",
+        "displayName": "Learning Green",
+        "tonalRamp": [
+          "oklch(15% 0.0285 169.75)",
+          "oklch(26% 0.0494 169.75)",
+          "oklch(37% 0.0703 169.75)",
+          "oklch(48% 0.0854 169.75)",
+          "oklch(59% 0.0854 169.75)",
+          "oklch(70% 0.0854 169.75)",
+          "oklch(82% 0.0769 169.75)",
+          "oklch(95% 0.0214 169.75)"
+        ]
+      },
+      "accent-secondary-light": {
+        "role": "secondary",
+        "displayName": "Terracotta",
+        "tonalRamp": [
+          "oklch(15% 0.0449 38.09)",
+          "oklch(26% 0.0778 38.09)",
+          "oklch(37% 0.1108 38.09)",
+          "oklch(48% 0.1347 38.09)",
+          "oklch(59% 0.1347 38.09)",
+          "oklch(70% 0.1347 38.09)",
+          "oklch(82% 0.1212 38.09)",
+          "oklch(95% 0.0337 38.09)"
+        ]
+      },
+      "canvas-light": {
+        "role": "neutral",
+        "displayName": "Light Learning Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0030 134.87)",
+          "oklch(26% 0.0052 134.87)",
+          "oklch(37% 0.0074 134.87)",
+          "oklch(48% 0.0090 134.87)",
+          "oklch(59% 0.0090 134.87)",
+          "oklch(70% 0.0090 134.87)",
+          "oklch(82% 0.0081 134.87)",
+          "oklch(95% 0.0023 134.87)"
+        ]
+      },
+      "contents-light": {
+        "role": "neutral",
+        "displayName": "Light Contents Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0043 141.81)",
+          "oklch(26% 0.0075 141.81)",
+          "oklch(37% 0.0107 141.81)",
+          "oklch(48% 0.0130 141.81)",
+          "oklch(59% 0.0130 141.81)",
+          "oklch(70% 0.0130 141.81)",
+          "oklch(82% 0.0117 141.81)",
+          "oklch(95% 0.0032 141.81)"
+        ]
+      },
+      "reading-light": {
+        "role": "neutral",
+        "displayName": "Light Reading Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0022 115.70)",
+          "oklch(26% 0.0038 115.70)",
+          "oklch(37% 0.0055 115.70)",
+          "oklch(48% 0.0066 115.70)",
+          "oklch(59% 0.0066 115.70)",
+          "oklch(70% 0.0066 115.70)",
+          "oklch(82% 0.0060 115.70)",
+          "oklch(95% 0.0017 115.70)"
+        ]
+      },
+      "surface-light": {
+        "role": "neutral",
+        "displayName": "Light Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0032 125.68)",
+          "oklch(26% 0.0056 125.68)",
+          "oklch(37% 0.0080 125.68)",
+          "oklch(48% 0.0097 125.68)",
+          "oklch(59% 0.0097 125.68)",
+          "oklch(70% 0.0097 125.68)",
+          "oklch(82% 0.0088 125.68)",
+          "oklch(95% 0.0024 125.68)"
+        ]
+      },
+      "figure-light": {
+        "role": "neutral",
+        "displayName": "Light Figure Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0034 131.36)",
+          "oklch(26% 0.0058 131.36)",
+          "oklch(37% 0.0083 131.36)",
+          "oklch(48% 0.0101 131.36)",
+          "oklch(59% 0.0101 131.36)",
+          "oklch(70% 0.0101 131.36)",
+          "oklch(82% 0.0091 131.36)",
+          "oklch(95% 0.0025 131.36)"
+        ]
+      },
+      "ink-light": {
+        "role": "neutral",
+        "displayName": "Light Reading Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0100 167.18)",
+          "oklch(26% 0.0173 167.18)",
+          "oklch(37% 0.0246 167.18)",
+          "oklch(48% 0.0299 167.18)",
+          "oklch(59% 0.0299 167.18)",
+          "oklch(70% 0.0299 167.18)",
+          "oklch(82% 0.0269 167.18)",
+          "oklch(95% 0.0075 167.18)"
+        ]
+      },
+      "heading-light": {
+        "role": "neutral",
+        "displayName": "Light Heading Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0150 167.10)",
+          "oklch(26% 0.0259 167.10)",
+          "oklch(37% 0.0369 167.10)",
+          "oklch(48% 0.0449 167.10)",
+          "oklch(59% 0.0449 167.10)",
+          "oklch(70% 0.0449 167.10)",
+          "oklch(82% 0.0404 167.10)",
+          "oklch(95% 0.0112 167.10)"
+        ]
+      },
+      "secondary-light": {
+        "role": "neutral",
+        "displayName": "Light Supporting Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0116 159.98)",
+          "oklch(26% 0.0200 159.98)",
+          "oklch(37% 0.0285 159.98)",
+          "oklch(48% 0.0347 159.98)",
+          "oklch(59% 0.0347 159.98)",
+          "oklch(70% 0.0347 159.98)",
+          "oklch(82% 0.0312 159.98)",
+          "oklch(95% 0.0087 159.98)"
+        ]
+      },
+      "link-focus-light": {
+        "role": "primary",
+        "displayName": "Light Link and Focus",
+        "tonalRamp": [
+          "oklch(15% 0.0264 176.05)",
+          "oklch(26% 0.0458 176.05)",
+          "oklch(37% 0.0652 176.05)",
+          "oklch(48% 0.0793 176.05)",
+          "oklch(59% 0.0793 176.05)",
+          "oklch(70% 0.0793 176.05)",
+          "oklch(82% 0.0714 176.05)",
+          "oklch(95% 0.0198 176.05)"
+        ]
+      },
+      "border-light": {
+        "role": "neutral",
+        "displayName": "Light Boundary",
+        "tonalRamp": [
+          "oklch(15% 0.0079 143.35)",
+          "oklch(26% 0.0137 143.35)",
+          "oklch(37% 0.0195 143.35)",
+          "oklch(48% 0.0237 143.35)",
+          "oklch(59% 0.0237 143.35)",
+          "oklch(70% 0.0237 143.35)",
+          "oklch(82% 0.0213 143.35)",
+          "oklch(95% 0.0059 143.35)"
+        ]
+      },
+      "divider-light": {
+        "role": "neutral",
+        "displayName": "Light Divider",
+        "tonalRamp": [
+          "oklch(15% 0.0066 135.84)",
+          "oklch(26% 0.0115 135.84)",
+          "oklch(37% 0.0164 135.84)",
+          "oklch(48% 0.0199 135.84)",
+          "oklch(59% 0.0199 135.84)",
+          "oklch(70% 0.0199 135.84)",
+          "oklch(82% 0.0179 135.84)",
+          "oklch(95% 0.0050 135.84)"
+        ]
+      },
+      "hover-light": {
+        "role": "neutral",
+        "displayName": "Light Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0072 143.22)",
+          "oklch(26% 0.0124 143.22)",
+          "oklch(37% 0.0177 143.22)",
+          "oklch(48% 0.0215 143.22)",
+          "oklch(59% 0.0215 143.22)",
+          "oklch(70% 0.0215 143.22)",
+          "oklch(82% 0.0193 143.22)",
+          "oklch(95% 0.0054 143.22)"
+        ]
+      },
+      "selected-light": {
+        "role": "neutral",
+        "displayName": "Light Selection",
+        "tonalRamp": [
+          "oklch(15% 0.0110 142.48)",
+          "oklch(26% 0.0190 142.48)",
+          "oklch(37% 0.0270 142.48)",
+          "oklch(48% 0.0329 142.48)",
+          "oklch(59% 0.0329 142.48)",
+          "oklch(70% 0.0329 142.48)",
+          "oklch(82% 0.0296 142.48)",
+          "oklch(95% 0.0082 142.48)"
+        ]
+      },
+      "success-light": {
+        "role": "neutral",
+        "displayName": "Light Success",
+        "tonalRamp": [
+          "oklch(15% 0.0315 153.33)",
+          "oklch(26% 0.0546 153.33)",
+          "oklch(37% 0.0778 153.33)",
+          "oklch(48% 0.0946 153.33)",
+          "oklch(59% 0.0946 153.33)",
+          "oklch(70% 0.0946 153.33)",
+          "oklch(82% 0.0851 153.33)",
+          "oklch(95% 0.0236 153.33)"
+        ]
+      },
+      "warning-light": {
+        "role": "neutral",
+        "displayName": "Light Warning",
+        "tonalRamp": [
+          "oklch(15% 0.0315 77.99)",
+          "oklch(26% 0.0546 77.99)",
+          "oklch(37% 0.0777 77.99)",
+          "oklch(48% 0.0946 77.99)",
+          "oklch(59% 0.0946 77.99)",
+          "oklch(70% 0.0946 77.99)",
+          "oklch(82% 0.0851 77.99)",
+          "oklch(95% 0.0236 77.99)"
+        ]
+      },
+      "danger-light": {
+        "role": "neutral",
+        "displayName": "Light Danger",
+        "tonalRamp": [
+          "oklch(15% 0.0503 24.62)",
+          "oklch(26% 0.0871 24.62)",
+          "oklch(37% 0.1240 24.62)",
+          "oklch(48% 0.1508 24.62)",
+          "oklch(59% 0.1508 24.62)",
+          "oklch(70% 0.1508 24.62)",
+          "oklch(82% 0.1357 24.62)",
+          "oklch(95% 0.0377 24.62)"
+        ]
+      },
+      "identity-dark": {
+        "role": "neutral",
+        "displayName": "Dark Course Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0114 163.12)",
+          "oklch(26% 0.0198 163.12)",
+          "oklch(37% 0.0281 163.12)",
+          "oklch(48% 0.0342 163.12)",
+          "oklch(59% 0.0342 163.12)",
+          "oklch(70% 0.0342 163.12)",
+          "oklch(82% 0.0308 163.12)",
+          "oklch(95% 0.0086 163.12)"
+        ]
+      },
+      "identity-text-dark": {
+        "role": "neutral",
+        "displayName": "Dark Identity Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0075 134.95)",
+          "oklch(26% 0.0130 134.95)",
+          "oklch(37% 0.0185 134.95)",
+          "oklch(48% 0.0226 134.95)",
+          "oklch(59% 0.0226 134.95)",
+          "oklch(70% 0.0226 134.95)",
+          "oklch(82% 0.0203 134.95)",
+          "oklch(95% 0.0056 134.95)"
+        ]
+      },
+      "button-dark": {
+        "role": "primary",
+        "displayName": "Pale Green Action",
+        "tonalRamp": [
+          "oklch(15% 0.0232 153.14)",
+          "oklch(26% 0.0402 153.14)",
+          "oklch(37% 0.0571 153.14)",
+          "oklch(48% 0.0695 153.14)",
+          "oklch(59% 0.0695 153.14)",
+          "oklch(70% 0.0695 153.14)",
+          "oklch(82% 0.0625 153.14)",
+          "oklch(95% 0.0174 153.14)"
+        ]
+      },
+      "button-text-dark": {
+        "role": "neutral",
+        "displayName": "Dark Action Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0113 155.38)",
+          "oklch(26% 0.0196 155.38)",
+          "oklch(37% 0.0279 155.38)",
+          "oklch(48% 0.0340 155.38)",
+          "oklch(59% 0.0340 155.38)",
+          "oklch(70% 0.0340 155.38)",
+          "oklch(82% 0.0306 155.38)",
+          "oklch(95% 0.0085 155.38)"
+        ]
+      },
+      "accent-dark": {
+        "role": "primary",
+        "displayName": "Dark Learning Green",
+        "tonalRamp": [
+          "oklch(15% 0.0239 154.65)",
+          "oklch(26% 0.0415 154.65)",
+          "oklch(37% 0.0590 154.65)",
+          "oklch(48% 0.0718 154.65)",
+          "oklch(59% 0.0718 154.65)",
+          "oklch(70% 0.0718 154.65)",
+          "oklch(82% 0.0646 154.65)",
+          "oklch(95% 0.0179 154.65)"
+        ]
+      },
+      "accent-secondary-dark": {
+        "role": "secondary",
+        "displayName": "Dark Terracotta",
+        "tonalRamp": [
+          "oklch(15% 0.0322 51.34)",
+          "oklch(26% 0.0559 51.34)",
+          "oklch(37% 0.0795 51.34)",
+          "oklch(48% 0.0967 51.34)",
+          "oklch(59% 0.0967 51.34)",
+          "oklch(70% 0.0967 51.34)",
+          "oklch(82% 0.0870 51.34)",
+          "oklch(95% 0.0242 51.34)"
+        ]
+      },
+      "canvas-dark": {
+        "role": "neutral",
+        "displayName": "Dark Learning Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0086 164.74)",
+          "oklch(26% 0.0149 164.74)",
+          "oklch(37% 0.0213 164.74)",
+          "oklch(48% 0.0259 164.74)",
+          "oklch(59% 0.0259 164.74)",
+          "oklch(70% 0.0259 164.74)",
+          "oklch(82% 0.0233 164.74)",
+          "oklch(95% 0.0065 164.74)"
+        ]
+      },
+      "reading-dark": {
+        "role": "neutral",
+        "displayName": "Dark Reading Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0117 161.21)",
+          "oklch(26% 0.0202 161.21)",
+          "oklch(37% 0.0288 161.21)",
+          "oklch(48% 0.0350 161.21)",
+          "oklch(59% 0.0350 161.21)",
+          "oklch(70% 0.0350 161.21)",
+          "oklch(82% 0.0315 161.21)",
+          "oklch(95% 0.0087 161.21)"
+        ]
+      },
+      "surface-dark": {
+        "role": "neutral",
+        "displayName": "Dark Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0125 161.25)",
+          "oklch(26% 0.0217 161.25)",
+          "oklch(37% 0.0308 161.25)",
+          "oklch(48% 0.0375 161.25)",
+          "oklch(59% 0.0375 161.25)",
+          "oklch(70% 0.0375 161.25)",
+          "oklch(82% 0.0337 161.25)",
+          "oklch(95% 0.0094 161.25)"
+        ]
+      },
+      "input-dark": {
+        "role": "neutral",
+        "displayName": "Dark Input Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0118 160.57)",
+          "oklch(26% 0.0205 160.57)",
+          "oklch(37% 0.0291 160.57)",
+          "oklch(48% 0.0354 160.57)",
+          "oklch(59% 0.0354 160.57)",
+          "oklch(70% 0.0354 160.57)",
+          "oklch(82% 0.0319 160.57)",
+          "oklch(95% 0.0089 160.57)"
+        ]
+      },
+      "popover-dark": {
+        "role": "neutral",
+        "displayName": "Dark Popover Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0146 156.99)",
+          "oklch(26% 0.0253 156.99)",
+          "oklch(37% 0.0360 156.99)",
+          "oklch(48% 0.0438 156.99)",
+          "oklch(59% 0.0438 156.99)",
+          "oklch(70% 0.0438 156.99)",
+          "oklch(82% 0.0394 156.99)",
+          "oklch(95% 0.0110 156.99)"
+        ]
+      },
+      "figure-dark": {
+        "role": "neutral",
+        "displayName": "Dark Figure Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0130 156.38)",
+          "oklch(26% 0.0225 156.38)",
+          "oklch(37% 0.0320 156.38)",
+          "oklch(48% 0.0389 156.38)",
+          "oklch(59% 0.0389 156.38)",
+          "oklch(70% 0.0389 156.38)",
+          "oklch(82% 0.0350 156.38)",
+          "oklch(95% 0.0097 156.38)"
+        ]
+      },
+      "heading-dark": {
+        "role": "neutral",
+        "displayName": "Dark Heading Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0061 127.14)",
+          "oklch(26% 0.0106 127.14)",
+          "oklch(37% 0.0150 127.14)",
+          "oklch(48% 0.0183 127.14)",
+          "oklch(59% 0.0183 127.14)",
+          "oklch(70% 0.0183 127.14)",
+          "oklch(82% 0.0165 127.14)",
+          "oklch(95% 0.0046 127.14)"
+        ]
+      },
+      "secondary-dark": {
+        "role": "neutral",
+        "displayName": "Dark Supporting Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0123 138.89)",
+          "oklch(26% 0.0214 138.89)",
+          "oklch(37% 0.0304 138.89)",
+          "oklch(48% 0.0370 138.89)",
+          "oklch(59% 0.0370 138.89)",
+          "oklch(70% 0.0370 138.89)",
+          "oklch(82% 0.0333 138.89)",
+          "oklch(95% 0.0093 138.89)"
+        ]
+      },
+      "link-dark": {
+        "role": "primary",
+        "displayName": "Dark Link",
+        "tonalRamp": [
+          "oklch(15% 0.0257 153.82)",
+          "oklch(26% 0.0445 153.82)",
+          "oklch(37% 0.0633 153.82)",
+          "oklch(48% 0.0770 153.82)",
+          "oklch(59% 0.0770 153.82)",
+          "oklch(70% 0.0770 153.82)",
+          "oklch(82% 0.0693 153.82)",
+          "oklch(95% 0.0192 153.82)"
+        ]
+      },
+      "focus-dark": {
+        "role": "primary",
+        "displayName": "Dark Focus",
+        "tonalRamp": [
+          "oklch(15% 0.0220 150.98)",
+          "oklch(26% 0.0382 150.98)",
+          "oklch(37% 0.0543 150.98)",
+          "oklch(48% 0.0661 150.98)",
+          "oklch(59% 0.0661 150.98)",
+          "oklch(70% 0.0661 150.98)",
+          "oklch(82% 0.0595 150.98)",
+          "oklch(95% 0.0165 150.98)"
+        ]
+      },
+      "border-dark": {
+        "role": "neutral",
+        "displayName": "Dark Boundary",
+        "tonalRamp": [
+          "oklch(15% 0.0171 148.42)",
+          "oklch(26% 0.0296 148.42)",
+          "oklch(37% 0.0422 148.42)",
+          "oklch(48% 0.0513 148.42)",
+          "oklch(59% 0.0513 148.42)",
+          "oklch(70% 0.0513 148.42)",
+          "oklch(82% 0.0462 148.42)",
+          "oklch(95% 0.0128 148.42)"
+        ]
+      },
+      "divider-dark": {
+        "role": "neutral",
+        "displayName": "Dark Divider",
+        "tonalRamp": [
+          "oklch(15% 0.0166 149.40)",
+          "oklch(26% 0.0287 149.40)",
+          "oklch(37% 0.0408 149.40)",
+          "oklch(48% 0.0497 149.40)",
+          "oklch(59% 0.0497 149.40)",
+          "oklch(70% 0.0497 149.40)",
+          "oklch(82% 0.0447 149.40)",
+          "oklch(95% 0.0124 149.40)"
+        ]
+      },
+      "hover-dark": {
+        "role": "neutral",
+        "displayName": "Dark Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0189 151.62)",
+          "oklch(26% 0.0328 151.62)",
+          "oklch(37% 0.0466 151.62)",
+          "oklch(48% 0.0567 151.62)",
+          "oklch(59% 0.0567 151.62)",
+          "oklch(70% 0.0567 151.62)",
+          "oklch(82% 0.0511 151.62)",
+          "oklch(95% 0.0142 151.62)"
+        ]
+      },
+      "selected-dark": {
+        "role": "neutral",
+        "displayName": "Dark Selection",
+        "tonalRamp": [
+          "oklch(15% 0.0185 150.16)",
+          "oklch(26% 0.0321 150.16)",
+          "oklch(37% 0.0456 150.16)",
+          "oklch(48% 0.0555 150.16)",
+          "oklch(59% 0.0555 150.16)",
+          "oklch(70% 0.0555 150.16)",
+          "oklch(82% 0.0499 150.16)",
+          "oklch(95% 0.0139 150.16)"
+        ]
+      },
+      "success-dark": {
+        "role": "neutral",
+        "displayName": "Dark Success",
+        "tonalRamp": [
+          "oklch(15% 0.0291 149.09)",
+          "oklch(26% 0.0504 149.09)",
+          "oklch(37% 0.0717 149.09)",
+          "oklch(48% 0.0872 149.09)",
+          "oklch(59% 0.0872 149.09)",
+          "oklch(70% 0.0872 149.09)",
+          "oklch(82% 0.0785 149.09)",
+          "oklch(95% 0.0218 149.09)"
+        ]
+      },
+      "warning-dark": {
+        "role": "neutral",
+        "displayName": "Dark Warning",
+        "tonalRamp": [
+          "oklch(15% 0.0324 85.45)",
+          "oklch(26% 0.0561 85.45)",
+          "oklch(37% 0.0799 85.45)",
+          "oklch(48% 0.0972 85.45)",
+          "oklch(59% 0.0972 85.45)",
+          "oklch(70% 0.0972 85.45)",
+          "oklch(82% 0.0875 85.45)",
+          "oklch(95% 0.0243 85.45)"
+        ]
+      },
+      "danger-dark": {
+        "role": "neutral",
+        "displayName": "Dark Danger",
+        "tonalRamp": [
+          "oklch(15% 0.0289 27.95)",
+          "oklch(26% 0.0501 27.95)",
+          "oklch(37% 0.0713 27.95)",
+          "oklch(48% 0.0868 27.95)",
+          "oklch(59% 0.0868 27.95)",
+          "oklch(70% 0.0868 27.95)",
+          "oklch(82% 0.0781 27.95)",
+          "oklch(95% 0.0217 27.95)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "page-title": {
+        "displayName": "Page title",
+        "purpose": "Home and course overview identity; 29px compact override."
+      },
+      "launch-title": {
+        "displayName": "Launch title",
+        "purpose": "Real start/resume action; 26px compact override."
+      },
+      "section-title": {
+        "displayName": "Player section title",
+        "purpose": "History/empty player heading role; teaching-concept titles separately scale with learner reading type."
+      },
+      "course-title": {
+        "displayName": "Course title",
+        "purpose": "Saved current lesson identity."
+      },
+      "subject-title": {
+        "displayName": "Subject title",
+        "purpose": "Current subject in contents."
+      },
+      "reading": {
+        "displayName": "Reading",
+        "purpose": "Independently configurable reading size, family, weight, spacing and measure."
+      },
+      "interface-body": {
+        "displayName": "Interface body",
+        "purpose": "Home/course explanatory text."
+      },
+      "action": {
+        "displayName": "Action",
+        "purpose": "Footer continuation and back controls."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Global desktop navigation and subject pathway."
+      },
+      "utility": {
+        "displayName": "Utility",
+        "purpose": "Local toolbar and supporting controls."
+      },
+      "evidence-caption": {
+        "displayName": "Evidence caption",
+        "purpose": "Supporting contents legend/status metadata only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "reading-menu",
+        "value": "0 12px 30px #10251b22",
+        "purpose": "Temporary Reading controls."
+      },
+      {
+        "name": "notes-panel",
+        "value": "0 14px 36px #10251b22",
+        "purpose": "Floating local note editor."
+      }
+    ],
+    "motion": [
+      {
+        "name": "course-interaction",
+        "value": "background 160ms ease, border-color 160ms ease",
+        "purpose": "Course-container hover; removed under reduced motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "course-shell-gutters",
+        "value": "1180px"
+      },
+      {
+        "name": "contents-overlay-and-trail-compact",
+        "value": "1050px"
+      },
+      {
+        "name": "home-course-stack",
+        "value": "960px"
+      },
+      {
+        "name": "shell-detail-collapse",
+        "value": "950px"
+      },
+      {
+        "name": "section-picker-only",
+        "value": "720px"
+      },
+      {
+        "name": "course-index-single-column",
+        "value": "700px"
+      },
+      {
+        "name": "small-shell",
+        "value": "660px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary continuation",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "A real next section or continuation action at the learning boundary.",
+      "html": "<button class=\"ds-forward\">Next section <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-forward{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 15px;border:1px solid transparent;border-radius:8px;background:var(--button,#1B5C48);color:var(--selectionText,#FFFFFF);font:600 14px/1.4 var(--ui-font,Inter,\"Segoe UI\",sans-serif);cursor:pointer}.ds-forward:hover:not(:disabled){filter:brightness(.97)}.ds-forward:disabled{opacity:.45;cursor:default}.ds-forward:focus-visible{outline:2px solid var(--focus,#176858);outline-offset:3px}"
+    },
+    {
+      "name": "Secondary back",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A quiet bordered prior-section action with the same stationary target.",
+      "html": "<button class=\"ds-back\">Back</button>",
+      "css": ".ds-back{min-height:44px;padding:10px 15px;border:1px solid var(--border,#C8D5C7);border-radius:8px;background:transparent;color:var(--text,#1C3028);font:600 14px/1.4 var(--ui-font,Inter,\"Segoe UI\",sans-serif);cursor:pointer}.ds-back:hover:not(:disabled){filter:brightness(.97)}.ds-back:disabled{opacity:.45;cursor:default}.ds-back:focus-visible{outline:2px solid var(--focus,#176858);outline-offset:3px}"
+    },
+    {
+      "name": "Contextual Ask",
+      "kind": "button",
+      "refersTo": "button-contextual",
+      "description": "The deliberate contextual question action, selected when its panel is open.",
+      "html": "<button class=\"ds-ask\" aria-expanded=\"true\">Ask about this page</button>",
+      "css": ".ds-ask{min-height:44px;padding:10px 15px;border:0;border-radius:8px;background:transparent;color:var(--text,#1C3028);font:600 14px/1.4 var(--ui-font,Inter,\"Segoe UI\",sans-serif);cursor:pointer}.ds-ask[aria-expanded=\"true\"]{background:var(--selected,#D8EAD6)}.ds-ask:hover{filter:brightness(.97)}.ds-ask:focus-visible{outline:2px solid var(--focus,#176858);outline-offset:3px}"
+    },
+    {
+      "name": "Subject search field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "The themed native field used to find an actual subject.",
+      "html": "<label class=\"ds-search\"><svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"/><path d=\"m21 21-4.3-4.3\"/></svg><input aria-label=\"Find a subject\" placeholder=\"Find a subject\"></label>",
+      "css": ".ds-search{display:inline-flex;align-items:center;gap:9px;min-height:40px;padding:0 12px;border:1px solid var(--border,#C8D5C7);border-radius:8px;background:var(--input,#FDFEF9);color:var(--text,#1C3028)}.ds-search input{width:180px;padding:9px 0;border:0;background:transparent;color:inherit;font:14px/1.5 var(--ui-font,Inter,\"Segoe UI\",sans-serif)}.ds-search input::placeholder{color:var(--secondary,#4C6356)}.ds-search input:focus-visible{outline:2px solid var(--focus,#176858);outline-offset:3px}"
+    },
+    {
+      "name": "Global course navigation",
+      "kind": "nav",
+      "refersTo": "appbar",
+      "description": "Deep identity band with foreground-colored descendant labels.",
+      "html": "<nav class=\"ds-global\" aria-label=\"Course navigation sample\"><button aria-current=\"page\"><span>My learning</span></button><button><span>Lesson</span></button><button><span>Library</span></button></nav>",
+      "css": ".ds-global{display:flex;align-items:center;gap:3px;min-height:64px;padding:0 24px;background:var(--learning-identity,var(--button,#1B5C48));color:var(--learning-identity-text,var(--selectionText,#FFFFFF))}.ds-global button{min-height:38px;padding:9px 13px;border:0;border-radius:8px;background:transparent;color:inherit;font:13px/1.5 var(--ui-font,Inter,\"Segoe UI\",sans-serif);cursor:pointer}.ds-global button span{color:inherit;font-size:inherit;opacity:1}.ds-global button[aria-current],.ds-global button:hover{background:color-mix(in srgb,var(--learning-identity-text,var(--selectionText,#FFFFFF)) 15%,transparent)}.ds-global button:focus-visible{outline:2px solid currentColor;outline-offset:3px}"
+    },
+    {
+      "name": "Connected section trail",
+      "kind": "nav",
+      "refersTo": "section-step",
+      "description": "Real ordered lesson sections with a current step and numbered circles.",
+      "html": "<nav class=\"ds-trail\" aria-label=\"Lesson sections sample\"><button><span class=\"ds-number\">1</span><span>Read the message</span></button><button aria-current=\"step\"><span class=\"ds-number\">2</span><span>Take a gradient step</span></button></nav>",
+      "css": ".ds-trail{position:relative;display:flex;gap:4px;padding:5px 4px 3px;overflow-x:auto;background:var(--reading,#FDFEF9)}.ds-trail:before{content:\"\";position:absolute;top:23px;left:20px;right:20px;height:1px;background:var(--divider,#DCE5D8)}.ds-trail button{position:relative;display:flex;flex:0 0 180px;align-items:center;gap:9px;padding:7px 10px 7px 6px;border:0;border-radius:8px;background:var(--reading,#FDFEF9);color:var(--secondary,#4C6356);text-align:left;font:13px/1.4 var(--ui-font,Inter,\"Segoe UI\",sans-serif);cursor:pointer}.ds-trail button[aria-current]{background:var(--selected,#D8EAD6);color:var(--heading,#15362A);font-weight:650}.ds-number{display:grid;place-items:center;flex:0 0 28px;width:28px;height:28px;border:1px solid var(--border,#C8D5C7);border-radius:50%;background:var(--reading,#FDFEF9);font-size:12px}.ds-trail [aria-current] .ds-number{background:var(--accent,#1B6D56);border-color:var(--accent,#1B6D56);color:var(--selectionText,#FFFFFF)}.ds-trail button:hover{filter:brightness(.97)}.ds-trail button:focus-visible{outline:2px solid var(--focus,#176858);outline-offset:3px}"
+    },
+    {
+      "name": "Course container",
+      "kind": "card",
+      "refersTo": "course-container",
+      "description": "A flat, bordered subject container with real saved context and a divided action boundary.",
+      "html": "<article class=\"ds-course\"><h2>Subject title</h2><p>The learner’s saved objective belongs here.</p><div class=\"ds-course-footer\"><span>Actual saved learning context</span><button aria-label=\"Open subject\">Open <svg width=\"17\" height=\"17\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></button></div></article>",
+      "css": ".ds-course{display:flex;flex-direction:column;min-height:213px;padding:25px 27px 0;border:1px solid var(--border,#C8D5C7);border-radius:14px;background:var(--reading,#FDFEF9);color:var(--text,#1C3028);font:15px/1.6 var(--ui-font,Inter,\"Segoe UI\",sans-serif);transition:background 160ms ease,border-color 160ms ease}.ds-course:hover{background:var(--surface,#F5F8F1);border-color:var(--accent,#1B6D56)}.ds-course h2{margin:0 0 10px;color:var(--heading,#15362A);font-size:23px;font-weight:600;line-height:1.25;letter-spacing:-.02em}.ds-course p{margin:0 0 20px;color:var(--secondary,#4C6356)}.ds-course-footer{display:flex;align-items:center;justify-content:space-between;gap:22px;margin-top:auto;padding:15px 0;border-top:1px solid var(--divider,#DCE5D8);font-size:14px}.ds-course button{display:inline-flex;align-items:center;gap:8px;padding:5px;border:0;border-radius:8px;background:transparent;color:inherit;font:inherit;cursor:pointer}.ds-course button:hover{background:var(--hover,#E3EFE2)}.ds-course button:focus-visible{outline:2px solid var(--focus,#176858);outline-offset:3px}@media(prefers-reduced-motion:reduce){.ds-course{transition-duration:0s}}"
+    },
+    {
+      "name": "Coverage status",
+      "kind": "chip",
+      "refersTo": "coverage-status",
+      "description": "A quiet semantic status label; covered and demonstrated remain distinct meanings.",
+      "html": "<span class=\"ds-status\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"m8 12 3 3 5-6\"/></svg>Demonstrated</span>",
+      "css": ".ds-status{display:inline-flex;align-items:center;gap:5px;color:var(--secondary,#4C6356);font:10px/1.6 var(--ui-font,Inter,\"Segoe UI\",sans-serif)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The campus learning itinerary",
+    "overview": "A contemporary course workspace gives subjects, their actual pathways and focused lesson sections a clear order. A deep green identity band, pale green neutral grounds and an openly licensed sans-serif give the application a calm, direct character. Compact native controls leave room for readable explanations and working scientific figures.\n\nThe signature is a connected, selectable section trail beside the subject pathway. Home, course overview and focused learning use one visual language; a contextual tutor and secondary History support it. The rejected folio's permanent prompt dock and transcript-first hierarchy are confirmed anti-references. The material is digital, without simulated paper or decorative raster imagery.",
+    "keyCharacteristics": [
+      "Deep green identity with independent light, dark and custom appearance.",
+      "Real subject pathways and numbered lesson-section trails.",
+      "Readable prose and broad inline scientific working space.",
+      "Compact task controls and restrained rounded containers.",
+      "Contextual questions, secondary history and honest evidence labels."
+    ],
+    "rules": [
+      {
+        "name": "The Learner Configuration Rule",
+        "body": "Factory tokens are defaults. Preserve independent edited palettes and fonts; version 4 upgrades only eligible untouched factory configurations. A single edited color prevents that factory replacement.",
+        "section": "colors"
+      },
+      {
+        "name": "The Identity Foreground Rule",
+        "body": "Navigation and every nested label use the identity foreground. Recorded native 13px navigation contrast is 7.86:1 in light and 13.13:1 in dark; these measurements support that specific repair, not complete accessibility conformance.",
+        "section": "colors"
+      },
+      {
+        "name": "The Reading Independence Rule",
+        "body": "Preserve reading size and scientific-label scale. Make space by reducing presentation layers and applying the actual responsive layout.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Working Surface Rule",
+        "body": "Reserve depth for temporary controls. Give working figures room through layout rather than ornamental shadows or smaller geometry.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use the learner's semantic palette and independent typography settings throughout new surfaces.",
+      "**Do** preserve the real pathway, original content order, reading position and scientific instance state.",
+      "**Do** give readable explanations and meaningful working geometry the main lesson area.",
+      "**Do** expose keyboard focus, honest pending/error states and the difference between coverage and demonstrated understanding.",
+      "**Do** label local examples, controlled acceptance content and scientific approximations honestly.",
+      "**Do** cite final native captures and scoped verification records with their actual limits."
+    ],
+    "donts": [
+      "**Don't** restore the rejected folio's permanent prompt dock, transcript-first hierarchy or compulsory right laboratory.",
+      "**Don't** overwrite a custom palette or font to force the factory identity.",
+      "**Don't** add decorative eyebrows, text-glyph icons or hard offset shadows to this world.",
+      "**Don't** manufacture mastery, XP, streaks, source pages, remaining quota or numerical scientific evidence.",
+      "**Don't** shrink teaching type or scientific geometry to compensate for unnecessary presentation chrome.",
+      "**Don't** infer complete release or accessibility verification from captures or the two-fix design verdict."
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+.term-popover {
+  position: fixed;
+  z-index: 10000;
+  width: min(360px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 16px;
+  background: var(--popover);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font-family: var(--ui-font, "Segoe UI", sans-serif);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.term-popover header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.term-popover strong {
+  font-size: 16px;
+  color: var(--heading);
+}
+.term-popover header button {
+  padding: 5px;
+  border: 0;
+  background: transparent;
+}
+.term-popover p {
+  color: var(--text);
+  margin: 10px 0 0;
+  line-height: 1.6;
+}
+.lesson-term {
+  display: inline !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-bottom: 1px dotted var(--accent) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  color: inherit !important;
+  vertical-align: baseline;
+  letter-spacing: inherit !important;
+}
+.lesson-term:hover {
+  background: var(--selected) !important;
+  color: var(--link) !important;
+}

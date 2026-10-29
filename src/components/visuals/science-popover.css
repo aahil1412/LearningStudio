@@ -1,0 +1,40 @@
+.science-popover {
+  position: fixed;
+  z-index: 12000;
+  max-height: 280px;
+  overflow: auto;
+  padding: 16px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--popover, var(--surface));
+  color: var(--text);
+  font: 15px/1.55 var(--reading-font, "Segoe UI", sans-serif);
+  box-shadow: 0 12px 40px #0003;
+  overflow-wrap: anywhere;
+}
+.science-popover-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+.science-popover-heading strong {
+  color: var(--heading, var(--text));
+  font-size: 16px;
+}
+.science-popover-heading button {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--surface);
+  color: var(--text);
+  font: 22px/1 var(--ui-font);
+  cursor: pointer;
+}
+.science-popover p {
+  margin: 6px 0;
+}

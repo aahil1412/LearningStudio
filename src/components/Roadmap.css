@@ -1,0 +1,86 @@
+.roadmap {
+  font: 11px/1.7 var(--ui-font);
+  letter-spacing: 0;
+  border: 1px solid var(--divider);
+  border-radius: 9px;
+  margin: -16px 0 29px;
+  color: var(--secondary);
+  background: var(--surface);
+}
+.roadmap summary {
+  padding: 11px 15px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--heading);
+}
+.roadmap summary > span {
+  float: right;
+  font-size: 9px;
+  color: var(--muted);
+}
+.roadmap-content {
+  border-top: 1px solid var(--divider);
+  padding: 15px;
+}
+.roadmap-content > label {
+  font-size: 10px;
+  color: var(--muted);
+}
+.roadmap-content > label > input {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  font-size: 11px;
+}
+.roadmap-content > p {
+  font: 10px/1.7 var(--ui-font);
+  color: var(--muted);
+  margin: 12px 0;
+}
+.roadmap-goal {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 9px 0;
+  border-top: 1px solid var(--divider);
+}
+.roadmap-goal > div {
+  flex: 1;
+}
+.roadmap-goal strong {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text);
+}
+.roadmap-goal small {
+  display: block;
+  font-size: 9px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+.goal-dot {
+  width: 9px;
+  height: 9px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+}
+.goal-dot.current {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.roadmap-add {
+  display: flex;
+  gap: 7px;
+  margin-top: 10px;
+}
+.roadmap-add input {
+  flex: 1;
+  font-size: 11px;
+}
+.roadmap-add button {
+  padding: 8px;
+}
+.roadmap summary:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}

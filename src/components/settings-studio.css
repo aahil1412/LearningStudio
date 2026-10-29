@@ -1,0 +1,620 @@
+/* Preferences are a dedicated workspace, with controls beside the document
+   they affect. All appearance values remain the learner's existing tokens. */
+.app-shell .settings-workbench-backdrop {
+  padding: 24px;
+  background: color-mix(in srgb, var(--bg) 70%, #000 30%);
+}
+.app-shell .settings-modal.settings-studio {
+  display: grid;
+  grid-template-columns: 224px minmax(0, 1fr);
+  grid-template-rows: 64px minmax(0, 1fr);
+  width: min(1380px, 100%);
+  max-width: none;
+  height: min(960px, 100%);
+  max-height: none;
+  border-radius: 16px;
+  background: var(--popover);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: none;
+  overflow: hidden;
+  font-family: var(--ui-font);
+}
+.settings-studio .settings-studio-heading {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 0 22px;
+  background: var(--sidebar);
+  border-bottom: 1px solid var(--divider);
+}
+.settings-studio .settings-studio-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+}
+.settings-studio .settings-save-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--text);
+}
+.app-shell .settings-studio .close-settings {
+  position: static;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  background: transparent;
+}
+.app-shell .settings-studio .settings-nav {
+  width: auto;
+  padding: 24px 12px 20px;
+  border-right: 1px solid var(--divider);
+  gap: 6px;
+  overflow: auto;
+}
+.app-shell .settings-studio .settings-nav h2 {
+  margin: 0 0 16px;
+  padding: 0 12px;
+  font: 500 12px/1.5 var(--ui-font);
+  color: var(--text);
+}
+.app-shell .settings-studio .settings-nav > button {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px 12px;
+  min-height: 69px;
+  gap: 12px;
+  border: 0;
+  border-radius: 10px;
+  color: var(--text);
+  font-size: 14px;
+}
+.settings-studio .settings-nav > button > svg {
+  flex: none;
+  margin-top: 2px;
+}
+.settings-studio .settings-nav > button > span {
+  display: grid;
+  gap: 4px;
+  text-align: left;
+}
+.settings-studio .settings-nav > button strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+.settings-studio .settings-nav > button small {
+  font-size: 12px;
+  line-height: 1.45;
+  color: inherit;
+}
+.settings-studio .settings-nav > button:hover {
+  background: var(--hover);
+}
+.settings-studio .settings-nav > button.active {
+  background: var(--selected);
+}
+.app-shell .settings-studio .settings-nav-footer {
+  padding: 18px 12px 0;
+  font-size: 12px;
+  color: var(--text);
+}
+.app-shell .settings-studio .settings-content {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.settings-studio .settings-page-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 112px;
+  padding: 24px 32px;
+  border-bottom: 1px solid var(--divider);
+  background: var(--popover);
+}
+.app-shell .settings-studio .settings-page-header h2 {
+  margin: 0;
+  font: 600 28px/1.2 var(--ui-font);
+  letter-spacing: -0.025em;
+}
+.settings-studio .settings-page-header p {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text);
+}
+.settings-studio .settings-page-body {
+  overflow: auto;
+  min-height: 0;
+  padding: 26px 32px 38px;
+  scrollbar-gutter: stable;
+}
+.settings-studio .settings-page-body > .settings-card:first-child {
+  margin-top: 0;
+}
+.settings-studio .settings-page-body h3 {
+  font-size: 17px;
+  line-height: 1.4;
+}
+.settings-studio .settings-page-body p {
+  font-size: 14px;
+  line-height: 1.65;
+}
+.settings-studio .settings-page-body button {
+  min-height: 34px;
+  border-radius: 7px;
+  font-size: 13px;
+}
+.settings-studio
+  .settings-page-body
+  input:not([type="range"]):not([type="checkbox"]):not([type="color"]),
+.settings-studio .settings-page-body select,
+.settings-studio .settings-page-body textarea {
+  font: 14px/1.5 var(--ui-font);
+  padding: 10px 12px;
+  border-radius: 7px;
+  min-width: 0;
+}
+.settings-studio .settings-page-body label {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.settings-studio .settings-page-body .settings-card {
+  margin: 0 0 26px;
+  padding: 0 0 26px;
+  border: 0;
+  border-bottom: 1px solid var(--divider);
+  border-radius: 0;
+  background: transparent;
+}
+.settings-studio .settings-page-body .settings-card h3 {
+  margin: 0 0 10px;
+}
+.settings-studio .settings-page-body .settings-card p {
+  font-size: 14px;
+}
+.settings-studio .settings-page-body .settings-note {
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.settings-studio .check-row {
+  padding: 16px 0;
+  margin: 0;
+  border-bottom: 1px solid var(--divider);
+}
+.settings-studio .check-row strong {
+  font-size: 14px;
+}
+.settings-studio .check-row small {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-top: 5px;
+  color: var(--text);
+}
+.settings-studio .model-row {
+  padding: 15px 0;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.6fr);
+  gap: 18px;
+}
+.settings-studio .account-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.settings-studio .account-card .badge {
+  margin-left: auto;
+}
+.settings-studio .appearance-workspace {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 30px;
+  align-items: start;
+}
+.settings-studio .appearance-controls {
+  min-width: 0;
+}
+.settings-studio .appearance-controls .section-heading {
+  display: flex;
+  align-items: start;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.settings-studio .appearance-controls .section-heading h3 {
+  margin: 0 0 7px;
+  font-size: 17px;
+}
+.settings-studio .appearance-controls .section-heading p {
+  margin: 0;
+  font-size: 13px;
+  max-width: 38ch;
+  color: var(--text);
+}
+.settings-studio .appearance-controls .section-heading .button-row {
+  gap: 6px;
+  flex-wrap: nowrap;
+}
+.settings-studio .appearance-controls .section-heading .button-row button {
+  padding: 7px;
+  font-size: 12px;
+}
+.settings-studio .appearance-modes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0 0 10px;
+}
+.settings-studio .appearance-modes button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 58px;
+  gap: 9px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+}
+.settings-studio .appearance-modes button.active {
+  border-color: var(--accent);
+  background: var(--selected);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.settings-studio .edit-scheme {
+  justify-content: flex-start;
+  margin: 20px 0 18px;
+  gap: 7px;
+}
+.settings-studio .edit-scheme > span {
+  font-size: 12px;
+  margin-right: auto;
+}
+.settings-studio .edit-scheme > button {
+  min-height: 30px;
+  padding: 5px 12px;
+  font-size: 12px;
+}
+.settings-studio .appearance-controls > .tabs {
+  display: flex;
+  gap: 4px;
+  margin: 0 0 24px;
+  padding: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+.settings-studio .appearance-controls > .tabs button {
+  flex: 1;
+  border: 0;
+  min-height: 34px;
+  padding: 6px 8px;
+  color: var(--text);
+  border-radius: 6px;
+}
+.settings-studio .appearance-controls > .tabs button.active {
+  background: var(--selected);
+  font-weight: 600;
+}
+.settings-studio .preset-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+.settings-studio .preset {
+  padding: 0 0 12px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: var(--surface);
+  gap: 7px;
+  min-width: 0;
+}
+.settings-studio .preset-swatch {
+  height: 96px;
+  padding: 20px;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid var(--border);
+}
+.settings-studio .preset-swatch > span {
+  font-size: 31px;
+}
+.settings-studio .preset-swatch i {
+  width: 17px;
+  height: 29px;
+}
+.settings-studio .preset-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  padding: 3px 12px 0;
+}
+.settings-studio .preset-title strong {
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+.settings-studio .preset > small {
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--text);
+}
+.settings-studio .preset.active {
+  border-color: var(--accent);
+  box-shadow: inset 0 0 0 1px var(--accent);
+}
+.settings-studio .color-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 16px;
+}
+.settings-studio .color-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+.settings-studio .color-field > label {
+  max-width: 45%;
+  font-size: 13px;
+}
+.settings-studio .color-field > div {
+  flex: 0 0 184px;
+  width: 184px;
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.settings-studio .color-field input[type="color"] {
+  flex: none;
+  width: 34px;
+  height: 34px;
+  padding: 2px;
+  border-radius: 6px;
+}
+.settings-studio .color-field input:not([type="color"]) {
+  width: 105px;
+  font-size: 13px !important;
+  font-variant-numeric: tabular-nums;
+}
+.settings-studio .color-field .icon-button {
+  width: 27px;
+  min-height: 30px;
+  padding: 5px;
+}
+.settings-studio .typography-grid {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 22px;
+}
+.settings-studio .typography-grid > label {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  font-size: 13px;
+}
+.settings-studio .typography-grid select {
+  width: 100%;
+  flex-basis: 100%;
+}
+.settings-studio .range-value {
+  margin-left: auto;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+.settings-studio .typography-grid input[type="range"] {
+  flex-basis: 100%;
+  width: 100%;
+  margin-top: 2px;
+}
+.settings-studio .appearance-preview-panel {
+  position: sticky;
+  top: 0;
+  min-width: 0;
+}
+.settings-studio .appearance-preview-heading {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 0 0 14px;
+  font-size: 12px;
+}
+.settings-studio .appearance-preview-heading strong {
+  font-size: 13px;
+}
+.settings-studio .appearance-preview-heading > span {
+  margin-left: auto;
+  font-size: 11px;
+}
+.settings-studio .theme-preview {
+  margin: 0;
+  padding: 28px 24px;
+  min-height: 490px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--reading);
+  color: var(--text);
+  font-family: var(--reading-font);
+}
+.settings-studio .theme-preview .preview-document-line {
+  width: 32px;
+  height: 3px;
+  background: var(--accent);
+  margin-bottom: 24px;
+}
+.settings-studio .theme-preview h2 {
+  margin: 0 0 20px;
+  font-family: var(--reading-font);
+  font-size: calc(var(--reading-size) * var(--heading-scale));
+  font-weight: var(--heading-weight);
+  line-height: 1.25;
+  color: var(--heading);
+  letter-spacing: var(--letter-spacing);
+}
+.settings-studio .theme-preview.reading p {
+  margin: 0 0 var(--paragraph-spacing);
+  font-size: var(--reading-size);
+  line-height: var(--line-height);
+  letter-spacing: var(--letter-spacing);
+  color: var(--text);
+}
+.settings-studio .theme-preview strong {
+  color: var(--bold);
+  font-weight: var(--bold-weight);
+}
+.settings-studio .theme-preview em {
+  color: var(--italic);
+}
+.settings-studio .theme-preview a {
+  font-size: 14px;
+  color: var(--link);
+  text-underline-offset: 3px;
+}
+.settings-studio .theme-preview pre {
+  margin: 22px 0;
+  padding: 14px;
+  overflow-x: auto;
+  font-size: 12px;
+  background: var(--codeBg);
+  color: var(--code);
+  border-radius: 6px;
+}
+.settings-studio .theme-preview .katex {
+  color: var(--math);
+  font-size: 1em;
+}
+.settings-studio .theme-preview .katex-display {
+  margin: 24px 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.settings-studio .theme-preview.reading p.preview-caption {
+  margin: 24px 0 0;
+  font: 12px/1.6 var(--ui-font);
+  color: var(--caption);
+}
+.settings-studio .appearance-preview-note {
+  margin: 14px 0 0;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--text);
+}
+.settings-studio .appearance-controls > .text-button {
+  margin-top: 20px;
+  font-size: 12px;
+}
+@media (max-width: 1250px) {
+  .app-shell .settings-modal.settings-studio {
+    grid-template-columns: 194px minmax(0, 1fr);
+  }
+  .settings-studio .settings-page-body {
+    padding: 24px;
+  }
+  .settings-studio .settings-page-header {
+    padding: 24px;
+  }
+  .settings-studio .appearance-workspace {
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: 22px;
+  }
+  .settings-studio .appearance-controls .section-heading {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1080px) {
+  .app-shell .settings-modal.settings-studio {
+    grid-template-columns: 176px minmax(0, 1fr);
+  }
+  .settings-studio .appearance-workspace {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .settings-studio .appearance-preview-panel {
+    position: static;
+    margin-top: 16px;
+  }
+  .settings-studio .theme-preview {
+    min-height: 0;
+  }
+  .settings-studio .preset-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .settings-studio .settings-nav > button small {
+    display: none;
+  }
+  .app-shell .settings-studio .settings-nav > button {
+    min-height: 48px;
+  }
+}
+@media (max-width: 760px) {
+  .app-shell .settings-workbench-backdrop {
+    padding: 10px;
+  }
+  .app-shell .settings-modal.settings-studio {
+    grid-template-columns: 64px minmax(0, 1fr);
+    grid-template-rows: 58px minmax(0, 1fr);
+    border-radius: 10px;
+  }
+  .settings-studio .settings-studio-heading {
+    padding: 0 14px;
+    gap: 12px;
+  }
+  .settings-studio .settings-save-status {
+    font-size: 11px;
+  }
+  .app-shell .settings-studio .settings-nav {
+    padding: 16px 8px;
+  }
+  .settings-studio .settings-nav h2,
+  .settings-studio .settings-nav > button > span,
+  .settings-studio .settings-nav-footer {
+    display: none !important;
+  }
+  .app-shell .settings-studio .settings-nav > button {
+    padding: 12px;
+    justify-content: center;
+  }
+  .settings-studio .settings-page-header {
+    min-height: 96px;
+    padding: 20px;
+  }
+  .app-shell .settings-studio .settings-page-header h2 {
+    font-size: 24px;
+  }
+  .settings-studio .settings-page-body {
+    padding: 20px;
+  }
+  .settings-studio .preset-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .settings-studio .color-field {
+    flex-wrap: wrap;
+  }
+  .settings-studio .color-field > label {
+    max-width: 100%;
+  }
+  .settings-studio .color-field > div {
+    margin-left: auto;
+  }
+  .settings-studio .model-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Override the legacy narrow-window toolbar limit; actions must remain inside
+   the appearance page rather than overflow beneath section navigation. */
+.settings-studio .appearance-controls .section-heading .button-row{max-width:none;flex-wrap:wrap;justify-content:flex-start;}

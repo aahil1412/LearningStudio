@@ -1,0 +1,860 @@
+/* A course and lesson player. All learner-edited theme values remain authoritative. */
+.learning-studio {
+  --learning-identity: var(--button);
+  --learning-identity-text: var(--selectionText);
+  --studio-header-height: 64px;
+  background: var(--bg);
+}
+.learning-studio [hidden] {
+  display: none !important;
+}
+.learning-studio .studio-topbar {
+  min-height: 64px;
+  padding: 0 24px;
+  gap: 28px;
+  background: var(--learning-identity);
+  color: var(--learning-identity-text);
+  border-bottom: 0;
+  flex-wrap: nowrap;
+  align-items: center;
+  align-content: center;
+  padding-block: 0;
+}
+.learning-studio .studio-wordmark,
+.learning-studio .studio-symbol,
+.learning-studio .studio-global-nav > button,
+.learning-studio .studio-account-actions > button,
+.learning-studio .studio-tools-menu > summary {
+  color: var(--learning-identity-text);
+}
+.learning-studio .studio-wordmark {
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  order: 0;
+  height: auto;
+}
+.learning-studio .studio-symbol {
+  display: grid;
+  place-items: center;
+}
+.learning-studio .studio-global-nav {
+  gap: 3px;
+  align-items: center;
+  align-self: center;
+  flex: 0 1 auto;
+  order: 0;
+  height: auto;
+  margin-top: 0;
+  overflow: visible;
+}
+.learning-studio .studio-global-nav > button {
+  min-height: 38px;
+  border-radius: 8px;
+  border: 0;
+  padding: 9px 13px;
+  font-size: 13px;
+  background: transparent;
+}
+.learning-studio .studio-global-nav > button[aria-current="page"],
+.learning-studio .studio-global-nav > button:hover {
+  background: color-mix(
+    in srgb,
+    var(--learning-identity-text) 15%,
+    transparent
+  );
+}
+.learning-studio .studio-account-actions {
+  margin-left: auto;
+  gap: 8px;
+  order: 0;
+}
+.learning-studio .studio-account-actions > button {
+  background: transparent;
+  border-color: color-mix(
+    in srgb,
+    var(--learning-identity-text) 28%,
+    transparent
+  );
+}
+.learning-studio .studio-topbar .studio-global-nav > button,
+.learning-studio
+  .studio-topbar
+  .studio-global-nav
+  > button[aria-current="page"],
+.learning-studio .studio-topbar .studio-account-actions > button,
+.learning-studio .studio-topbar .studio-account-actions > .account-pill,
+.learning-studio .studio-topbar .provider-usage-compact > summary,
+.learning-studio .studio-topbar .studio-mobile-actions > button {
+  color: var(--learning-identity-text);
+  background: transparent;
+}
+.learning-studio .studio-topbar .studio-command-button kbd {
+  color: var(--learning-identity-text);
+}
+.learning-studio .studio-topbar .studio-global-nav > button > span {
+  color: var(--learning-identity-text);
+  font-size: inherit;
+  opacity: 1;
+}
+.learning-studio .studio-topbar .studio-account-actions > button,
+.learning-studio .studio-topbar .provider-usage-compact > summary {
+  border-color: color-mix(
+    in srgb,
+    var(--learning-identity-text) 35%,
+    transparent
+  );
+}
+.learning-studio .studio-topbar .studio-account-actions > button:hover,
+.learning-studio .studio-topbar .provider-usage-compact > summary:hover {
+  background: color-mix(
+    in srgb,
+    var(--learning-identity-text) 14%,
+    transparent
+  );
+}
+.learning-studio .studio-topbar .provider-usage-popover {
+  color: var(--text);
+  background: var(--popover);
+}
+.learning-studio .studio-connection {
+  max-width: 200px;
+  font-size: 12px;
+}
+.learning-studio .studio-tools-popover {
+  color: var(--text);
+}
+.learning-studio .studio-local-state {
+  display: none;
+}
+.learning-studio .studio-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+  padding: 0;
+  gap: 0;
+}
+.learning-studio .folio-contents-slot {
+  flex: 0 0 auto;
+  min-height: 0;
+  display: flex;
+  border-right: 1px solid var(--divider);
+}
+.learning-studio .subject-contents {
+  background: var(--sidebar);
+  min-width: 220px;
+}
+.learning-studio .folio-contents {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+  height: 100%;
+  min-height: 0;
+  position: relative;
+  color: var(--text);
+  background: var(--sidebar);
+  font: 13px/1.5 var(--ui-font);
+}
+.learning-studio .folio-contents__header {
+  padding: 24px 18px 20px;
+  border-bottom: 1px solid var(--divider);
+}
+.learning-studio .folio-contents__subject-heading {
+  display: flex;
+  align-items: start;
+  gap: 8px;
+}
+.learning-studio .folio-contents__subject-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: 650 20px/1.3 var(--ui-font);
+  color: var(--heading);
+}
+.learning-studio .folio-contents__subject-button span {
+  overflow-wrap: anywhere;
+}
+.learning-studio .folio-contents__collapse {
+  background: transparent;
+  border: 0;
+  color: var(--secondary);
+  padding: 2px;
+}
+.learning-studio .folio-contents__objective {
+  margin: 14px 0 0;
+  color: var(--secondary);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.learning-studio .folio-contents__scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 14px 20px;
+}
+.learning-studio .folio-contents__section {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.learning-studio .folio-contents__section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 13px;
+  padding-inline: 4px;
+}
+.learning-studio .folio-contents__section-heading h2 {
+  margin: 0;
+  font: 650 13px/1.4 var(--ui-font);
+  color: var(--heading);
+}
+.learning-studio .folio-contents__text-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--link);
+  font: 12px/1.5 var(--ui-font);
+  text-align: left;
+}
+.learning-studio .folio-contents__tree,
+.learning-studio .folio-contents__recent {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.learning-studio .folio-contents__tree-row {
+  display: flex;
+  align-items: start;
+  padding-left: calc(var(--contents-depth, 0) * 12px);
+  margin-block: 3px;
+  border-radius: 7px;
+}
+.learning-studio .folio-contents__tree-row[data-current],
+.learning-studio .folio-contents__recent-button[aria-current="page"] {
+  background: var(--selected);
+}
+.learning-studio .folio-contents__tree-toggle {
+  width: 20px;
+  height: 30px;
+  flex: 0 0 20px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--secondary);
+}
+.learning-studio .folio-contents__node {
+  display: flex;
+  align-items: start;
+  gap: 7px;
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  text-align: left;
+  padding: 7px 7px 7px 0;
+  font: 13px/1.45 var(--ui-font);
+}
+.learning-studio .folio-contents__node-status {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  color: var(--secondary);
+}
+.learning-studio .folio-contents__node-status[data-status="demonstrated"] {
+  color: var(--success);
+}
+.learning-studio .folio-contents__node-copy {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+.learning-studio .folio-contents__node-title,
+.learning-studio .folio-contents__recent-title {
+  overflow-wrap: anywhere;
+}
+.learning-studio .folio-contents__current-label {
+  font-size: 10px;
+  color: var(--link);
+}
+.learning-studio .folio-contents__legend {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--secondary);
+  margin-top: 16px;
+  padding: 0 4px;
+}
+.learning-studio .folio-contents__legend span {
+  flex-basis: 100%;
+}
+.learning-studio .folio-contents__empty {
+  font: 12px/1.7 var(--ui-font);
+  color: var(--secondary);
+  padding: 0 4px;
+}
+.learning-studio .folio-contents__empty p {
+  margin: 0 0 8px;
+}
+.learning-studio .folio-contents__recent-button {
+  width: 100%;
+  display: flex;
+  gap: 9px;
+  text-align: left;
+  padding: 10px 9px;
+  color: var(--text);
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+  font: 12px/1.5 var(--ui-font);
+}
+.learning-studio .folio-contents__recent-button > svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+.learning-studio .folio-contents__recent-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  color: var(--secondary);
+  font-size: 10px;
+}
+.learning-studio .folio-contents__footer {
+  padding: 16px;
+  border-top: 1px solid var(--divider);
+  display: grid;
+  gap: 7px;
+}
+.learning-studio .folio-contents__footer-button {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 7px 5px;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  text-align: left;
+  font: 12px/1.5 var(--ui-font);
+}
+.learning-studio .folio-contents__count {
+  margin-left: auto;
+  color: var(--secondary);
+}
+.learning-studio .folio-contents__new-session {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 10px;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font: 13px var(--ui-font);
+}
+.learning-studio .learning-page-tools {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  min-height: 24px;
+  margin-bottom: 10px;
+  color: var(--secondary);
+  font-size: 12px;
+}
+.learning-studio .folio-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+  background: var(--bg);
+}
+.learning-studio .folio-surface-root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow: hidden;
+}
+.learning-studio .folio-documentbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 7px 24px 0;
+  flex-shrink: 0;
+  background: var(--bg);
+  border: 0;
+}
+.learning-studio .folio-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  font-size: 12px;
+}
+.learning-studio .folio-breadcrumb button {
+  border: 0;
+  background: transparent;
+  color: var(--secondary);
+}
+.learning-studio .folio-breadcrumb > select {
+  max-width: 210px;
+  min-width: 80px;
+  border: 0;
+  background: transparent;
+  color: var(--secondary);
+}
+.learning-studio .lesson-actions {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  flex-shrink: 0;
+}
+.learning-studio .lesson-actions > button,
+.learning-studio .folio-reading-menu > summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 10px;
+  background: transparent;
+  border: 0;
+  color: var(--secondary);
+  font-size: 12px;
+  cursor: pointer;
+}
+.learning-studio .folio-reading-menu {
+  position: relative;
+}
+.learning-studio .folio-reading-menu .reading-controls {
+  position: absolute;
+  z-index: 60;
+  right: 0;
+  top: 36px;
+  width: 340px;
+  background: var(--popover);
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 30px #10251b22;
+  padding: 18px;
+}
+.learning-studio .learning-course-title {
+  padding: 5px 24px 10px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  background: var(--bg);
+  border: 0;
+  flex-shrink: 0;
+}
+.learning-studio .learning-course-title h1 {
+  margin: 0;
+  font: 650 21px/1.3 var(--ui-font);
+  letter-spacing: -0.025em;
+  color: var(--heading);
+}
+.learning-studio .learning-course-title p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: var(--secondary);
+  max-width: 70ch;
+}
+.learning-studio .learning-course-title p {
+  display: none;
+}
+.learning-mode-select {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 12px;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+.learning-mode-select select {
+  color: var(--text);
+  border: 1px solid var(--border);
+  background: var(--input);
+  border-radius: 8px;
+  padding: 7px 10px;
+  font: 13px var(--ui-font);
+}
+.learning-studio .learning-player {
+  margin: 0 24px;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
+}
+.learning-studio .learning-player-heading h2 {
+  font: 650 26px/1.3 var(--ui-font);
+  letter-spacing: -0.025em;
+}
+.learning-studio .learning-player-position {
+  color: var(--secondary);
+}
+.learning-studio .learning-player-status.is-failed {
+  color: var(--danger);
+}
+.learning-studio .folio-reader-region {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.learning-studio .lesson-reader {
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 16px 32px 32px;
+  background: var(--reading);
+  scroll-behavior: auto;
+}
+.learning-studio .reading-column {
+  width: 100%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0;
+}
+.learning-studio .lesson-message {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.learning-studio .message-label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: var(--secondary);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.learning-studio .learning-player:not(.is-history) .lesson-message.user {
+  display: none;
+}
+.learning-studio .learning-player.is-history .lesson-message {
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--divider);
+}
+.learning-studio .learning-player.is-history .message-label {
+  justify-content: flex-start;
+}
+.learning-studio .lesson-blocks > div {
+  scroll-margin-top: 18px;
+}
+.learning-studio .studio-lesson-context {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: var(--secondary);
+}
+.learning-studio .learning-player:not(.is-history) .studio-lesson-context {
+  display: none;
+}
+.learning-studio .learning-player:not(.is-history) .learning-page-tools {
+  float: right;
+  position: relative;
+  z-index: 4;
+  margin: 0 0 0 12px;
+  min-height: 26px;
+}
+.learning-studio .learning-player:not(.is-history) .teaching-concept {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+.learning-studio .learning-player:not(.is-history) .teaching-concept h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+.learning-studio .learning-player:not(.is-history) .teaching-prerequisites {
+  margin-top: 8px;
+}
+.learning-studio .learning-player:not(.is-history) .markdown > :first-child {
+  margin-top: 0;
+}
+.learning-studio .learning-player:not(.is-history) .visual-instance-shell {
+  margin: 14px 0 24px;
+  clear: both;
+}
+.learning-studio .learning-player:not(.is-history) .visual-figure-header {
+  padding: 12px 18px;
+}
+.learning-studio .learning-player:not(.is-history) .visual-figure-header h4 {
+  font-size: 18px;
+  line-height: 1.35;
+}
+.learning-studio
+  .learning-player:not(.is-history)
+  .visual-figure-header
+  .visual-tag {
+  display: none;
+}
+.learning-studio
+  .learning-player:not(.is-history)
+  .visual-instance-toolbar
+  > span {
+  display: none;
+}
+.learning-studio .learning-player:not(.is-history) .visual-instance-toolbar {
+  justify-content: flex-end;
+  padding: 4px 8px;
+  border-radius: 8px 8px 0 0;
+}
+.learning-studio .studio-message-actions {
+  margin-left: auto;
+}
+.learning-studio .lesson-empty {
+  max-width: 660px;
+  padding: 48px 12px;
+  text-align: left;
+  margin: auto;
+}
+.learning-studio .lesson-empty h2 {
+  font-size: 28px;
+}
+.learning-studio .lesson-empty p {
+  font: var(--reading-size)/var(--line-height) var(--reading-font);
+}
+.learning-studio .learning-question-panel {
+  flex: 0 0 auto;
+  padding: 16px 24px;
+  border-top: 1px solid var(--divider);
+  background: var(--surface);
+  max-height: 290px;
+  overflow: auto;
+}
+.learning-question-panel > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.learning-question-panel h3 {
+  margin: 0;
+  font: 600 15px var(--ui-font);
+}
+.learning-question-panel > header button {
+  border: 0;
+  background: transparent;
+  padding: 4px;
+  color: var(--secondary);
+}
+.learning-studio .composer-wrap {
+  position: static;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.learning-studio .quick-actions {
+  margin: 0 0 8px;
+  gap: 7px;
+}
+.learning-studio .quick-actions > button:first-child {
+  display: none;
+}
+.learning-studio .message-composer {
+  display: flex;
+  min-height: 68px;
+  margin: 0;
+  padding: 10px 12px;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  align-items: end;
+  gap: 12px;
+}
+.learning-studio .message-composer textarea {
+  flex: 1;
+  min-height: 44px;
+  padding: 3px;
+  font: 15px/1.6 var(--reading-font);
+  border: 0;
+  outline: 0;
+  resize: vertical;
+  background: transparent;
+  color: var(--text);
+}
+.learning-studio .folio-input-mode {
+  display: none;
+}
+.learning-studio .composer-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 8px;
+  font-size: 11px;
+  color: var(--secondary);
+}
+.learning-studio .folio-notes-panel {
+  position: absolute;
+  z-index: 35;
+  inset: 12px 12px 12px auto;
+  width: min(360px, calc(100% - 24px));
+  display: flex;
+  flex-direction: column;
+  background: var(--popover);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 14px 36px #10251b22;
+  padding: 18px;
+}
+.learning-studio .folio-notes-panel > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.learning-studio .folio-notes-panel h3 {
+  flex: 1;
+  margin: 0;
+  font-size: 16px;
+}
+.learning-studio .folio-notes-panel textarea {
+  flex: 1;
+  min-height: 150px;
+  resize: none;
+  background: var(--input);
+  border: 1px solid var(--border);
+  padding: 14px;
+  margin-top: 14px;
+  color: var(--text);
+  font: 16px/1.65 var(--reading-font);
+}
+.learning-studio .folio-contents-overlay {
+  position: fixed;
+  inset: 64px 0 0;
+  z-index: 70;
+  background: #10251b66;
+  display: flex;
+}
+.learning-studio .folio-contents-overlay .folio-contents {
+  width: 292px !important;
+  max-width: 88vw;
+}
+[data-theme="dark"] .learning-studio {
+  --learning-identity: var(--sidebar);
+  --learning-identity-text: var(--text);
+}
+@media (max-width: 1180px) {
+  .learning-studio .studio-topbar {
+    gap: 14px;
+    padding-inline: 18px;
+  }
+  .learning-studio .studio-global-nav > button {
+    padding-inline: 9px;
+  }
+  .learning-studio .studio-connection {
+    max-width: 130px;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .learning-studio .learning-player {
+    margin-inline: 16px;
+  }
+  .learning-studio .learning-course-title,
+  .learning-studio .folio-documentbar {
+    padding-inline: 22px;
+  }
+}
+@media (max-width: 950px) {
+  .learning-studio .studio-wordmark > span:last-child {
+    max-width: 85px;
+    white-space: normal;
+    line-height: 1.1;
+    font-size: 15px;
+  }
+  .learning-studio .studio-global-nav > button svg {
+    display: none;
+  }
+  .learning-studio .studio-command-button kbd,
+  .learning-studio .studio-connection,
+  .learning-studio .studio-account-actions .usage-status {
+    display: none;
+  }
+  .learning-studio .learning-course-title {
+    gap: 12px;
+  }
+  .learning-studio .learning-course-title h1 {
+    font-size: 20px;
+  }
+  .learning-studio .lesson-reader {
+    padding: 18px 22px 30px;
+  }
+  .learning-studio .folio-breadcrumb > select {
+    max-width: 150px;
+  }
+}
+@media (max-width: 660px) {
+  .learning-studio .studio-topbar {
+    padding-inline: 10px;
+    gap: 8px;
+    min-height: 58px;
+  }
+  .learning-studio .studio-wordmark > span:last-child {
+    display: none;
+  }
+  .learning-studio .studio-global-nav > button {
+    padding: 8px;
+    font-size: 11px;
+  }
+  .learning-studio .studio-account-actions {
+    gap: 2px;
+  }
+  .learning-studio .studio-command-button {
+    display: none;
+  }
+  .learning-studio .learning-player {
+    margin-inline: 7px;
+    border-radius: 10px 10px 0 0;
+  }
+  .learning-studio .folio-documentbar,
+  .learning-studio .learning-course-title {
+    padding-inline: 14px;
+  }
+  .learning-studio .folio-breadcrumb > select {
+    display: none;
+  }
+  .learning-studio .lesson-actions button {
+    padding-inline: 5px;
+  }
+  .learning-studio .learning-course-title {
+    align-items: flex-start;
+  }
+  .learning-studio .learning-course-title h1 {
+    font-size: 18px;
+  }
+  .learning-mode-select {
+    display: grid;
+    gap: 3px;
+  }
+  .learning-studio .lesson-reader {
+    padding-inline: 14px;
+  }
+  .learning-studio .learning-question-panel {
+    padding: 12px 14px;
+  }
+}

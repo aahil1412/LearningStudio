@@ -1,0 +1,642 @@
+{
+  "version": "2.4.0",
+  "recordedAt": "2026-10-29T01:43:26.370Z",
+  "unitChecks": {
+    "total": 443,
+    "passed": 443,
+    "failed": 0,
+    "skipped": 0
+  },
+  "uniqueWorkflows": {
+    "total": 121,
+    "passed": 121,
+    "unresolved": 0
+  },
+  "packaged": {
+    "learningWorkflowsPassed": 6,
+    "runtimeFilesVerified": 82,
+    "allRuntimeFilesMatch": true
+  },
+  "scope": {
+    "controlledProviderFixturesLabeled": true,
+    "freshLiveChatGPTMeasured": false,
+    "installerWizardInstalledGlobally": false,
+    "installerSigned": false
+  },
+  "latestResults": [
+    {
+      "file": "accessibility.spec.ts",
+      "title": "WCAG audits cover the learning workspace and settings in both appearance schemes",
+      "status": "passed"
+    },
+    {
+      "file": "advanced-visual-ui.spec.ts",
+      "title": "custom formulas derive symbolically and reject executable source without losing the usable model",
+      "status": "passed"
+    },
+    {
+      "file": "advanced-visual-ui.spec.ts",
+      "title": "custom Three.js surfaces and vector fields render computed geometry and respond to camera interaction",
+      "status": "passed"
+    },
+    {
+      "file": "advanced-visual-ui.spec.ts",
+      "title": "a newly authored nonlinear ODE runs as validated derivatives with time playback",
+      "status": "passed"
+    },
+    {
+      "file": "advanced-visual-ui.spec.ts",
+      "title": "a typed chemical block renders validated chemical connectivity locally through RDKit",
+      "status": "passed"
+    },
+    {
+      "file": "advanced-visual-ui.spec.ts",
+      "title": "real molecular comparison aligns, reports RMSD and measures angles and torsions @network",
+      "status": "passed"
+    },
+    {
+      "file": "automation-ui.spec.ts",
+      "title": "isolated disconnected account profiles can be created, renamed, selected, and recovered after restart; full-page Settings supports keyboard navigation",
+      "status": "passed"
+    },
+    {
+      "file": "automation-ui.spec.ts",
+      "title": "scheduled inference requires explicit consent, future tasks wait, cancellation works, and disconnected due-task failures preserve the session",
+      "status": "passed"
+    },
+    {
+      "file": "biology-repaired-rendering-ui.spec.ts",
+      "title": "renders the recorded biology outputs with repaired figures and actual image fallback",
+      "status": "passed"
+    },
+    {
+      "file": "connected-graph-explorer-ui.spec.ts",
+      "title": "large native knowledge map stays bounded, filters multiple keywords, connects source concepts, follows backlinks and preserves pins",
+      "status": "passed"
+    },
+    {
+      "file": "connected-graph-explorer-ui.spec.ts",
+      "title": "definition-only saved chats create a connected encountered map with no setup or mastery claim, and explicit tracking keeps the node identity",
+      "status": "passed"
+    },
+    {
+      "file": "folio-studio-ui.spec.ts",
+      "title": "native subject-first folio exposes real pathway, teaching, inline interaction, memory, notes and complete preferences without losing data",
+      "status": "passed"
+    },
+    {
+      "file": "inline-only-workspace-ui.spec.ts",
+      "title": "new and legacy lessons remain inline without a lab or unrelated example, retaining interactive state through fullscreen and restart",
+      "status": "passed"
+    },
+    {
+      "file": "inline-only-workspace-ui.spec.ts",
+      "title": "manual figure authoring is available in the notebook and creates no preset plot before an explicit model choice",
+      "status": "passed"
+    },
+    {
+      "file": "interactive-explainers-ui.spec.ts",
+      "title": "the real welcome lesson opens a paused inline mechanism and DNA edits change actual RNA and protein",
+      "status": "passed"
+    },
+    {
+      "file": "interactive-explainers-ui.spec.ts",
+      "title": "calculated descent, direct manipulation and real 3D camera retain the same figure through fullscreen and application restart",
+      "status": "passed"
+    },
+    {
+      "file": "interactive-explainers-ui.spec.ts",
+      "title": "reusable circuit and chemistry experiments change geometry and exact calculated values rather than only swapping prose",
+      "status": "passed"
+    },
+    {
+      "file": "interactive-explainers-ui.spec.ts",
+      "title": "ordinary learning questions acquire the appropriate trusted inline interaction even when the controlled model emits only prose",
+      "status": "passed"
+    },
+    {
+      "file": "interactive-explainers-ui.spec.ts",
+      "title": "native HTML export opens without network or Learning Studio and preserves all three trusted interactive renderer types",
+      "status": "passed"
+    },
+    {
+      "file": "interactive-explainers-ui.spec.ts",
+      "title": "new lesson figures retain readable sans-serif typography and independent light, dark, custom and narrow-window layouts",
+      "status": "passed"
+    },
+    {
+      "file": "learning-redesign-ui.spec.ts",
+      "title": "learning home begins with subjects and real study actions, then adopts a supplied curriculum without an automatic model request",
+      "status": "passed"
+    },
+    {
+      "file": "learning-redesign-ui.spec.ts",
+      "title": "lesson sections replace the default transcript and preserve the mounted interactive figure and camera across navigation",
+      "status": "passed"
+    },
+    {
+      "file": "learning-redesign-ui.spec.ts",
+      "title": "asking is an explicit contextual action and a completed tutor response becomes a usable next learning section",
+      "status": "passed"
+    },
+    {
+      "file": "learning-redesign-ui.spec.ts",
+      "title": "the original conversation remains accessible and branching preserves its transcript",
+      "status": "passed"
+    },
+    {
+      "file": "learning-redesign-ui.spec.ts",
+      "title": "notes, appearance, selected lesson section and scientific controls survive SQLite restart",
+      "status": "passed"
+    },
+    {
+      "file": "learning-redesign-ui.spec.ts",
+      "title": "the redesigned learning surfaces remain usable in light, dark, custom and compact layouts with preserved tools",
+      "status": "passed"
+    },
+    {
+      "file": "learning-ui.spec.ts",
+      "title": "numeric review schedules SM-2 and knowledge stays unassessed until evidence is explicitly confirmed",
+      "status": "passed"
+    },
+    {
+      "file": "learning-ui.spec.ts",
+      "title": "hierarchy links and drag reparenting survive restart, and graph coordinates have durable undo and redo",
+      "status": "passed"
+    },
+    {
+      "file": "progressive-tutor-ui.spec.ts",
+      "title": "validated figures appear before completion, with no raw protocol or unsolicited retrieval, and keep the same live DOM after final definition reordering",
+      "status": "passed"
+    },
+    {
+      "file": "progressive-tutor-ui.spec.ts",
+      "title": "cancel preserves validated streamed content and interactive state, supports a later message and survives restart",
+      "status": "passed"
+    },
+    {
+      "file": "progressive-tutor-ui.spec.ts",
+      "title": "deadline preserves validated streamed content and interactive state, supports a later message and survives restart",
+      "status": "passed"
+    },
+    {
+      "file": "provider-recovery.spec.ts",
+      "title": "real IPC rejects disconnected and malformed model requests without changing the session",
+      "status": "passed"
+    },
+    {
+      "file": "provider-recovery.spec.ts",
+      "title": "saved partial responses and malformed optional questions survive recovery without blocking the lesson",
+      "status": "passed"
+    },
+    {
+      "file": "provider-recovery.spec.ts",
+      "title": "real PDF import extracts text, keeps provenance, and does not infer mastery",
+      "status": "passed"
+    },
+    {
+      "file": "provider-recovery.spec.ts",
+      "title": "desktop isolation and Windows credential encryption are active",
+      "status": "passed"
+    },
+    {
+      "file": "providers-ui.spec.ts",
+      "title": "provider provisioning preserves ChatGPT by default, explicit local selection streams through real IPC and survives restart, and quota is honest",
+      "status": "passed"
+    },
+    {
+      "file": "providers-ui.spec.ts",
+      "title": "external-provider setup requires explicit billing consent and keeps keys out of learning exports",
+      "status": "passed"
+    },
+    {
+      "file": "research-network.spec.ts",
+      "title": "actual public research metadata can be searched, inspected and saved @network",
+      "status": "passed"
+    },
+    {
+      "file": "research-network.spec.ts",
+      "title": "Openverse scientific image retrieval uses Chromium transport and survives an offline-cache restart @network",
+      "status": "passed"
+    },
+    {
+      "file": "restore-preview-ui.spec.ts",
+      "title": "actual Settings restore previews and cancels safely, then commits reviewed normalized data and survives autosave/restart",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes light at 360px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes light at 690px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes light at 1100px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes dark at 360px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes dark at 690px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes dark at 1100px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes custom at 360px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes custom at 690px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scenes custom at 1100px keep symbols and labels separate",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "authored scene interactions visibly focus participants, change active stages and restore state",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "offline production textbook preserves authored scene state and interactions without a network",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "light at 360px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "light at 690px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "light at 700px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "light at 1100px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "dark at 360px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "dark at 690px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "dark at 700px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "dark at 1100px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "custom at 360px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "custom at 690px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "custom at 700px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "custom at 1100px keeps semantic hues and readable collision-free annotations",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "translation progression keeps antiparallel pairing visible without an overprinted ghost",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "production translation controls inspect participants, animate causal changes and restore saved state",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "annotation letters clear structural strokes without concealing the mechanism behind label plates",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-illustrations-ui.spec.ts",
+      "title": "both membrane routes conserve particles between explanatory steps and export valid standalone SVG",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-models-ui.spec.ts",
+      "title": "calculated field parameters change geometry and numerical values, playback changes time, and state rehydrates",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-models-ui.spec.ts",
+      "title": "association changes chain geometry, preserves material, responds to phase partitioning, and opens local feedback",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-models-ui.spec.ts",
+      "title": "QCD controls change actual vertex topology, QED has no fake elementary self-vertices, and branch feedback is anchored",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-models-ui.spec.ts",
+      "title": "a generic one-step relationship diagram has no fake playback and clicking gets immediate local explanation",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-models-ui.spec.ts",
+      "title": "translation selections show a nearby explanation without scrolling to the figure end",
+      "status": "passed"
+    },
+    {
+      "file": "scientific-models-ui.spec.ts",
+      "title": "offline trusted models retain safe saved parameters and actual interactive mechanisms",
+      "status": "passed"
+    },
+    {
+      "file": "studio-interface-ui.spec.ts",
+      "title": "definitions open next to the selected term without jumping to the end; typography stays inherited in light/dark/custom",
+      "status": "passed"
+    },
+    {
+      "file": "studio-interface-ui.spec.ts",
+      "title": "the real provider pipeline shows quiet thinking without a stopwatch and upgrades an ordinary aggregation explanation automatically",
+      "status": "passed"
+    },
+    {
+      "file": "study-source-ui.spec.ts",
+      "title": "pasted broad curriculum is reviewed before adoption, preserves ordered sections and creates source-linked chats without mastery",
+      "status": "passed"
+    },
+    {
+      "file": "study-source-ui.spec.ts",
+      "title": "real PDF textbook imports, adopts physical chapter pages, grounds continue with exact citations and survives restart",
+      "status": "passed"
+    },
+    {
+      "file": "study-source-ui.spec.ts",
+      "title": "a held source-save response cannot erase a concurrent tutor completion or locally added library note",
+      "status": "passed"
+    },
+    {
+      "file": "study-source-ui.spec.ts",
+      "title": "local Markdown textbook import retains heading citations without inventing PDF page 1",
+      "status": "passed"
+    },
+    {
+      "file": "subjects-ui.spec.ts",
+      "title": "broad workspace, editable pathway, separate coverage, shared evidence, branches and restart",
+      "status": "passed"
+    },
+    {
+      "file": "subjects-ui.spec.ts",
+      "title": "living textbook, precise search, memory corrections and failed model preserve subject state",
+      "status": "passed"
+    },
+    {
+      "file": "subjects-ui.spec.ts",
+      "title": "real Electron teaching flow proposes a broad pathway and sends bounded shared JSON to a second chat",
+      "status": "passed"
+    },
+    {
+      "file": "subjects-ui.spec.ts",
+      "title": "subject search opens exact concepts, curriculum nodes, notes and message anchors",
+      "status": "passed"
+    },
+    {
+      "file": "v2-appearance-ui.spec.ts",
+      "title": "subject, pathway, memory, search, textbook and document interfaces remain accessible in light, dark and custom themes",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export-ui.spec.ts",
+      "title": "native selected-message export previews the actual standalone edition and saves a self-contained HTML without private notes",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export-ui.spec.ts",
+      "title": "living textbook retains user edits when a concurrent writer advances the chapter revision",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export-ui.spec.ts",
+      "title": "document study retains original PDF bytes, requires actual page excerpts, and saves genuine page provenance",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export-ui.spec.ts",
+      "title": "equation explorer and selection tools preserve the lesson after a disconnected contextual request",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export-ui.spec.ts",
+      "title": "living textbook applies customized reading typography to prose, headings, and mathematics immediately",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export-ui.spec.ts",
+      "title": "an explicitly synthetic provider fixture renders a calculated contextual graph without a real model or account",
+      "status": "passed"
+    },
+    {
+      "file": "v2-export.spec.ts",
+      "title": "ordinary browser opens a standalone offline textbook with real math, interactive plots, diagrams, answer reveals, images, and molecular controls",
+      "status": "passed"
+    },
+    {
+      "file": "v2-migration-ui.spec.ts",
+      "title": "an actual v1.1 library upgrades with a pre-migration backup and remains editable across restart",
+      "status": "passed"
+    },
+    {
+      "file": "v2-visual-ui.spec.ts",
+      "title": "one mounted plot moves inline, fullscreen, collapses and restores parameters and axes after restart",
+      "status": "passed"
+    },
+    {
+      "file": "v2-visual-ui.spec.ts",
+      "title": "notebook annotations, tags, duplication and authored canvas survive a real app restart",
+      "status": "passed"
+    },
+    {
+      "file": "v2-visual-ui.spec.ts",
+      "title": "a single mounted Three.js scene keeps its orientation through docking and rehydrates its camera after restart",
+      "status": "passed"
+    },
+    {
+      "file": "v2-visual-ui.spec.ts",
+      "title": "ODE time and model parameters survive a real restart without resetting to the completed trajectory",
+      "status": "passed"
+    },
+    {
+      "file": "v2-visual-ui.spec.ts",
+      "title": "a molecular source, representation, selection and camera restore from immutable subject assets @network",
+      "status": "passed"
+    },
+    {
+      "file": "v2-visual-ui.spec.ts",
+      "title": "visual notebook and canvas have consistent light, dark and edited custom themes with accessible controls",
+      "status": "passed"
+    },
+    {
+      "file": "v21-annotations-ui.spec.ts",
+      "title": "real selection paints two persistent colors, note search, source navigation and restart",
+      "status": "passed"
+    },
+    {
+      "file": "v21-annotations-ui.spec.ts",
+      "title": "connected graph has cross-chat evidence backlinks, pending note suggestions and persistent pins",
+      "status": "passed"
+    },
+    {
+      "file": "v21-planning-ui.spec.ts",
+      "title": "broad conversational setup remains optional, persists preferences, and never launches planning prematurely",
+      "status": "passed"
+    },
+    {
+      "file": "v21-planning-ui.spec.ts",
+      "title": "a checkpointed main-process job survives navigation and restart with explicit safe recovery",
+      "status": "passed"
+    },
+    {
+      "file": "v21-reading-ui.spec.ts",
+      "title": "real Electron reading controls, keyboard zoom and portable offline font settings survive restart",
+      "status": "passed"
+    },
+    {
+      "file": "v21-reading-ui.spec.ts",
+      "title": "a document highlight opens its exact original page",
+      "status": "passed"
+    },
+    {
+      "file": "v21-requests-ui.spec.ts",
+      "title": "planning and unrelated chats remain independent across navigation, scoped cancellation, and append-only retry",
+      "status": "passed"
+    },
+    {
+      "file": "v21-requests-ui.spec.ts",
+      "title": "deadline and transport interruption preserve partial work, explicit retries recover, and restart never shows stale writing",
+      "status": "passed"
+    },
+    {
+      "file": "v21-requests-ui.spec.ts",
+      "title": "same-profile relaunch focuses the existing process while isolated profiles remain independent",
+      "status": "passed"
+    },
+    {
+      "file": "v21-shutdown-ui.spec.ts",
+      "title": "quit from a SQLite native callback unwinds before disposal/close, exits normally, and preserves the library",
+      "status": "passed"
+    },
+    {
+      "file": "v21-shutdown-ui.spec.ts",
+      "title": "normal hidden Electron shutdown closes SQLite cleanly without replacing saved settings",
+      "status": "passed"
+    },
+    {
+      "file": "v21-teaching-ui.spec.ts",
+      "title": "actual Electron teaching controller orders definitions and an inline translation illustration, with canonical optional MCQ feedback, review evidence and restart",
+      "status": "passed"
+    },
+    {
+      "file": "v21-teaching-ui.spec.ts",
+      "title": "an explicit Boltzmann request works without model authentication and retains real parameters when moved inline and fullscreen and after restart",
+      "status": "passed"
+    },
+    {
+      "file": "v21-teaching-ui.spec.ts",
+      "title": "image requests run free retrieval inline with source and licensing, and a real transport failure stays recoverable @network",
+      "status": "passed"
+    },
+    {
+      "file": "visual-ui.spec.ts",
+      "title": "interactive scientific plots calculate real values and support parameters without unsafe-eval",
+      "status": "passed"
+    },
+    {
+      "file": "visual-ui.spec.ts",
+      "title": "validated SVG diagrams support selection, pan controls, fullscreen and export",
+      "status": "passed"
+    },
+    {
+      "file": "visual-ui.spec.ts",
+      "title": "real RCSB structure loads in WebGL and remains interactive @network",
+      "status": "passed"
+    },
+    {
+      "file": "visual-ui.spec.ts",
+      "title": "real PubChem chemistry diagram and licensed educational image have provenance @network",
+      "status": "passed"
+    },
+    {
+      "file": "workflows.spec.ts",
+      "title": "a broad learning goal needs no assessment and survives a real restart with notes and mode",
+      "status": "passed"
+    },
+    {
+      "file": "workflows.spec.ts",
+      "title": "the clearly labeled reference lesson renders mathematics, calculated plots, SVG diagrams, and optional practice",
+      "status": "passed"
+    },
+    {
+      "file": "workflows.spec.ts",
+      "title": "roadmap goals, lesson position, optional practice, and reading progress survive restart",
+      "status": "passed"
+    },
+    {
+      "file": "workflows.spec.ts",
+      "title": "library resources and an editable evidence-based knowledge graph connect back to a saved lesson",
+      "status": "passed"
+    },
+    {
+      "file": "workflows.spec.ts",
+      "title": "independent custom light and dark palettes, typography, presets, and system appearance persist",
+      "status": "passed"
+    }
+  ],
+  "repositoryCleanup": {
+    "unitTestsPassed": 443,
+    "affectedNativeWorkflowsPassed": 2,
+    "typecheckPassed": true,
+    "lintPassed": true,
+    "productionBuildPassed": true,
+    "installerRuntimeStillMatches": true,
+    "runtimeChanges": false
+  }
+}

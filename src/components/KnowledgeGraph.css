@@ -1,0 +1,404 @@
+.ks-workspace {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  padding: 30px 32px 16px;
+  box-sizing: border-box;
+}
+.ks-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 23px;
+}
+.ks-eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--muted);
+}
+.ks-header h1 {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: 29px;
+  letter-spacing: -0.8px;
+  margin: 9px 0;
+  color: var(--heading);
+}
+.ks-header p {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+.ks-workspace button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.ks-workspace button:hover {
+  border-color: var(--accent);
+}
+.ks-workspace button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+.ks-workspace button.ks-primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+  font-weight: 650;
+}
+.ks-toolbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.ks-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: var(--input);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 0 12px;
+  flex: 1;
+  color: var(--muted);
+  height: 39px;
+}
+.ks-search input {
+  border: 0 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  outline: 0;
+  width: 100%;
+}
+.ks-workspace input,
+.ks-workspace select,
+.ks-workspace textarea {
+  background: var(--input);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 9px;
+  font: inherit;
+  font-size: 12px;
+  box-sizing: border-box;
+  min-width: 0;
+}
+.ks-workspace input:focus,
+.ks-workspace select:focus,
+.ks-workspace textarea:focus {
+  outline: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
+  outline-offset: 2px;
+}
+.ks-count {
+  font-size: 11px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.ks-notice {
+  font-size: 12px;
+  color: var(--accent);
+  margin: 0 0 12px;
+}
+.ks-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  flex: 1;
+  min-height: 350px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+  background: var(--bg);
+}
+.ks-body.ks-with-details {
+  grid-template-columns: minmax(0, 1fr) 300px;
+}
+.ks-canvas {
+  position: relative;
+  min-width: 0;
+  min-height: 350px;
+}
+.ks-node {
+  display: flex;
+  gap: 10px;
+  text-align: left;
+  align-items: flex-start;
+}
+.ks-node strong {
+  font-size: 13px;
+  line-height: 1.3;
+  display: block;
+  color: var(--heading);
+}
+.ks-node small {
+  display: block;
+  font-size: 10px;
+  color: var(--muted);
+  margin-top: 5px;
+}
+.ks-status-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.ks-canvas-hint {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 10px;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 6px 9px;
+  border-radius: 20px;
+  pointer-events: none;
+  max-width: 85%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ks-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+.ks-empty-icon {
+  height: 85px;
+  width: 85px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border);
+  border-radius: 23px;
+  color: var(--accent);
+  background: var(--surface);
+  margin-bottom: 5px;
+}
+.ks-empty h2 {
+  font-size: 22px;
+  font-weight: 550;
+  letter-spacing: -0.4px;
+  color: var(--heading);
+  margin: 15px 0 8px;
+}
+.ks-empty p {
+  max-width: 380px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 18px;
+}
+.ks-details {
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  padding: 20px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.ks-detail-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ks-detail-heading button {
+  border: 0;
+  background: transparent;
+  padding: 3px;
+}
+.ks-details label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.ks-details textarea {
+  resize: vertical;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.ks-help {
+  font-size: 10px;
+  line-height: 1.6;
+  color: var(--muted);
+  display: flex;
+  gap: 6px;
+  margin: 0;
+}
+.ks-help svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.ks-error {
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--danger);
+  margin: 0;
+}
+.ks-full {
+  width: 100%;
+}
+.ks-detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.ks-section-label {
+  border-top: 1px solid var(--border);
+  padding-top: 17px;
+  margin-top: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  color: var(--muted);
+}
+.ks-workspace button.ks-danger {
+  color: var(--danger);
+}
+.ks-details h2 {
+  font-size: 19px;
+  font-weight: 550;
+  color: var(--heading);
+  margin: 5px 0;
+}
+.ks-relationship {
+  font-size: 12px;
+  color: var(--accent);
+  margin: 0;
+}
+.ks-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding-top: 13px;
+}
+.ks-legend span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 9px;
+  color: var(--muted);
+}
+.ks-legend i {
+  width: 5px;
+  height: 5px;
+  display: block;
+  border-radius: 50%;
+}
+.ks-workspace .react-flow__controls {
+  box-shadow: none;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.ks-workspace .react-flow__controls-button {
+  padding: 6px;
+  background: var(--surface);
+  color: var(--text);
+  border: 0;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  box-sizing: content-box;
+}
+.ks-workspace .react-flow__controls-button svg {
+  fill: currentColor;
+}
+.ks-workspace .react-flow__minimap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  overflow: hidden;
+  bottom: 30px;
+}
+.ks-workspace .react-flow__attribution {
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 8px;
+}
+.ks-workspace .react-flow__attribution a {
+  color: inherit;
+}
+.ks-workspace .react-flow__handle {
+  background: var(--accent);
+  border: 2px solid var(--surface);
+  height: 7px;
+  width: 7px;
+}
+.ks-workspace .react-flow__edge-textbg {
+  fill: var(--surface);
+}
+@media (max-width: 1050px) {
+  .ks-workspace {
+    padding: 22px 18px;
+  }
+  .ks-body.ks-with-details {
+    grid-template-columns: minmax(0, 1fr) 260px;
+  }
+  .ks-count {
+    display: none;
+  }
+  .ks-header h1 {
+    font-size: 24px;
+  }
+  .ks-legend {
+    gap: 8px;
+  }
+}
+@media (max-width: 750px) {
+  .ks-header {
+    align-items: flex-start;
+  }
+  .ks-header p {
+    max-width: 240px;
+  }
+  .ks-toolbar {
+    flex-wrap: wrap;
+  }
+  .ks-search {
+    flex-basis: 100%;
+  }
+  .ks-body.ks-with-details {
+    grid-template-columns: 1fr;
+  }
+  .ks-details {
+    max-height: 410px;
+    border-left: 0;
+    border-top: 1px solid var(--border);
+  }
+  .ks-canvas {
+    min-height: 380px;
+  }
+  .ks-workspace {
+    overflow: auto;
+  }
+  .ks-workspace .react-flow__minimap {
+    display: none;
+  }
+}
+.ks-workspace .ks-cluster-label .react-flow__handle {
+  display: none;
+}

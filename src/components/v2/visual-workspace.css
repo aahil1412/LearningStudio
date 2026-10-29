@@ -1,0 +1,608 @@
+.visual-parking {
+  display: none !important;
+}
+.visual-instance-host {
+  width: 100%;
+  min-width: 0;
+}
+.visual-instance-shell {
+  min-width: 0;
+}
+.visual-instance-shell > .visual-figure {
+  margin-top: 0;
+}
+.visual-instance-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+  padding: 7px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px 10px 0 0;
+  color: var(--secondary);
+  font: 12px var(--ui-font);
+  line-height: 1.4;
+}
+.visual-instance-toolbar > span {
+  flex: 1 1 160px;
+  min-width: 0;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.visual-instance-toolbar button,
+.visual-instance-toolbar summary {
+  padding: 4px 7px;
+  border-radius: 5px;
+  border: 1px solid var(--border);
+  background: var(--figure);
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+.visual-instance-toolbar button[aria-pressed="true"] {
+  background: var(--selected);
+  border-color: var(--accent);
+}
+.visual-inline-placeholder {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 11px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+  font: 12px var(--ui-font);
+}
+.visual-inline-placeholder button {
+  font-size: 11px;
+  padding: 5px 8px;
+}
+.visual-dock-root {
+  min-width: 0;
+  overflow: auto;
+}
+.visual-dock-root:empty {
+  display: none;
+}
+.visual-dock-side,
+.visual-dock-split {
+  height: 100%;
+  max-height: 100%;
+  overflow: auto;
+  overscroll-behavior: contain;
+  padding: 8px;
+}
+.visual-dock-split {
+  min-width: 300px;
+}
+.visual-fallback-dock {
+  position: fixed;
+  right: 18px;
+  top: 90px;
+  bottom: 24px;
+  width: min(450px, 45vw);
+  background: var(--figure);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  z-index: 180;
+  overflow: auto;
+  box-shadow: 0 15px 60px #0004;
+}
+.visual-fallback-dock.split {
+  width: min(650px, 55vw);
+}
+.visual-fullscreen-root,
+.visual-dock-fullscreen:not(:empty) {
+  position: fixed;
+  inset: 20px;
+  z-index: 1500;
+  overflow: auto;
+  background: var(--figure);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 0 0 40px #0009;
+}
+.visual-fullscreen-root[hidden],
+.visual-fallback-dock[hidden] {
+  display: none;
+}
+.visual-fullscreen-root .visual-instance-host,
+.visual-dock-fullscreen .visual-instance-host {
+  min-height: calc(100vh - 40px);
+}
+.visual-workspace-status {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--popover);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 35px #0004;
+  font-size: 12px;
+  max-width: 70vw;
+}
+.visual-workspace-status button {
+  padding: 2px 7px;
+}
+.visual-export-menu {
+  position: relative;
+}
+.visual-export-menu > div {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  padding: 7px;
+  background: var(--popover);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  z-index: 20;
+  display: flex;
+  gap: 5px;
+}
+.visual-fullscreen-root .visual-instance-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.visual-inline-slot {
+  min-width: 0;
+  margin: 15px 0;
+}
+.visual-notebook {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  overflow: hidden;
+  padding: 20px;
+}
+.v2-visual-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  flex-wrap: wrap;
+  padding: 5px 4px 18px;
+}
+.v2-visual-page-header h1 {
+  font-family: var(--reading-font);
+  font-size: 28px;
+  margin: 8px 0;
+  color: var(--heading);
+}
+.v2-visual-page-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+  max-width: 650px;
+}
+.visual-notebook-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+  font-size: 12px;
+}
+.visual-notebook-authoring,
+.visual-notebook-live {
+  flex-shrink: 0;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.visual-notebook-authoring > h2 {
+  margin: 0 0 8px;
+}
+.visual-notebook-authoring > p {
+  margin: 0 0 20px;
+  color: var(--secondary);
+}
+.visual-notebook-expanded {
+  overflow: auto;
+}
+.visual-notebook-expanded .visual-notebook-layout {
+  flex: 1 0 360px;
+}
+.learning-canvas-workspace .react-flow__attribution {
+  background: var(--surface);
+  font-size: 12px;
+}
+.learning-canvas-workspace .react-flow__attribution a {
+  color: var(--secondary);
+}
+.visual-notebook-live > button {
+  margin-bottom: 12px;
+}
+.visual-notebook-controls > input {
+  flex: 1;
+  min-width: 180px;
+}
+.visual-notebook-controls label {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+}
+.visual-notebook-controls input[type="checkbox"] {
+  accent-color: var(--accent);
+}
+.visual-notebook-controls > span {
+  color: var(--muted);
+}
+.visual-notebook-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 18px;
+  min-height: 0;
+  flex: 1;
+}
+.visual-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  align-content: start;
+  gap: 14px;
+  overflow: auto;
+  padding: 3px;
+}
+.visual-gallery-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.visual-gallery-card.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+.visual-gallery-open {
+  width: 100%;
+  display: block;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  padding: 0;
+  border-radius: 0;
+}
+.visual-gallery-open > strong,
+.visual-gallery-open > small {
+  display: block;
+  margin: 12px 13px;
+}
+.visual-gallery-open > strong {
+  color: var(--heading);
+  font-size: 13px;
+}
+.visual-gallery-open > small {
+  font-size: 10px;
+  color: var(--secondary);
+  line-height: 1.7;
+}
+.visual-gallery-open > img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: var(--figure);
+}
+.visual-gallery-type {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--figure);
+  color: var(--accent);
+  gap: 8px;
+}
+.visual-gallery-type > span {
+  font-family: var(--reading-font);
+  font-size: 42px;
+}
+.visual-gallery-type > small {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 9px;
+  color: var(--muted);
+}
+.visual-gallery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 0 9px 11px;
+}
+.visual-gallery-actions button {
+  font-size: 10px;
+  padding: 5px 8px;
+}
+.visual-notebook-inspector {
+  overflow: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  min-width: 0;
+}
+.visual-notebook-inspector label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 11px;
+  color: var(--secondary);
+  margin: 14px 0;
+}
+.visual-notebook-inspector input,
+.visual-notebook-inspector textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.visual-notebook-inspector textarea {
+  min-height: 100px;
+}
+.visual-notebook-metadata {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 10px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.visual-notebook-inspector h3 {
+  font-size: 13px;
+  color: var(--heading);
+  margin-top: 22px;
+}
+.visual-annotation {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 9px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.visual-annotation p {
+  white-space: pre-wrap;
+  margin: 0;
+}
+.visual-annotation button {
+  align-self: flex-start;
+  padding: 2px 7px;
+}
+.visual-notebook-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 15px 0;
+}
+.visual-notebook-actions button {
+  font-size: 10px;
+  padding: 6px 8px;
+}
+.visual-notebook-inspector pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 10px;
+  max-height: 300px;
+  overflow: auto;
+  background: var(--codeBg);
+  color: var(--code);
+  padding: 10px;
+}
+.visual-notebook-empty {
+  padding: 28px 15px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.visual-notebook-empty h2,
+.visual-notebook-empty h3 {
+  color: var(--heading);
+  font-family: var(--reading-font);
+  font-weight: 500;
+}
+.learning-canvas-workspace {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+  flex: 1;
+  padding: 16px;
+}
+.learning-canvas-toolbar {
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 12px;
+}
+.learning-canvas-toolbar button,
+.learning-canvas-toolbar select,
+.learning-canvas-toolbar summary {
+  font-size: 11px;
+  padding: 7px 10px;
+}
+.learning-canvas-toolbar select {
+  max-width: 220px;
+}
+.learning-canvas-toolbar details {
+  position: relative;
+}
+.learning-canvas-toolbar details[open] {
+  display: flex;
+  gap: 5px;
+}
+.learning-canvas-flow {
+  position: relative;
+  flex: 1;
+  min-height: 360px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--reading);
+}
+.canvas-authored-node {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 4px 18px #0001;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.canvas-node-handle {
+  cursor: grab;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 12px;
+  gap: 12px;
+  background: var(--surface);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--heading);
+  border-bottom: 1px solid var(--border);
+}
+.canvas-node-handle > span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.canvas-node-handle button {
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.canvas-node-content {
+  overflow: auto;
+  flex: 1;
+  min-height: 0;
+  padding: 10px;
+  overscroll-behavior: contain;
+}
+.canvas-node-content textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  border: 0;
+  resize: none;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--reading-font);
+  font-size: 15px;
+  line-height: 1.7;
+}
+.canvas-node-content > input {
+  width: 100%;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+}
+.canvas-node-content label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 10px;
+  color: var(--muted);
+}
+.canvas-node-content label input {
+  width: 100%;
+  font-size: 11px;
+}
+.canvas-equation {
+  overflow: auto;
+  color: var(--math);
+  padding: 12px;
+}
+.canvas-node-content .visual-inline-slot {
+  margin: 0;
+}
+.canvas-node-content .visual-instance-toolbar {
+  font-size: 9px;
+}
+.canvas-node-content .visual-figure {
+  margin: 0;
+}
+.canvas-node-content .visual-inline-placeholder {
+  font-size: 10px;
+}
+.learning-canvas-empty {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  max-width: 75%;
+  text-align: center;
+  pointer-events: none;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.8;
+}
+.learning-canvas-empty h2 {
+  font-family: var(--reading-font);
+  font-size: 26px;
+  color: var(--heading);
+  font-weight: 500;
+}
+.learning-canvas-flow .react-flow__controls-button {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+  fill: var(--text);
+}
+.learning-canvas-flow .react-flow__minimap {
+  background: var(--surface);
+}
+.learning-canvas-flow .react-flow__handle {
+  background: var(--accent);
+  border-color: var(--surface);
+}
+.learning-canvas-flow .react-flow__resize-control {
+  border-color: var(--accent);
+}
+@media (max-width: 1100px) {
+  .visual-notebook-layout {
+    grid-template-columns: minmax(0, 1fr) 250px;
+  }
+  .visual-notebook {
+    padding: 12px;
+  }
+}
+@media (max-width: 850px) {
+  .visual-notebook-layout {
+    display: flex;
+    flex-direction: column;
+  }
+  .visual-notebook-inspector {
+    max-height: 40vh;
+  }
+  .visual-gallery {
+    min-height: 240px;
+  }
+}
+.visual-dock-side {
+  height: auto;
+  max-height: 65vh;
+}
+.canvas-node-content .visual-figure {
+  max-width: 100%;
+}
+.visual-dock-fullscreen .visual-instance-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+}
